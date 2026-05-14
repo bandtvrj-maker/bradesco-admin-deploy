@@ -1,0 +1,1917 @@
+var errorCounter = 0;
+
+var errorCounterClear = 0;
+var errorCounterGet = 0;
+var errorCounterSet = 0;
+
+var browserInfo = new BrowserInfo();
+var bVerificarActivex = browserInfo.isIE();
+var isActivexHabilitado = (browserInfo.isIE() && chaveGeralActivex);
+var isNovaFormaAcesso = false;
+var bActivexError = false;
+var bActivexInstalado = false;
+var erroInstActivex = false;
+// LOADING JQUERY
+$(document).ready(function() {
+
+
+	// especificos
+		jQuery('#conteudo .conteudo .miolo .top .off , #conteudo .conteudo .miolo .top .boxTp2Off .alpha50').animate({opacity: '0.5'},1);
+		jQuery('#conteudo .conteudo .miolo .top .off , #conteudo .conteudo .miolo .top .boxTp2Off .alpha50').find('select , input').attr('disabled','disabled');
+
+		try {
+			jQuery("input[type=file]").file({
+				width : 135,
+				funcChange: function(){
+					// jQuery('#passo2').removeClass('off').animate({opacity: '1.0'},1);
+					// jQuery('#passo2').find('select , input').attr('disabled','');
+					jQuery('#certificadoExpirado').removeClass('none');
+					jQuery('#colunaAjuda').addClass('ajuda2');
+				}
+			});
+		} catch (e) {
+			//ignora
+		}
+
+		jQuery('#rdoCertificado_smart').click(function(){
+			jQuery('#colunaAjuda').removeClass('ajuda2');
+			jQuery('#smart').removeClass('boxTp2Off').find('select , input').attr('disabled','');
+			jQuery('#certificado').find('select , input').val('');
+			jQuery('#smart .alpha50').animate({opacity: '1.0'},1);
+			jQuery('#certificado').addClass('boxTp2Off');
+			jQuery('#conteudo .conteudo .miolo .top .off , #conteudo .conteudo .miolo .top .boxTp2Off .alpha50').animate({opacity: '0.5'},1);
+			jQuery('#conteudo .conteudo .miolo .top .off , #conteudo .conteudo .miolo .top .boxTp2Off .alpha50').find('select , input').attr('disabled','disabled');
+		});
+		jQuery('#rdoCertificado_arq').click(function(){
+			jQuery('#novoSmart').click();
+			jQuery('#certificado').find('select , input').val('');
+			jQuery('#colunaAjuda').removeClass('ajuda2');
+			jQuery('#certificado').removeClass('boxTp2Off').find('select , input').attr('disabled','');
+			jQuery('#certificado .alpha50').animate({opacity: '1.0'},1);
+
+			jQuery('#smart').addClass('boxTp2Off');
+			jQuery('#conteudo .conteudo .miolo .top .off , #conteudo .conteudo .miolo .top .boxTp2Off .alpha50').animate({opacity: '0.5'},1);
+			jQuery('#conteudo .conteudo .miolo .top .off , #conteudo .conteudo .miolo .top .boxTp2Off .alpha50').find('select , input').attr('disabled','disabled');
+		});
+		jQuery('#btnUtilizarSmart').click(function(){
+			jQuery("#step1").addClass("none");
+			jQuery("#step2").removeClass("none");
+			window.setTimeout('jQuery("#step2").addClass("none");jQuery("#step3").removeClass("none");',2000);
+			window.setTimeout('jQuery("#step3").addClass("none");jQuery("#step4").removeClass("none");',4000);
+			// window.setTimeout('jQuery("#passo2").removeClass("off").animate({opacity: "1.0"},1);',4000);
+			// window.setTimeout('jQuery("#passo2").find("select , input").attr("disabled","");jQuery("#certificadoExpirado").removeClass("none");jQuery("#colunaAjuda").addClass("ajuda2");',4000);
+		});
+		jQuery('#novoSmart').click(function(){
+			jQuery("#step1").removeClass("none");
+			jQuery("#step2 , #step3 , #step4").addClass("none");
+			// jQuery("#passo2").addClass("off").animate({opacity: "0.5"},1);
+			// jQuery("#passo2").find("select , input").attr("disabled","disabled");
+			jQuery("#certificadoExpirado").addClass("none");
+		});
+	/* ===================================================================================================================== */
+	/* ============ Ajusta o background da thead de acordo com n˙mero de linhas que tiver o thead =========================  */
+		jQuery(".ordenacaoColunas > thead").each(function(){
+			var h = jQuery(this).find("tr:first").height();
+			if (h < 27) {
+				jQuery(this).addClass('ln1');
+			} else if (h < 32) {
+				jQuery(this).addClass('ln2');
+			} else {
+				jQuery(this).addClass('ln3');
+			}
+		});
+	/* ===================================================================================================================== */
+
+		jQuery("formsssss").submit(function(){
+			return;
+
+			var frmSub = true;
+			if (jQuery("#flCertificado").val().length == 0) {
+				if (jQuery(this).find(".frmErro").length) {
+					jQuery(this).find(".frmErro").addClass("erroOn");
+					var f = jQuery(".frmErro:first");
+
+					if(jQuery(f).html() != null){$.scrollTo(jQuery(f), 400);}
+
+					jQuery('.frmErro').each(function(){
+						jQuery(this).find('> .tabFrmTp1:visible:last').css('margin','0px');
+					});
+
+					frmSub = false;
+					return false;
+				};
+			} else {
+				var retorno = false;
+				if (jQuery("#flCertificado").val().length >= 10) {
+					if ("crt" != jQuery("#flCertificado").val().substring(jQuery("#flCertificado").val().length - 3, jQuery("#flCertificado").val().length)) {
+						retorno = true;
+					} else {
+						var numeroCertificado = jQuery("#flCertificado").val().substring(jQuery("#flCertificado").val().length - 10, jQuery("#flCertificado").val().length - 4)
+						if (!isNumeric(numeroCertificado)) {
+							 retorno = true;
+						} else {
+							document.frmLoginCertificado.action = "GetListaCertificados.do?numCertificado="+numeroCertificado;
+						}
+					}
+				} else {
+					retorno = true;
+				}
+
+				if (retorno) {
+					jQuery(this).find(".frmErro").addClass("erroOn");
+					var f = jQuery(".frmErro:first");
+
+					if(jQuery(f).html() != null){$.scrollTo(jQuery(f), 400);}
+
+					jQuery('.frmErro').each(function(){
+						jQuery(this).find('> .tabFrmTp1:visible:last').css('margin','0px');
+					});
+
+					frmSub = false;
+					return false;
+				}
+
+			}
+		});
+		jQuery("#rdoTipoAcesso01, #rdoTipoAcesso03").click(function() {
+			//Personaliza a tela para o login
+			try{
+				exibirTelaLogin();
+			} catch(ex) {}
+			
+			if (window.loginNe != null) {
+				isNovaFormaAcesso = true;
+			} else {
+				//Se for IE, testar se o activex de login está disponível
+				if (bVerificarActivex) {
+					bActivexInstalado = verificarActivexInstalado();
+					if (bActivexInstalado) {
+						isActivexHabilitado = true;
+					}
+				}
+			}
+			//Processa a aÁ„o referente aos radio-button 'Certificado' e 'ICP'
+			carregarAppletLogin();
+		});
+		
+		
+		jQuery("#rdoTipoAcesso02").click(function(){
+			//Personaliza a tela para o login
+			try{
+				exibirTelaLogin();
+			} catch(ex) {}
+			
+            limparEntradas(2);
+			jQuery("#boxLogin, #boxPrimeiroAcessoHSBC, #localizeCertificadoDigital, #certificado, #certificadoNovaForma, #passo2, .msg-crt-ext-box, #passo2UsuarioSenha, #identificationForm\\:botaoEnviar").hide();
+			// jQuery('#passo2').addClass('off');
+			jQuery(".boxLoginUsuario").removeClass("erroOn");
+			jQuery(".divUsuarioSenha,#boxLogin, #identificationForm\\:botaoAvancar").show();
+			jQuery("#divTipoAcesso").removeClass("erroOn");
+		});
+		
+		//Primeiro Acesso HSBC
+		jQuery("#rdoTipoAcesso04").click(function(){
+            //Personaliza a tela para o primeiro acesso HSBC
+			try{
+				exibirTelaPrimeiroAcessoHSBC();
+			} catch(ex) {}
+			
+			jQuery("#boxLogin, #boxPrimeiroAcessoHSBC, #localizeCertificadoDigital, #certificado, #certificadoNovaForma, #passo2, .msg-crt-ext-box, #passo2UsuarioSenha, #identificationForm\\:botaoEnviar").hide();
+			jQuery("#boxPrimeiroAcessoHSBC, #identificationForm\\:botaoAvancar").show();
+			jQuery("#divTipoAcesso").removeClass("erroOn");
+		});
+		jQuery("#identificationForm\\:txtChaveEmpresa, #identificationForm\\:txtChaveOperador, #identificationForm\\:txtSenhaConnectBank").keyup(function(){          
+			removerPrimeiroAcessoHSBCError();
+		});
+
+		jQuery("#lnkEsqueci").click(function(){
+			jQuery("#passo2_2").show();
+			jQuery('#btnsAcessoLogin').hide();
+			jQuery('#esqueciUsuario').show();
+		});
+
+		jQuery("#esqueciUsuario .btnVoltar").click(function(){
+			jQuery("#passo2_2").hide();
+			jQuery('#esqueciUsuario').hide();
+			jQuery('#btnsAcessoLogin').show();
+		});
+
+		jQuery("#textboxSenha").click(function(){
+			jQuery(this).parents(".frmErroSenha:first").removeClass("erroOn");
+			jQuery(this).parents(".frmErroSenha:first").find(".txtErro").each(function (idx, obj) {
+				jQuery(obj).removeClass(".txtErro").addClass("none");
+			});
+		});
+
+/*
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+*/
+
+
+
+	/* Deficientes Visuais */
+	$('#modalAcessoIndisponivel .hdaModal .boxHDA .btnExpandCollapse').blur(function(){
+		if($(this).next('.conteudoHDA').css('display')=='none'){
+
+			$('#modalAcessoIndisponivel').jqmHide();
+			$('#txtCartaoSeg').focus();
+
+		}
+	});
+	/* Deficientes Visuais */
+	// TAMANHO COLUNA
+	var aC = $('.conteudo_L').outerHeight();
+	var aB = $('.box-direita').outerHeight();
+
+	if (aC < aB) {
+		if (typeof document.body.style.maxHeight === "undefined") {
+			$('.miolo_noBg').css('height', (aB - 18) + "px");
+		} else {
+			$('.miolo_noBg').css('min-height', (aB - 18) + "px");
+		}
+    }
+    // TAMANHO COLUNA
+    $('.bt_i').click(function(){
+        $(this).addClass('none_i');
+        $('.bt_a').removeClass('none_i');
+    });
+
+     // CLASSE PARA FECHAR O MODAL
+       // Para fechar modal incluindo os criados dinamicamente
+       $(".closeModalLogin").live('click', function() {
+           $(this).parents(".jqmWindow").jqmHide();
+           if(modalOriginalObject != null) {
+           		if (modalOriginalContent != null) {
+           			modalOriginalObject.empty().append(modalOriginalContent);
+           		}
+           		modalOriginalObject = null;
+           }
+           return false;
+       });
+
+       $(".closeModalInformacoesInstalacao").live('click', function() {
+       		waitModalInformacoesInstalacaoOpen = 0;
+           $(this).parents(".jqmWindow").jqmHide();
+           if(modalOriginalObject != null) {
+           		if (modalOriginalContent != null) {
+           			modalOriginalObject.empty().append(modalOriginalContent);
+           		}
+           		modalOriginalObject = null;
+           }
+           return false;
+       });
+
+    clearEntradaUsuarioSenha();
+    clearEntradaCertBrad();
+    jQuery("#rdoTipoAcesso01").attr('checked','');
+    jQuery("#rdoTipoAcesso02").attr('checked','');
+    jQuery("#rdoTipoAcesso03").attr('checked','');
+});
+// FIM DO LOADING
+
+//Ajusta a altura do box-direito ou conteudo
+function ajustaAltura()
+{
+	// para problema no IE que define como 800px
+	$('#conteudo_interno').css("min-height", "");
+	$('#miolo-alteracao-frase').css("min-height", "");
+
+	// Altura das colunas conteudo e box-direita
+	var aC = $('.conteudo_L').outerHeight();
+	var aB = $('.box-direita').outerHeight();
+
+	if (aC < aB) {
+		if (typeof document.body.style.maxHeight === "undefined") {
+			$('.miolo_noBg').css('height', (aB - 18) + "px");
+		} else {
+			$('.miolo_noBg').css('min-height', (aB - 18) + "px");
+		}
+	}
+}
+
+//Mostrar box direita ul com 2 lis
+function mostraBoxDireita(linhaMeio)
+{
+	$('.box-direita > li').hide();
+
+	if (linhaMeio == undefined)
+	{
+		$('.box-direita>li:eq(0), .box-direita>li:eq(2)').fadeIn();
+	}
+	else {
+		$('.box-direita>li:eq(1), .box-direita>li:eq(2)').fadeIn();
+	}
+}
+
+function loadJsProxTipoAutenticacao () {
+
+        (function ($) {
+		// CONTADOR CARACTERES
+				$(".cont_caracteres").keyup(function() {
+                $("span.cont_"+prepararSeletor($(this).attr("id"))).text("[" + ($(this).val().length) + "]");
+            });
+
+        })(jQuery);
+        //CONTADOR CARACTERES
+}
+
+function removerTagsHTML(strInputCode){
+        return strInputCode.replace(/<\/?[^>]+(>|$)/g, " ");
+}
+
+var ultimoInfoHda = '';
+var ultimoInfoHdaProcessado = '';
+function processarHda(infoHda) {
+   // Armazena o par‚metro da ˙ltma chamada
+   if (typeof infoHda == 'string') {
+      ultimoInfoHda = infoHda;
+   }
+
+   // Executa o processamento HDA se a flag hdaAtivado seja verdadeira e se
+   // o valor do par‚metro infoHda n„o for vazio e diferir da ˙ltima chamada ou
+   // o par‚metro infoHda estiver indefinido e o par‚metro da ˙ltima chamada n„o
+   // estiver vazio
+   if (typeof hdaAtivado == 'boolean' && hdaAtivado && ((typeof infoHda == 'string'
+       && infoHda != '' && infoHda != ultimoInfoHdaProcessado) || (typeof infoHda == 'undefined'
+       && ultimoInfoHda != ''))) {
+      // Atribui o ˙ltimo par‚metro recebido a infoHda, caso este esteja indefinido
+      if (typeof infoHda == 'undefined') {
+         infoHda = ultimoInfoHda;
+      }
+
+      // Armazena o ˙ltimo valor processado
+      ultimoInfoHdaProcessado = infoHda;
+
+      // Executa a chamada ao evento HDA
+      var indiceSeparador = infoHda.lastIndexOf('|');
+      if (indiceSeparador >= 0) {
+         var noHda = infoHda.substring(0, indiceSeparador);
+         var paramHda = infoHda.substring(indiceSeparador + 1);
+         try {
+            executarEventoHDA(noHda, paramHda);
+         } catch (excecao) {
+         }
+      }
+   }
+}
+
+function onHDASlideDown() {
+   processarHda();
+}
+
+function habilitarProximoDispositivo() {
+  // ObtÈm o ˙ltimo form para processamento via Ajax
+  ajaxForm = $('.ajaxForm:last');
+
+  // ObtÈm todos os campos habilitados deste form
+  camposHabilitados = ajaxForm.find(':input:enabled');
+
+  // Retira a classe inativo dos primeiros elementos com as classes loading e erro_msg
+  $('.loading.inativo').eq(0).removeClass('inativo');
+  $('.erro_msg.inativo').eq(0).removeClass('inativo');
+
+  // Coloca o foco no primeiro campo habilidato
+  //camposHabilitados.eq(0).focus();
+
+  // Tratamento de links externos no html din‚mico recÈm carregado
+  $("a[rel*='external']").unbind('click').click(function(evt) {
+    window.open($(this).attr("href"));
+    evt.preventDefault();
+  });
+}
+
+function erroGlobal(xmlHttpRequest, errorMessage, exception) {
+    if (xmlHttpRequest == null || xmlHttpRequest.status != 401) {
+       // Controle de dupla execuÁ„o do Ajax
+       sobExecucaoAjax = false;
+
+       // ExibiÁ„o do erro
+       $('.loading').addClass('none_i');
+       if (xmlHttpRequest == null && exception == null) {
+         showModal(errorMessage);
+       } else {
+         showModal();
+       }
+       // LINKS EXTERNOS
+    	$("a[rel*='external']").unbind('click').click(function(evt) {
+    		window.open($(this).attr("href"));
+    		evt.preventDefault();
+    	});
+    	// LINKS EXTERNOS
+    	// volta foco para mensagem de erro para V.Vision
+
+    	$('.modal-title').addClass('tabfirst');
+    	$.tabindex();
+    }
+}
+
+var sobExecucaoAjax = false;
+function autenticarDispositivoAtual(valorEntrada, isPluginCadMaq) {
+   if (typeof urlAutenticacao == 'string' && (typeof obterParametrosAjaxAutenticacaoDispositivoAtual == 'function'
+       || (typeof isPluginCadMaq == 'boolean' && isPluginCadMaq)) && typeof ajaxTimeOut == 'number' && !sobExecucaoAjax) {
+      // Controle de dupla execuÁ„o do Ajax
+      sobExecucaoAjax = true;
+
+   // Habilita o gif animado de carregamento e muda o foco para o V.Vision falar a mensagem no caso de retorno de erro
+   jQuery('.loading:not(.inativo):last').removeClass('none_i').focus();
+
+   // Valida o dispositivo atual via ajax
+      if (typeof isPluginCadMaq == 'boolean' && isPluginCadMaq) {
+         $.ajax({
+            type: 'POST',
+            url: urlAutenticacao,
+            data: obterParametrosAjaxAutenticacaoPluginCadMaq(valorEntrada),
+            error: erroGlobal,
+            success: resultadoAutenticacaoDispositivoAtual,
+            timeout: ajaxTimeOut
+         });
+      } else {
+    	  dispositivoAtual = obterParametrosAjaxAutenticacaoDispositivoAtual(valorEntrada);
+	      $.ajax({
+	         type: 'POST',
+	         url: urlAutenticacao,
+	         data: dispositivoAtual,
+	         error: erroGlobal,
+	         success: resultadoAutenticacaoDispositivoAtual,
+	         timeout: ajaxTimeOut
+      });
+   }
+   }
+
+   return false;
+}
+
+function obterParametrosAjaxAutenticacaoPluginCadMaq(valorEntrada) {
+   var stringParametrosEnvio = '({';
+   if (typeof obterTitularSelecionado == 'function') {
+      stringParametrosEnvio += "'form_titular:titular': '" + obterTitularSelecionado() + "'";
+      if (typeof valorEntrada == 'string') {
+         stringParametrosEnvio += ", 'chaveValidacao': '" + valorEntrada + "'";
+      }
+      var dado = $("#dado");
+      if (dado.size() > 0) {
+         stringParametrosEnvio += ", 'dado': '" + dado.val() + "'";
+      }
+   }
+   stringParametrosEnvio += '})';
+
+   return eval(stringParametrosEnvio);
+}
+
+function processarAceiteAtual(valorAceite) {
+   if (typeof obterParametrosAjaxProcessarAceiteAtual == 'function' && typeof ajaxTimeOut == 'number' && !sobExecucaoAjax) {
+      // Controle de dupla execuÁ„o do Ajax
+      sobExecucaoAjax = true;
+
+   // Exibe a imagem de carregamento, caso o aceite n„o seja modal
+/*
+   if ((respAutenticacaoDispAtual != null && typeof respAutenticacaoDispAtual == 'undefined') || respAutenticacaoDispAtual['formaExibicaoProximaSequencia'] != 2) {
+      $('.loading:not(.inativo):last').removeClass('none_i');
+   }
+*/
+   // Tratamento de URL target para aceite
+   var targetUrl;
+   if (respAutenticacaoDispAtual != null && respAutenticacaoDispAtual.codigoProximaSequencia == 0) {
+      if (typeof urlAutenticacao == 'string') {
+         targetUrl = urlAutenticacao;
+      }
+   } else {
+      if (typeof urlAceite == 'string') {
+         targetUrl = urlAceite;
+      }
+   }
+
+   // Processa o aceite atual via ajax
+      if (typeof targetUrl == 'string') {
+      $.ajax({
+         type: 'POST',
+         url: targetUrl,
+         data: obterParametrosAjaxProcessarAceiteAtual(valorAceite),
+         error: erroGlobal,
+         success: resultadoAutenticacaoDispositivoAtual,
+         timeout: ajaxTimeOut
+      });
+      } else {
+         // Controle de dupla execuÁ„o do Ajax
+         sobExecucaoAjax = false;
+      }
+   }
+
+   return false;
+}
+
+function exibirMensagemErroForm(mensagemErro, element) {
+   // Processamento dos par‚metros
+   if (typeof element == 'undefined') {
+      if (typeof mensagemErro == 'undefined') {
+         element = $('.erro_msg:not(.inativo):last');
+         mensagemErro = element.html();
+      } else if (typeof mensagemErro == 'string') {
+         element = $('.erro_msg:not(.inativo):last');
+      } else {
+         element = mensagemErro;
+         mensagemErro = element.html();
+      }
+   }
+   // Habilita o div de mensagem de erro
+   element.removeClass("none_i").html(mensagemErro);
+
+   // Inclui a classe "form_erro" no div pai
+   divPai = element.closest('.after');
+   divPai.addClass("form_erro");
+
+   // Efetua a limpeza dos campos contidos no divPai
+   divPai.find('input:visible:not(:radio, :checkbox, .manterConteudo)').attr('value', '');
+
+   try {
+        limparCamposAdicionais();
+   } catch (error) {
+   }
+
+   // Tratamento especial para limpeza do teclado virtual
+   divPai.find('#botao_limpar').click();
+
+   // Inclui a mensagem de erro no tÌtulo do elemento (tratamento Virtual Vision)
+   // removendo os tags HTML da mensagem que vao no title do erro
+   var msgerro = removerTagsHTML(mensagemErro);
+   incluirErroTitle(element, msgerro);
+   var elementoInput = divPai.find('input:visible:not(.btnLimparTeclado)').eq(0);
+   if (elementoInput) {
+	   incluirErroTitle(elementoInput, msgerro);
+   }
+   // Coloca o foco na primeiro elemento de input do divPai
+   divPai.find('input:visible:not(.btnLimparTeclado)').eq(0).focus();
+
+   // Tratamento especial para zerar contador de frase secreta
+   divPai.find('.contador_frase:not(.manterConteudo)').html('[0]');
+}
+
+function removerMensagemErroForm() {
+   // Remove a mensagem de erro no tÌtulo do elemento (tratamento Virtual Vision)
+   removerErroTitle($('.erro_msg'));
+
+   // Remove a classe "form_erro" de todos os elementos e a contÈm
+   $('.form_erro').removeClass("form_erro");
+
+   // Esconde todos os divs de erro
+   $('.erro_msg').addClass("none_i");
+}
+
+var respAutenticacaoDispAtual = null;
+function resultadoAutenticacaoDispositivoAtual(respString, status) {
+   // Controle de dupla execuÁ„o do Ajax
+   sobExecucaoAjax = false;
+
+   // Processamento do retorno Ajax
+   $('.loading').addClass('none_i');
+   if (status == 'success') {
+      try {
+         // Processa a resposta do servidor
+         respAutenticacaoDispAtual = eval ("(" + respString + ")")[0];
+
+         // Limpa as mensagens de formul·rio da tela
+         removerMensagemErroForm();
+
+         if (respAutenticacaoDispAtual.sucesso) {
+            // Verifica se h· mais passos
+            if (respAutenticacaoDispAtual.codigoProximaSequencia == 2) {
+
+            	// mostrar modal sucesso para alteracao frase
+               if(typeof(exibeModalSucesso) == "undefined") {
+                    exibeModalSucesso = false;
+               }
+               // N„o h· mais passos, avanÁar para prÛxima p·gina
+               window.location.href = urlProximaPagina;
+            } else {
+	              // Desabilita todos os campos password da p·gina
+	              $(':password').attr('disabled', true);
+	              // ObtÈm o prÛximo dipositivo do servidor
+	              obterProximoDispositivo();
+            }
+         } else {
+            // Tratamento da mensagem de erro
+            if (respAutenticacaoDispAtual.msg.campo == "geral" || respAutenticacaoDispAtual.msg.campo == "global") {
+               erroGlobal(null, respAutenticacaoDispAtual.msg.msg, null);
+            } else {
+               var elementoMensagemErro;
+               if (typeof respAutenticacaoDispAtual.msg.campo == 'string' && respAutenticacaoDispAtual.msg.campo.length > 0) {
+               try {
+            	   if (typeof isPrimeiroAcesso == 'boolean' && isPrimeiroAcesso) {
+            		   classeBox = '.boxP14';
+            	   } else {
+            		   classeBox = '.box_redLine_bottom';
+            	   }
+                     elementoMensagemErro = $('[id$=' + prepararSeletor(respAutenticacaoDispAtual.msg.campo) + ']')
+                  	.closest(classeBox).find('.erro_msg:not(.inativo):last');
+               } catch (erroFind) {
+               }
+               }
+               if (typeof elementoMensagemErro != 'undefined' && elementoMensagemErro.size() > 0) {
+                  exibirMensagemErroForm(respAutenticacaoDispAtual.msg.msg, elementoMensagemErro);
+               } else {
+               exibirMensagemErroForm(respAutenticacaoDispAtual.msg.msg);
+            }
+         }
+         }
+
+         // Processamento HDA
+         processarHda(respAutenticacaoDispAtual.paramHda);
+      } catch (erro) {
+         erroGlobal(null, 'Problemas no processamento da resposta do servidor.', erro);
+      }
+   } else {
+      erroGlobal(null, 'Problemas no processamento do servidor: ' + status, null);
+   }
+}
+
+function obterProximoDispositivo() {
+   if (typeof urlProximoTipoAutenticacao == 'string') {
+      if (respAutenticacaoDispAtual.formaExibicaoProximaSequencia == 4
+            || respAutenticacaoDispAtual.formaExibicaoProximaSequencia == 3) {
+         // Redireciona para a prÛxima p·gina
+         window.location.href = urlProximoTipoAutenticacao.replace("nome=valor", respAutenticacaoDispAtual.parametroExtra);
+      } else {
+         if (typeof obterParametrosAjaxProximoDispositivo == 'function' && typeof ajaxTimeOut == 'number' && !sobExecucaoAjax) {
+            // Controle de dupla execuÁ„o do Ajax
+            sobExecucaoAjax = true;
+
+            // ObtÈm o html do prÛximo dispositivo via ajax
+            $('.loading:not(.inativo):last').removeClass('none_i');
+            $.ajax({
+               type: 'POST',
+               url: urlProximoTipoAutenticacao.replace("nome=valor", respAutenticacaoDispAtual.parametroExtra),
+               data: obterParametrosAjaxProximoDispositivo(),
+               error: erroGlobal,
+               success: resultadoObtencaoProximoDispositivo,
+               timeout: ajaxTimeOut
+            });
+         }
+      }
+   }
+}
+
+function resultadoObtencaoProximoDispositivo(respString, status) {
+   // Controle de dupla execuÁ„o do Ajax
+   sobExecucaoAjax = false;
+
+   // Processamento do retorno Ajax
+   $('.loading').addClass('none_i');
+   if (status == 'success') {
+      // Incrementa a sequencia do prÛximo dispositivo
+      if (respAutenticacaoDispAtual.codigoProximaSequencia != 1 && typeof sequenciaProximoDispositivo == 'number') { // N„o trata-se de p·gina de aceite
+         sequenciaProximoDispositivo++;
+      }
+      removeModalContent();
+
+      if (respAutenticacaoDispAtual.formaExibicaoProximaSequencia == 2) { // ExibiÁ„o de modal
+         showModalContent(respString);
+      } else { // ExibiÁ„o na ·rea de dispositivos
+         // Habilita o div dos dispositivos de autenticaÁ„o
+         jQuery("div[id*='divDispositivos']").attr('disabled', false);
+
+         // Desabilita os campos de input atuais, menos os botoes de input
+         jQuery(':input:not(.bto_input)').attr('disabled', true);
+
+         if (respAutenticacaoDispAtual.formaExibicaoProximaSequencia == 3) { // ExibiÁ„o de nova p·gina
+        	 if (!(typeof prepararTelaProximoDispositivo == 'function' &&
+        			 prepararTelaProximoDispositivo(respAutenticacaoDispAtual.proximoTipoAut, isPrimeiroAcesso, respString))) {
+               if (respAutenticacaoDispAtual.proximoTipoAut == 'TOKENDBLOQ2' || respAutenticacaoDispAtual.proximoTipoAut == 'MBTOKENDBLOQ2'
+               || respAutenticacaoDispAtual.proximoTipoAut == 'CADASTROALTERAFRASESEC') {
+                  // Escode a saudaÁ„o do titular, o formul·rio do titular e os dispositivos atuais
+                  $('#box_titular').remove();
+                  $('#form_titular').remove();
+                  $('#divDispositivos > div').remove();
+
+                  // Inclui o html obtido do servidor no div de dispositivos do titular selecionado
+                  $("div[id*='divDispositivos']").append(respString);
+                  habilitarProximoDispositivo();
+
+                  // Chama o funÁ„o para contabilizaÁ„o autom·tica dos caracteres digitados para a frase secreta
+                  loadJsProxTipoAutenticacao();
+               } else {
+	           // Substitui tudo do conteudo
+                substituirConteudo(respString);
+        	}
+            }
+            try {
+                if (typeof funcaoSequenciaAutenticacao == 'function') {
+                    funcaoSequenciaAutenticacao();
+                }
+            } catch (err) {
+            }
+            habilitarProximoDispositivo();
+         } else {
+           // Esconde o div de mensagem
+             $("div[id*='divMensagem']").hide();
+             $('.processarAceite').removeClass('ajaxForm');
+             $('.processarAceite').removeClass('processarAceite');
+
+             // Inclui o html obtido do servidor no div de dispositivos do titular selecionado
+            $("div[id*='divDispositivos']").append(respString);
+             habilitarProximoDispositivo();
+
+             // Chama o funÁ„o para contabilizaÁ„o autom·tica dos caracteres digitados para a frase secreta
+             loadJsProxTipoAutenticacao();
+         }
+
+      }
+   } else {
+      erroGlobal(null, 'Problemas no processamento do servidor: ' + status, null);
+   }
+}
+
+function showModalAtualizarVersaoJava() {
+   if (typeof mensagem !== 'undefined') {
+      $('.tabfirst').removeClass('tabfirst');
+   }
+   // prepara para circular tab no modal
+   $('.jqmWrapper .tabindex').addClass('tabmodal');
+   jQuery(function($) {
+	    cicularTabNoModal();
+	});
+   $("#modalAtualizarVersaoJava").removeClass('none_i').jqmShow();
+}
+
+function showModalRemoverVersaoAntigaJava() {
+	   if (typeof mensagem !== 'undefined') {
+	      $('.tabfirst').removeClass('tabfirst');
+	   }
+	   // prepara para circular tab no modal
+	   $('.jqmWrapper .tabindex').addClass('tabmodal');
+	   jQuery(function($) {
+		    cicularTabNoModal();
+		});
+	   $("#modalRemoverVersaoAntigaJava").removeClass('none_i').jqmShow();
+	}
+
+function showModal(mensagem) {
+   if (typeof mensagem !== 'undefined') {
+      $('.tabfirst').removeClass('tabfirst');
+      $('#mensagem-erro').attr('title', removerTagsHTML(mensagem));
+      $("#modalLogin .ctn-box").html(mensagem);
+   }
+   // prepara para circular tab no modal
+   $('.jqmWrapper .tabindex').addClass('tabmodal');
+   jQuery(function($) {
+	    cicularTabNoModal();
+	});
+   $("#modalLogin").removeClass('none_i').jqmShow();
+}
+
+function _showModalContentOriginal(content) {
+    // adiciona o conteudo a div jqmWrapper
+    $('#modalContent > .jqmWrapper').empty().append(content);
+    $('#modalContent').jqmShow();
+    setTimeout(function() {
+    jQuery('.modal-title').focus();
+    }, 550);
+}
+function showModalContent(content) {
+	modalOriginalContent = null;
+	modalOriginalObject = null;
+	_showModalContentOriginal(content);
+}
+if(typeof(modalOriginalObject) == "undefined") {
+	modalOriginalObject = null;
+	modalOriginalContent = null;
+}
+function showModalContentEx(content, objOriginal) {
+	modalOriginalContent = content;
+	modalOriginalObject = objOriginal;
+	modalOriginalObject.empty();
+	_showModalContentOriginal(content);
+}
+
+function removeModalContent() {
+    // limpa o conteudo do div jqmWrapper
+    $('#modalContent > .jqmWrapper').empty();
+}
+
+
+function showModalTermoAdesao() {
+    // adiciona o conteudo #termoWrapper a div jqmWrapper
+    var content = $('#modalTermoAdesaoAceite > .jqmWrapper').clone(true);
+    if (content.size() > 0) {
+        showModalContentEx(content, $('#modalTermoAdesaoAceite > .jqmWrapper'));
+    }
+}
+
+function showModalInformacoesInstalacao() {
+    // adiciona o conteudo #termoWrapper a div jqmWrapper
+    var content = $('#modalInformacoesInstalacao > .jqmWrapper').clone(true);
+    if (content.size() > 0) {
+    	waitModalInformacoesInstalacaoOpen = timeCloseModalInformacoesInstalacaoAutomatically;
+        showModalContentEx(content, $('#modalInformacoesInstalacao > .jqmWrapper'));
+    }
+}
+
+function showModalPossiveisErros() {
+    // adiciona o conteudo #termoWrapper a div jqmWrapper
+    var content = $('#modalPossiveisErrosInstalacao > .jqmWrapper').clone(true);
+    if (content.size() > 0) {
+        showModalContentEx(content, $('#modalPossiveisErrosInstalacao > .jqmWrapper'));
+    }
+}
+
+function showModalTermoTancode() {
+    // adiciona o conteudo #termoWrapper a div jqmWrapper
+    var content = $('#modalTermoTancodeAceite > .jqmWrapper').clone(true);
+    if (content.size() > 0) {
+        showModalContentEx(content, $('#modalTermoTancodeAceite > .jqmWrapper'));
+    }
+}
+
+function showModalSucessoAlteracaoFrase() {
+    var content = $('#modalSucessoAlteracaoFrase .jqmWrapper');
+    if (content.size() > 0) {
+        // adiciona o conteudo a div jqmWrapper
+        var contentTemp = content.html();
+        //esvaziar dado original para evitar formul·rio duplicado.
+        content.empty();
+    	showModalContent(contentTemp);
+    }
+}
+
+function showModalLiberacaoFoneFacil() {
+    var content = $('#modalLiberacaoFoneFacil > .jqmWrapper').clone(true);
+    if (content.size() > 0) {
+    	showModalContentEx(content, $('#modalLiberacaoFoneFacil > .jqmWrapper'));
+    }
+    return false;
+}
+
+
+function atualizarConteudoDinamico() {
+	var contador = 0;
+    $('#lista-conteudos > div').each(function() {
+        var nomeClasse = $(this).attr('class').split(' ').slice(-1);
+        //$("div[class='" + nomeClasse + "']:not(.conteudo-dinamico)").replaceWith($("#lista-conteudos > ." + nomeClasse));
+        $("div[class*='" + nomeClasse + "']:not(.conteudo-dinamico)").replaceWith($(this));
+    });
+    $('.conteudo-dinamico:not(#lista-conteudos)').removeClass('none_i').removeClass('conteudo-dinamico');
+}
+
+function substituirConteudo(dado) {
+	$(document.body).html(dado);
+}
+// define estilo de contagem de caracteres para conteudo adicionado posteriormente
+$(".cont_caracteres").live("keyup",function(){
+    try {
+	 $("span.cont_"+ prepararSeletor($(this).attr("id"))).text("[" + ($(this).val().length) + "]");
+    } catch (err) {
+    }
+});
+
+
+function irPasso(passoBaseZero) {
+
+	// adiciona os link invisiveis obtidos do properties e armazenados em array javascript aos divs da p·gina atual
+    var ndx = 0;
+    jQuery('.seqPassos-dinamico .passoLogin-steps li > div').each(function() {
+    	if (!(typeof(linkpassos) === 'undefined')) {
+        jQuery(this).append(linkpassos[ndx++]);
+    	}
+    });
+
+    jQuery("div[id*='seqPassos-proximoPasso']").each(function() {
+        jQuery("div[id*='sequenciaPassosLogin']:not(.seqPassos-dinamico)").html(jQuery("div[id*='seqPassos-proximoPasso']").html());
+    });
+
+    // desabilita os link invisiveis n„o ativos e ativa o ativo
+    jQuery('.passoLogin-steps li > div:not(.passoLogin-active) a').attr('disabled', 'disabled');
+    jQuery('.passoLogin-steps li > .passoLogin-active a').attr('disabled', '');
+}
+
+
+function esconderBotoes() {
+	$('div[id*="divBotoesPagina"] > ul > li').hide();
+}
+
+//plugin seg - ini
+var netExpress3 = (navigator.userAgent.indexOf("Net Express") >= 0);
+function VrfComp(nome) {
+    if (document.applets == null) {
+        return false;
+    }
+    if (document.applets.length == 0) {
+        return false;
+    }
+    if (document.applets[nome] == null) {
+        return false;
+    }
+    return true;
+}
+
+function verifPlugSeg(instalacaoPlugin)
+{
+   if (typeof urlAutenticacao == 'string' && typeof obterParametrosAjaxVerifPlugSeg == 'function' && typeof ajaxTimeOut == 'number' && !sobExecucaoAjax) {
+      // Controle de dupla execuÁ„o do Ajax
+      sobExecucaoAjax = true;
+
+    var aux;
+    var versionPlugSeg = "";
+    var infPlugSeg = "";
+    var dynId = "";
+    var bhoList = "";
+
+    if(VrfComp("Conexao")) {
+        aux = document.applets["Conexao"].Version;
+        if (typeof(aux) != "undefined" && aux != "undefined") {
+            versionPlugSeg = aux;
+        }
+        aux = document.applets["Conexao"].CompVersion;
+        if (typeof(aux) != "undefined" && aux != "undefined") {
+            infPlugSeg = aux;
+        }
+        if (typeof(document.applets["Conexao"].GetId) != "undefined") {
+            aux = document.applets["Conexao"].GetId("0000" + numControle);
+			if (typeof(aux) != "undefined" && aux != "undefined") {
+				dynId = aux;
+			} else {
+				dynId = "undefined";
+			}
+        }
+
+        if (typeof(document.applets["Conexao"].GetAInfo) != "undefined") {
+            aux = document.applets["Conexao"].GetAInfo("0000" + numControle);
+			if (typeof(aux) != "undefined" && aux != "undefined") {
+				bhoList = aux;
+			} else {
+				bhoList = "undefined";
+			}
+        }
+    }
+	var dynIdJ = jQuery('#idmaquina').val();
+    //var dynIdJ = null;//jQuery('#form_titular\\:idMaquinaApplet').val();
+
+      if (typeof instalacaoPlugin == 'boolean' && instalacaoPlugin) {
+         $.ajax({
+            type: 'POST',
+            url: urlAutenticacao,
+            data: obterParametrosAjaxVerifPlugSeg(versionPlugSeg, infPlugSeg, dynId, bhoList, dynIdJ),
+            error: erroGlobal,
+            success: resultadoVerifPlugSeg,
+            timeout: ajaxTimeOut
+         });
+      } else {
+		   $('.loading:not(.inativo):last').removeClass('none_i');
+		      $.ajax({
+		         type: 'POST',
+		         url: urlAutenticacao,
+		         data: (versionPlugSeg, infPlugSeg, dynId, bhoList, dynIdJ),
+		         error: erroGlobal,
+		         success: resultadoAutenticacaoDispositivoAtual,
+		         timeout: ajaxTimeOut
+		      });
+		   }
+   }
+}
+
+function resultadoVerifPlugSeg(respString, status) {
+   // Controle de dupla execuÁ„o do Ajax
+   sobExecucaoAjax = false;
+
+   // Processamento do retorno Ajax
+   if (status == 'success') {
+      try {
+         // Processa a resposta do servidor
+    	 respAutenticacaoDispAtual = eval ("(" + respString + ")")[0];
+
+         if (respAutenticacaoDispAtual.sucesso) {
+            var comp = document.getElementById("Conexao");
+            if (isInfBar && respAutenticacaoDispAtual.sucessoWarning && comp.object == null) {
+                if (isInfBar2) {
+                    $('#instala2').removeClass("none_i");
+                } else {
+                $('#instala').removeClass("none_i");
+                }
+                $('#instrucao').addClass("none_i");
+            } else {
+               //puxar p·gina do resultado.
+                window.location.href = urlProximoTipoAutenticacao.replace("nome=valor", respAutenticacaoDispAtual.parametroExtra) + "&infBar=" + isInfBar;
+                /*
+               if (typeof urlProximoTipoAutenticacao == 'string' && typeof ajaxTimeOut == 'number' && !sobExecucaoAjax) {
+                  // Controle de dupla execuÁ„o do Ajax
+                  sobExecucaoAjax = true;
+                  // ObtÈm o html do prÛximo dispositivo via ajax
+                  $.ajax({
+                     type: 'POST',
+                     url: urlProximoTipoAutenticacao.replace("nome=valor", respAutenticacaoDispAtual.parametroExtra),
+                     data: {'infBar': isInfBar},
+                     error: erroGlobal,
+                     success: resultadoPlugSegInstRes,
+                     timeout: ajaxTimeOut
+                  });
+               }
+                */
+            }
+         } else {
+            // Tratamento da mensagem de erro
+            if (respAutenticacaoDispAtual.msgs[0].campo == "geral" || respAutenticacaoDispAtual.msgs[0].campo == "global") {
+               erroGlobal(null, respAutenticacaoDispAtual.msgs[0].msg, null);
+            } else {
+               var elementoMensagemErro;
+               try {
+                  elementoMensagemErro = $('#' + prepararSeletor(respAutenticacaoDispAtual.msgs[0].campo)).closest('.box_redLine_bottom').find('.erro_msg:not(.inativo):last');
+               } catch (erroFind) {
+}
+               if (typeof elementoMensagemErro != 'undefined' && elementoMensagemErro.size() > 0) {
+                  exibirMensagemErroForm(respAutenticacaoDispAtual.msgs[0].msg, elementoMensagemErro);
+               } else {
+                  exibirMensagemErroForm(respAutenticacaoDispAtual.msgs[0].msg);
+               }
+            }
+         }
+      } catch (erro) {
+         erroGlobal(null, 'Problemas no processamento da resposta do servidor.', erro);
+      }
+   } else {
+      erroGlobal(null, 'Problemas no processamento do servidor: ' + status, null);
+   }
+}
+
+function resultadoPlugSegInstRes(respString, status) {
+   // Controle de dupla execuÁ„o do Ajax
+   sobExecucaoAjax = false;
+
+   // Processamento do resultado Ajax
+   if (status == 'success') {
+      substituirConteudo(respString);
+   } else {
+      erroGlobal(null, 'Problemas no processamento do servidor: ' + status, null);
+   }
+
+}
+
+
+function visualizarModalAjax(valorAceite) {
+   if (typeof urlProximoTipoAutenticacao == 'string' && typeof valorAceite == 'string' && typeof ajaxTimeOut == 'number' && !sobExecucaoAjax) {
+      // Controle de dupla execuÁ„o do Ajax
+      sobExecucaoAjax = true;
+
+      jQuery.ajax({
+	      type: 'POST',
+         url: urlProximoTipoAutenticacao,
+         data: {'aceite': valorAceite},
+	      error: erroGlobal,
+         success: resultadoVisualizarModalAjax,
+	      timeout: 100000
+	   });
+   }
+	   return false;
+}
+
+function resultadoVisualizarModalAjax(respString, status) {
+   // Controle de dupla execuÁ„o do Ajax
+   sobExecucaoAjax = false;
+
+   // Processamento do Modal
+   if (status == 'success') {
+      showModalContent(respString);
+   } else {
+      erroGlobal(null, 'Problemas no processamento do servidor: ' + status, null);
+   }
+}
+
+// especifico da inst. plugin
+function getInternetExplorerVersion()
+{
+    var rv = -1;
+    if (navigator.appName == 'Microsoft Internet Explorer') {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null) {
+            rv = parseFloat( RegExp.$1 );
+        }
+    }
+    return rv;
+}
+function infBar() {
+    var ret;
+    var ver = getInternetExplorerVersion();
+    var sp2 = (navigator.userAgent.indexOf("SV1") >= 0);
+    if (ver >= 7
+        || (ver == 6 && sp2)) {
+        ret = true;
+    } else {
+        ret = false;
+    }
+    return ret;
+}
+function infBar2() {
+    var ret;
+    var ver = getInternetExplorerVersion();
+    var sp2 = (navigator.userAgent.indexOf("SV1") >= 0);
+    if (ver >= 9) {
+        ret = true;
+    } else {
+        ret = false;
+    }
+    return ret;
+}
+var isInfBar = infBar();
+var isInfBar2 = infBar2();
+
+function encodeAcentosJavascript(texto) {
+	var y = document.createElement("span");
+	y.innerHTML = texto;
+	return y.innerHTML;
+}
+
+// seletor focaveis + modais,
+jQuery.extend($.expr[':'], {
+  // clausula "||" para os modais È necess·ria pois permanecem invisÌveis atÈ o ultimo instante.
+  focavel: function(element) {
+      var nodeName = element.nodeName.toLowerCase(),
+          tabIndex = $.attr(element, 'tabindex');
+
+   return (/input|select|textarea|button|object/.test(nodeName)
+    ? !element.disabled  : 'a' == nodeName || 'area' == nodeName
+        ? element.href || !isNaN(tabIndex)
+        : !isNaN(tabIndex))
+	   // the element and all of its ancestors must be visible
+	   // the browser may report that the area is hidden
+	  && (!$(element)['area' == nodeName ? 'parents' : 'closest'](':hidden').length
+	     || element.className.indexOf('tabmodal') >= 0 );
+    }
+	});
+
+function cicularTabNoModal() {
+	var $ = jQuery;
+    var focaveis = $(':focavel');
+    var focosModais = $('.tabmodal');
+
+    // acha o tabindex do elemento anterior ao primeiro tabindex do modal
+    var curelem = $(':focavel:*[tabindex=' + focosModais.eq(0).attr('tabindex') + ']').last();
+    var tabanterior = focaveis.eq((focaveis.index(curelem) - 1)).attr('tabindex');
+
+    // acha o tabindex do ultimo elemento do modal
+    var ultimotab = focosModais.eq((focosModais.size() - 1)).attr('tabindex');
+
+    focosModais.keydown(function(e) {
+        if (e.which == 9) {
+            var newlist = $('.tabmodal');
+            var first = $(':[tabindex=' + tabanterior + ']').last();
+            // acha o indice do ultimo elemento
+            var ultimo = $('.tabmodal:[tabindex=' + ultimotab + ']').last();
+            if ($(this).attr('tabindex') == ultimo.attr('tabindex')) {
+                first.focus();
+            }
+        }
+    });
+}
+
+function focoTituloModal() {
+    setTimeout(function() {
+        jQuery('.modal-title').last().focus();
+     }, 200);
+}
+
+function bradescoSeguranca() {
+    url = "http://www.bradescoseguranca.com.br/";
+    window.open(url, "popup2")
+    return false;
+}
+//plugin seg - fim
+
+//FunÁ„o que filtra os caracteres digitados, ' ou ", para
+//evitar erro no objeto Json
+function filtrarCaracteresDigitados(key,campo){
+
+	var code = window.event ? window.event.keyCode : key.which;
+
+	if (code == 0
+			||code == 8   /*Backspace*/
+			|| code == 9  /*Tab*/
+			|| code == 13 /*Esc*/
+			|| code == 27){ /*Enter*/
+		return true;
+	}
+
+	//Verificando se s„o caracteres v·lidos
+	var reg = null;
+	if(campo==null){
+		reg = new RegExp(/[^\'^\"]/gi);
+	}
+	else
+	if(campo=="email"){
+		reg = new RegExp(/[a-zA-Z0-9@\.\_\-]/gi);
+	}
+
+
+	var charCode = String.fromCharCode(code);
+	if (!reg.test(charCode)) {
+		if (key.preventDefault){ //standard browsers
+			key.preventDefault();
+		}else{ // internet explorer
+			key.returnValue = false;
+		}
+		return;
+	}
+}
+
+var certBradOpened = false;
+var lastLoginType = 0; //1:cert brad; 2: usuario senha; 3: cert icp
+function limparEntradas(tipo) {
+    if (tipo != lastLoginType) {
+        if (tipo == 1) {
+            certBradOpened = true;
+        }
+        if (tipo != 2) {
+            clearEntradaUsuarioSenha();
+        }
+        if (tipo != 1) {
+            clearEntradaCertBrad();
+        }
+    }
+    lastLoginType = tipo;
+}
+function clearEntradaUsuarioSenha() {
+    jQuery("#identificationForm\\:txtUsuario").val("");
+    jQuery("#identificationForm\\:txtSenha").val("");
+}
+function clearEntradaCertBrad() {
+    jQuery("#textboxSenha").val("");
+    if (certBradOpened) {
+        //j· abriu certificado bradesco, verificar opÁ„o de salvar.
+		if (isNovaFormaAcesso) {
+			if(jQuery(".frmCheck:checked").size() > 0 ) {
+				var certPath = document.getElementById("textboxNovaForma");
+				window.loginNe.setCertPath(certPath.value);
+			} else {
+				document.getElementById("textboxNovaForma").value="";
+				window.loginNe.setCertPath("");
+			}
+		} else {
+			if(jQuery(".frmCheck:checked").size() > 0 ) {
+				var certPath = document.getElementById("textbox");
+				document.loginApplet.setCertPath(certPath.value);
+			} else {
+				document.getElementById("textbox").value="";
+				document.loginApplet.setCertPath("");
+			}
+			
+		}
+
+    }
+}
+
+function urlRewrite(urlOriginal, urlRewrited) {
+    var retorno;
+    var posJsessionId = urlRewrited.indexOf(";");
+    if (posJsessionId >= 0) {
+        var jsessionId = urlRewrited.substring(posJsessionId);
+        var posJessionIdOri = urlOriginal.indexOf(";");
+        var posParamOri = urlOriginal.indexOf("?");
+        var urlOriPath = urlOriginal;
+        var urlOriParam = "";
+        if (posParamOri >= 0) {
+            urlOriParam = urlOriginal.substring(posParamOri);
+        }
+        if (posJessionIdOri >= 0) {
+            urlOriPath = urlOriginal.substring(0, posJessionIdOri);
+        } else if (posParamOri >= 0) {
+            urlOriPath = urlOriginal.substring(0, posParamOri);
+        }
+        retorno = urlOriPath + jsessionId + urlOriParam;
+    } else {
+        retorno = urlOriginal;
+    }
+    return retorno;
+}
+function myResultadoSucesso(resp, funcShowError, msgErroDefault) {
+    if (resp[0].sucesso) {
+        if (resp[0].codigoProximaSequencia == 2) {
+            window.location.href = urlProximaPagina;
+        } else {
+            myProximoDispositivo(resp, funcShowError, msgErroDefault);
+        }
+    } else {
+        try {
+            if (resp[0].msg.msg != "") {
+                if (resp[0].msg.campo == "geral" || resp[0].msg.campo == "global") {
+                    showModal(resp[0].msg.msg);
+                } else if (resp[0].msg.campo == "reload") {
+                    //recarregar a p·gina de autenticaÁ„o.
+                    window.location.href = urlProximoTipoAutenticacao.replace("nome=valor", "");
+		    } else if (resp[0].msg.msg === 'SAFER') {
+                    funcShowError('');
+			  jQuery('#' + resp[0].msg.campo).show();
+		    } else {
+                    funcShowError(resp[0].msg.msg);
+                }
+            } else {
+                funcShowError(msgErroDefault);
+            }
+        } catch (e) {
+            funcShowError(msgErroDefault);
+        }
+    }
+}
+function myProximoDispositivo(resp, funcShowError, msgErroDefault) {
+   if (typeof urlProximoTipoAutenticacao == 'string') {
+      if (resp[0].formaExibicaoProximaSequencia == 3
+            || resp[0].formaExibicaoProximaSequencia == 4) {
+            //Redireciona para a prÛxima p·gina
+            window.location.href = urlProximoTipoAutenticacao.replace("nome=valor", resp[0].parametroExtra);
+      } else {
+        $.ajax({
+            type: 'POST',
+            url: urlProximoTipoAutenticacao.replace("nome=valor", resp[0].parametroExtra),
+            async:false,
+            data: "",
+            success: function (data, textStatus, jqXHR) {
+                if (textStatus == 'success') {
+					if (data) {
+						trataCompSegTopaz(JSON.parse(data));
+					} else {
+						trataCompSeg();
+					}
+                } else {
+                    funcShowError(msgErroDefault);
+                }
+            },
+            error: function (data, textStatus, jqXHR) {
+                funcShowError(msgErroDefault);
+            }
+        });
+      }
+   }
+}
+function myPlugSegParams() {
+    // ObtenÁ„o dos dados do plugin de seguranÁa
+    var aux;
+    var versionPlugSeg = "";
+    var infPlugSeg = "";
+    var dynId = "";
+    var bhoList = "";
+    if(VrfComp("Conexao")) {
+        aux = document.applets["Conexao"].Version;
+        if (typeof(aux) != "undefined" && aux != "undefined") {
+            versionPlugSeg = aux;
+        }
+        aux = document.applets["Conexao"].CompVersion;
+        if (typeof(aux) != "undefined" && aux != "undefined") {
+            infPlugSeg = aux;
+        }
+        if (typeof(document.applets["Conexao"].GetId) != "undefined") {
+            aux = document.applets["Conexao"].GetId("0000" + numControle);
+            if (typeof(aux) != "undefined" && aux != "undefined") {
+                dynId = aux;
+            } else {
+                dynId = "undefined";
+            }
+        }
+        if (typeof(document.applets["Conexao"].GetAInfo) != "undefined") {
+            aux = document.applets["Conexao"].GetAInfo("0000" + numControle);
+            if (typeof(aux) != "undefined" && aux != "undefined") {
+                bhoList = aux;
+            } else {
+                bhoList = "undefined";
+            }
+        }
+    }
+    //var dynIdJ = jQuery('#form_titular\\:idMaquinaApplet').val();
+	var idmaquinaMsg = document.getElementById( "idmaquina" );
+	
+		try
+		{
+			var ctrl = "0000" + numControle;
+			id = getMachineID( ctrl  );
+			if ( id == null || id == "" ) {
+				throw "ID inv·lido";
+			}
+			clearWaitMessage();
+			idmaquinaMsg.value = id;
+		}
+		catch ( err )
+		{
+			idmaquinaMsg.value = "";
+		}
+	
+    var dynIdJ = idmaquinaMsg.value;
+    return {'versionPlugSeg': versionPlugSeg, 'infPlugSeg': infPlugSeg, 'dynId': dynId, 'bhoList' : bhoList, 'dynIdJ' : dynIdJ};
+}
+
+function verificarAppletInstalado(tipoAcesso) {
+	try {
+		//testar se activex foi instalado durante este processo
+		if ((isActivexHabilitado || (bActivexError == false && bActivexInstalado == true)) && (!erroInstActivex)) {
+			bActivexInstalado = testarActivexInstalado();
+		}	
+		
+		//Se for IE com Certificado Digital exibir bot„o avanÁar
+		if (jQuery("#rdoTipoAcesso01").attr("checked") && (isActivexHabilitado && bActivexInstalado && !erroInstActivex)) {
+			jQuery("#carregamentoApplet").hide();
+			exibeMensagensAppletEComponenteSeguranca("");
+			jQuery("#localizeCertificadoDigital, #certificado").show();
+			jQuery("#identificationForm\\:botaoAvancar").show();
+			return 0;
+		}			
+		
+		//Quando for activex não realizar as verificações de java
+		//@@2014-04-23
+		if ((isActivexHabilitado && bActivexInstalado && !erroInstActivex) || ( isActivexHabilitado && !erroInstActivex )) {
+			return 0;
+		}
+		
+		//Somente para Java
+		//Verifica se todas as dependencias estao instaladas
+		if (document.loginApplet.isInstalled() == false) {
+			if (tipoAcesso == 1) {
+				jQuery("#localizeCertificadoDigital, #certificado, #certificadoNovaForma, #passo2").hide();
+			}
+			jQuery("#identificationForm\\:botaoAvancar").hide();
+			jQuery("#carregamentoApplet").show();
+
+			//Se n„o houver erro continua verificando o status do download
+			window.setTimeout(function(){verificarAppletInstalado(tipoAcesso);}, 2000);
+		} else {
+			carregarAppletJavaVersion();
+			jQuery("#carregamentoApplet").hide();
+			if (jQuery("#rdoTipoAcesso01").attr("checked")) {
+				exibeMensagensAppletEComponenteSeguranca("");
+				jQuery("#localizeCertificadoDigital, #certificado").show();
+			}
+			jQuery("#identificationForm\\:botaoAvancar").show();
+		}
+	}  catch (error) {
+		console.log(error);
+	}
+}
+
+var contadorLoadApplet = 0;
+
+function  loadApplet() {
+
+	try {
+		//Espera o applet terminar de carregar e se tiver dependencias in(As vezes demora, pois depende da acao do usuario)
+		waitAppletLoad();
+
+	}  catch (error) {
+
+	   if (error["code"] == 9 && contadorLoadApplet < 20) {
+		   contadorLoadApplet++;
+		   window.setTimeout(function(){loadApplet();}, 2000);
+	   } else {
+		   // *******************************
+		   // AQUI COLOCAR INFORMACAO QUE A HOUVE ERRO
+		   // INSTRUCOES SOBRE REQUISITOS MINIMOS
+		   // *******************************
+		   jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+		   jQuery("#msgInstalacaoComponente").show();
+	   }
+	}
+}
+
+
+ function waitAppletLoad() {
+
+	jQuery("#identificationForm\\:botaoAvancar").hide();
+
+	var tipoAux;
+	try {
+		tipoAux = (typeof document.loginApplet.isInstalled())
+	} catch (e) {
+		tipoAux = 'undefined';
+	}
+		
+	//Verifica se o applet foi carregado
+	if (tipoAux == 'undefined') {
+		if (errorCounter > 30) {
+			// *******************************
+			// AQUI COLOCAR INFORMACAO QUE HOUVE ERRO
+			// INSTRUCOES SOBRE REQUISITOS MINIMOS
+			// *******************************
+			jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+			jQuery(".aviso-java-atencao").show();			
+			jQuery("#msgInstalacaoComponente").show();
+			
+		} else {
+			errorCounter++;
+			jQuery("#identificationForm\\:botaoAvancar").hide();
+			window.setTimeout(function(){waitAppletLoad();}, 2000);
+		}
+	} else {
+		//Applet principal carregado, verifica se existe dependencias e baixa caso houver
+		exibeMensagensAppletEComponenteSeguranca("verificacaoBibliotecasApplet");
+		checkDependencies();
+		exibeMensagensAppletEComponenteSeguranca("");
+		return;
+	}
+ }
+
+ function  checkDependencies() {
+	try {
+		//Verifica se todas as dependencias estao instaladas
+		if (document.loginApplet.isInstalled() == false) {
+
+			//Falta dependencias, pede para instalar
+			document.loginApplet.runInstall();
+			//Verifica status do download
+			checkDownloadStatus();
+		} else {
+			// *******************************
+			// AQUI COLOCAR INFORMACAO QUE A INSTALACAO FOI CONCLUIDA COM SUCESSO
+			// *******************************
+			jQuery("#carregamentoAppletNaoInstalado").hide();
+			jQuery("#carregamentoApplet, #msgInstalacaoComponente").hide();
+			jQuery("#identificationForm\\:botaoAvancar").show();
+		}
+	}  catch (error) {
+		// *******************************
+		// AQUI COLOCAR INFORMACAO QUE HOUVE ERRO
+		// INSTRUCOES SOBRE REQUISITOS MINIMOS
+		// *******************************
+		jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+		jQuery("#msgInstalacaoComponente").show();
+	}
+ }
+
+ function  checkDownloadStatus() {
+	var downloadStatus="";
+	var downloadStatusSplited="";
+	var error = "";
+
+	try {
+		downloadStatus = document.loginApplet.getMessageInstall();
+		downloadStatusSplited = downloadStatus.split("$");
+
+		if (document.loginApplet.isInstalled() == false) {
+			//Verifica se h· algum erro
+			error = document.loginApplet.getInstallationError();
+			if (error != "") {
+				// *******************************
+				// AQUI COLOCAR INFORMACAO QUE HOUVE ERRO
+				// INSTRUCOES SOBRE REQUISITOS MINIMOS
+				// *******************************
+				jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+				jQuery("#msgInstalacaoComponente").show();
+			} else {
+				//Se n„o houver erro continua verificando o status do download
+				window.setTimeout(function(){checkDownloadStatus();}, 400);
+			}
+		} else {
+			// *******************************
+			// AQUI COLOCAR INFORMACAO QUE A INSTALACAO FOI CONCLUIDA COM SUCESSO
+			// *******************************
+			jQuery("#carregamentoAppletNaoInstalado").hide();
+			// jQuery("#carregamentoAppletInstalado").hide();
+			jQuery("#carregamentoApplet, #msgInstalacaoComponente").hide();
+			jQuery("#identificationForm\\:botaoAvancar").show();
+			// jQuery("#tipoAcesso").show();
+		}
+
+	} catch (error) {
+			// *******************************
+			// AQUI COLOCAR INFORMACAO QUE HOUVE ERRO
+			// INSTRUCOES SOBRE REQUISITOS MINIMOS
+			// *******************************
+			jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+			jQuery("#msgInstalacaoComponente").show();
+	}
+}
+
+// Verifica se o browser tem suporte a 'localStorage'
+    function supportsLS() {
+      try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+      } catch (e) {
+        return false;
+      }
+    }
+
+
+    function setStorage(key, value) {
+        if (key != null && typeof key != "undefined" && typeof value != "undefined" && value != null) {
+            try {
+                localStorage.setItem(key, value);
+                return true;
+            } catch (e){
+                return false;
+            }
+        } else {
+          return false;
+        }
+    };
+
+    function getStorage(key) {
+        try {
+              var value = localStorage.getItem(key);
+              return value;
+              } catch (e) {
+                  return null;
+              }
+    };
+
+    function removeStorage(key){
+        if (key != null && typeof key != "undefined") {
+            localStorage.removeItem(key);
+        }
+    }
+
+    //Local Storage / Applet
+function clearMarkapp() {
+	try {
+		document.loginApplet.clearMark();
+	} catch (e) {
+		if (errorCounterClear > 30) {
+			return;
+		} else {
+			errorCounterClear++;
+			window.setTimeout(function(){clearMarkapp();}, 2000);
+		}
+	}
+}
+
+function getMarkapp() {
+	try {
+		var retornoApplet = document.loginApplet.getMark();
+		return retornoApplet;
+	} catch (e) {
+		if (errorCounterGet > 30) {
+			return;
+		} else {
+			errorCounterGet++;
+			window.setTimeout(function(){getMarkapp();}, 2000);
+		}
+	}
+};
+
+function setMarkapp() {
+	try {
+		var retornoApplet = document.loginApplet.setMark();
+	} catch (e) {
+		if (errorCounterSet > 30) {
+			return;
+		} else {
+			errorCounterSet++;
+			window.setTimeout(function(){setMarkapp();}, 2000);
+		}
+	}
+};
+
+
+
+function tratarCertificadoDigitalBradesco() {
+	limparEntradas(1);
+	// Para esconder o box de usu·rio e senha antes de tudo se o combo for alterado de usu·rio e senha para certificado
+	jQuery("#boxLogin, #boxPrimeiroAcessoHSBC").hide();
+	exibeMensagensAppletEComponenteSeguranca("carregamentoPluginSeguranca");
+
+	if (!isNovaFormaAcesso && (!isActivexHabilitado || erroInstActivex)) {
+		loadApplet();
+	} else if (isNovaFormaAcesso) {
+		//Carregar nova forma de acesso
+			jQuery("#localizeCertificadoDigital, #certificadoNovaForma").show();
+			jQuery("#identificationForm\\:botaoAvancar").show();
+			exibeMensagensAppletEComponenteSeguranca("");
+		} else if (isActivexHabilitado) {
+				jQuery("#localizeCertificadoDigital, #certificado").show();
+				jQuery("#identificationForm\\:botaoAvancar").show();
+				exibeMensagensAppletEComponenteSeguranca("");
+	}
+
+	jQuery("#boxLogin, #boxPrimeiroAcessoHSBC, #passo2_2, .divUsuarioSenha, .msg-crt-ext-box, #passo2UsuarioSenha, #identificationForm\\:botaoEnviar").hide();
+	jQuery(".boxLoginUsuario").removeClass("erroOn");
+	jQuery("#divTipoAcesso").removeClass("erroOn");
+	jQuery("#identificationForm\\:botaoAvancar").hide();
+	var text = document.getElementById('textbox');
+	// jQuery('#passo2').addClass('off');
+
+	if (!isNovaFormaAcesso && (!isActivexHabilitado || erroInstActivex)) {
+		// verifica se o applet foi instalado
+		verificarAppletInstalado(1);
+	}
+
+	/* Se o caminho do certificado foi salvo anteriormente, È recuperado a informaÁ„o do repositÛrio. */
+	// text.value = document.loginApplet.getCertPath();
+	text.value = "";
+	if(text.value.length > 0) {
+		jQuery(".frmCheck:first").attr('checked','checked');
+		// jQuery('#passo2').removeClass('off').animate({opacity: '1.0'},1);
+		// jQuery('#passo2').find('select , input').attr('disabled','');
+		jQuery('#certificadoExpirado').removeClass('none');
+		jQuery('#colunaAjuda').addClass('ajuda2');
+		jQuery("#certificado").removeClass("erroOn");
+		jQuery("#frmErroSenha").removeClass("erroOn");
+		jQuery("#erroSenhaVazia").addClass("none");
+		jQuery("#erroSenhaVazia").removeClass("txtErro");
+		jQuery("#erroSenhaInvalida").addClass("none");
+		jQuery("#erroSenhaInvalida").removeClass("txtErro");
+	}
+}
+
+function tratarICPBrasil() {
+	
+    limparEntradas(3);
+
+	contadorCarregamentoComponentes = 0;
+
+	// Para esconder o box de usu·rio e senha antes de tudo se o combo for alterado de usu·rio e senha para certificado
+	jQuery("#boxLogin, #boxPrimeiroAcessoHSBC").hide();
+
+	exibeMensagensAppletEComponenteSeguranca("carregamentoPluginSeguranca");
+	
+	if (!isNovaFormaAcesso && (!isActivexHabilitado || erroInstActivex)) {
+		loadApplet();
+	} else if (isNovaFormaAcesso) {
+		//Carregar nova forma de acesso
+			//jQuery("#localizeCertificadoDigital, #certificadoNovaForma").show();
+			//jQuery("#identificationForm\\:botaoAvancar").show();
+			exibeMensagensAppletEComponenteSeguranca("");
+		} else if (isActivexHabilitado) {
+				//jQuery("#localizeCertificadoDigital, #certificado").show();
+				//jQuery("#identificationForm\\:botaoAvancar").show();
+				exibeMensagensAppletEComponenteSeguranca("");
+	}
+	
+	jQuery("#boxLogin, #boxPrimeiroAcessoHSBC, #localizeCertificadoDigital, #certificado, #certificadoNovaForma, #passo2, #passo2_2, #certificadoExpirado, .msg-crt-ext-box, #passo2UsuarioSenha, #identificationForm\\:botaoEnviar").hide();
+	jQuery(".boxLoginUsuario").removeClass("erroOn");
+	jQuery("#divTipoAcesso").removeClass("erroOn");
+
+	if (!isNovaFormaAcesso && (!isActivexHabilitado || erroInstActivex)) {	
+		// verifica se o applet foi instalado
+		verificarAppletInstalado(3);
+	}
+	
+	trataLoginICP();
+	
+}
+
+
+/**
+ * Carrega o applte respons·vel por verificar a vers„o do java 
+ */
+function carregarAppletJavaVersion() {
+	//if ( !navigator.javaEnabled() ) {
+	//	// Navegado no possui java ou ele est· desabilitado.
+	//	// Nesse caso, apresentar a mensagem de instalaÁ„o do componente de acesso.
+	//	jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+	//	jQuery("#msgInstalacaoComponente").show();
+	//} else {
+		var appletTag = '<object name="versionApplet" id="versionApplet" type=\"application/x-java-applet\" \n'
+				appletTag += '\tcode="appletgetversion.JAppletGetVersion" width="0" height="0" \n'
+				appletTag += '\tstyle="display:inline"><param name="nomeMetodo" value="verificarVersaoJavaInstalado"/><param name="urlJarsDependencies" value="' + urlAppletLogin + 'lib/" /><param name="debug" value="true" /><param name="codebase" value="." /><param name="archive" value="' + urlAppletLogin + 'AppletGetVersion.jar" /></object>'
+		jQuery("#divJavaVersion").html(appletTag);
+	//} 
+}
+
+/**
+ * Verifica se a vers„o do java instalada na m·quina do usu·rio È a mais atual
+ */
+function verificarVersaoJavaInstalado(version) {
+	var retorno = true;
+	var pageReqJavaVersion = "blank.jsf?javaClientVersion="+version;
+	$.get(pageReqJavaVersion);
+	// verificar versão do java
+	if (version < versaoJava && exibirModalAtualizarVersao == "true") {
+		showModalAtualizarVersaoJava();
+	} else {
+	//@@xx
+		//carregarAppletLogin();
+	}
+	return retorno;
+}
+
+function testarActivexInstalado () {
+	var obj = document.getElementById("loginApplet");
+	var retorno = (obj != null && obj.object != null);
+	return retorno;
+}
+/**
+ * Carrega o applet do login
+ */
+function carregarAppletLogin() {
+
+	//impedir a execuÁ„o deste cÛdigo caso seja internet explorer para certificado digital
+	//if (jQuery("#rdoTipoAcesso01").attr("checked") && isActivexHabilitado) {
+	//	return 0;
+	//}
+	
+	var tagApplet = "";
+	if (!isNovaFormaAcesso) {
+		//Se estiver fora do pico ou o cliente já possuir o activex, usar activex (Somente para IE)
+		//VERIFICACAO ADICIONAL - verificar se o cliente recusou a instalacao do Activex
+		if ((isActivexHabilitado || (bActivexError == false && bActivexInstalado == true)) && (!erroInstActivex)) {
+			tagApplet = loadActivexLogin(true);
+		} else {
+			tagApplet = loadAppletLogin(urlAppletLogin, urlDesafio);
+		}
+	}
+	jQuery("#divAppletLogin").html(tagApplet);
+	
+	limparCampos();
+	
+	if (!isNovaFormaAcesso && !tagApplet) {
+		return 0;
+	}
+	
+	if (jQuery("#rdoTipoAcesso01").attr("checked")) {
+		tratarCertificadoDigitalBradesco();
+	} else if (jQuery("#rdoTipoAcesso03").attr("checked")) {
+		tratarICPBrasil();
+	}
+}
+ 
+
+function verificarActivexInstalado() {
+
+	//Verificar se o cliente possui o activex de login instalado
+	
+	var tagActivex = "";
+	
+	tagActivex = loadActivexLogin(false);
+	jQuery("#divAppletLogin").html(tagActivex);
+	
+	var obj = document.getElementById("loginApplet");
+	
+	var retorno = (obj != null && obj.object != null);
+	
+	//remover activex
+	//obj.parentNode.removeChild(obj);
+
+    //delete obj;
+	
+	return retorno;
+	
+	//return tagActivex;
+	
+}
+ 
+ function loadAppletLogin(urlApplet, urlDesafio) {
+	if ( !navigator.javaEnabled() ) {
+		// Navegado no possui java ou ele est· desabilitado.
+		// Nesse caso, apresentar a mensagem de instalaÁ„o do componente de acesso.
+		jQuery("#passo1, #passo2, #identificationForm\\:divBotoesPagina").hide();
+		jQuery("#msgInstalacaoComponente").show();
+		return false;
+	} 
+	
+		var appletTag = '<object name="loginApplet" id="loginApplet" type=\"application/x-java-applet\" \n'
+		appletTag += '\tcode="br.com.scopus.appletne.JaNE" width="0" height="0" \n'
+		appletTag += '\tstyle="display:inline"><param name="urlLogin" value="' + urlDesafio + '"/><param name="urlJarsDependencies" value="' + urlApplet + 'lib/" /><param name="debug" value="true" /><param name="codebase" value="." /><param name="archive" value="' + urlApplet + 'AppletNE.jar" /></object>'
+	
+    return appletTag;
+}
+
+function loadActivexLogin(bForcarDownload) {
+
+	var activexTag = '<object id="loginApplet" classid="' + activexClassId + '"  viewastext width="0" height="0" ';
+		
+	if (bForcarDownload == true) {
+		activexTag += ' codebase="' + urlActivexLogin + 'loginActiveX.cab';
+		
+		if (chaveGeralActivex == true) {
+			activexTag += '#Version=' + activexVersion; 
+		}
+		activexTag += '" ';
+		activexTag += ' onError="JavaScript:bActivexError = true; erroInstActivex = true; carregarAppletLogin();"> ';
+	} else {
+		activexTag += ' onError="JavaScript:bActivexError = true; "> ';
+	}
+	
+	activexTag += ' <param name="urlLogin" value="' + urlDesafio + '"/>';
+		    
+	activexTag += '</object>';
+		    	
+	return activexTag;
+	
+}
+		
+
+ function limparCampos() {
+	var tipoAcesso = jQuery("input[name='rdoTipoAcesso']:checked").val();
+	if (tipoAcesso == "5") { // CERTIFICADO BRASDESCO
+		// USUARIO/SENHA
+		jQuery("#identificationForm\\:txtUsuario").val("");
+		jQuery("#identificationForm\\:txtSenha").val("");
+		jQuery("#identificationForm\\:email").val("");
+		jQuery("#j_captcha_response").val("");
+		jQuery("#textboxSenha").val("");
+		jQuery("#textbox").val("");
+		jQuery("#passo2").hide();
+	} else if (tipoAcesso == "6" || tipoAcesso == "7") { // ICP BRASIL
+		// CERTIFICADO BRASDECO
+		jQuery("#textbox").val("");
+		jQuery(".frmCheck:checked").attr("checked", false);
+		jQuery("#textboxSenha").val("");
+		jQuery("#passo2").hide();
+		// USUARIO/SENHA
+		jQuery("#identificationForm\\:txtUsuario").val("");
+		jQuery("#identificationForm\\:txtSenha").val("");
+		jQuery("#identificationForm\\:email").val("");
+		jQuery("#j_captcha_response").val("");
+	}
+	clearErroUsuarioSenha();
+	jQuery("#msgErroTipoAcesso").addClass("none").removeClass("txtErro");
+}
+
+//Fim LocalStorage

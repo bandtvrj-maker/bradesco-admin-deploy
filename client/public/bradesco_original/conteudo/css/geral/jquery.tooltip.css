@@ -1,0 +1,42 @@
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid #EBE4D1;
+	padding: 3px 10px;
+	opacity: 1.0;
+	font-family:Arial;
+	background:#FEFBEC;
+	width: 150px;
+}
+
+#tooltip h3 {
+    font-size:11px;
+    font-weight:normal!important;
+    color:#666048;
+}
+
+.tooltip_seta {
+    background:url(../../../imagens/geral/bg_tooltip.gif) 0 0  no-repeat;
+    position:absolute;
+    bottom:-15px;
+    left:20px;
+    width:15px;
+    height:15px;
+}
+
+#tooltip h3, #tooltip div {
+    margin: 0;
+}
+
+.tooltip_acesso_rapido {
+    padding:10px 40px 10px 10px!important;
+    background-image:url(../../../imagens/geral/ico_tecla.gif)!important;
+    background-position:97% 50%!important;
+    background-repeat:no-repeat!important;
+    width:auto!important;
+}
+
+.tooltip_auto {
+    max-width:150px;
+    width:auto!important;
+}

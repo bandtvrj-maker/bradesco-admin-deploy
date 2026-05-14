@@ -1,0 +1,66 @@
+var qtdeTentativasAcessarComponente = 10; // Cada tentativa corresponde a 0,5 segundos
+var flagNovoComponenteLoaded = false;
+var cssLoaded = false;
+var aumentouTimeout = false;
+
+var imageLoadJS = new Image();
+imageLoadJS.onload = function () {
+    cssLoaded = true;
+}
+imageLoadJS.onerror = function () {
+    cssLoaded = true;
+}
+
+
+String.prototype.replaceAll = function (find, replace) {
+    var str = this;
+    return str.replace(new RegExp(find.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g'), replace);
+}
+
+jQuery(window).load(function() {
+	if (window.scpComp != null && window.scpComp.estaInstalado) {
+		hasCSScp = true;
+	} else {
+		callService(textoVerificacaoCompScopus);
+		initNovoCompseg();
+	}
+});
+
+var callbackExtra = null;
+
+function initNovoCompseg(callback) {
+    callbackExtra = callback;
+	if (window.scpComp == null) {
+		detectingServiceByCSS(funcaoSucesso, funcaoErro, 0);
+	}
+}
+
+function funcaoSucesso(info) {
+    hasCSScp = true;
+    flagNovoComponenteLoaded = true;
+    compScopusData = info;
+	
+	if (compScopusData.toLowerCase().indexOf("erro") == 0) {
+		compScopusData = "";
+	}
+
+    if (callbackExtra != null) {
+        callbackExtra();
+        callbackExtra = null;
+    }
+}
+
+function funcaoErro() {
+    if (hasCSScp == false) { // sem componente
+    //houve erro no carregamento (IE), aumenta timeout
+      if ((aumentouTimeout==false) && (qtdeTentativasAcessarComponente == 1) && (cssLoaded == false)) {
+          qtdeTentativasAcessarComponente = qtdeTentativasAcessarComponente + 24;
+          aumentouTimeout = true;
+      }
+
+      if (qtdeTentativasAcessarComponente > 0){
+          qtdeTentativasAcessarComponente--;
+          setTimeout("initNovoCompseg()", 500);
+      }
+    }
+}

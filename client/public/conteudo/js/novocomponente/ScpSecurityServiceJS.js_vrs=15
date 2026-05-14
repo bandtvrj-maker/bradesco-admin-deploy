@@ -1,0 +1,93 @@
+var qtdeTentativasAcessarComponente = 10; // Cada tentativa corresponde a 0,5 segundos
+var flagNovoComponenteLoaded = false;
+var cssLoaded = false;
+var aumentouTimeout = false;
+
+var imageDeTeste = new Image();
+imageDeTeste.onload = function () {
+	cssLoaded = true;
+}
+imageDeTeste.onerror = function () {
+	cssLoaded = true;
+}
+
+
+var portas =  [ "9134", "9135", "9136", "9137", "9138" ];
+
+function callService(dados) {
+    var prefix, posfix;
+
+    if (dados == "CDHJKSABCHASBD" || dados == null || dados == "") {
+        prefix = "ini";
+        posfix = "ini.css";
+    } else {
+        prefix = "css1";
+        posfix = "act.css";
+    }
+
+    for (i = 0; i < 5; i++) {
+        var link  = document.createElement('link');
+        link.id   = "cssComponente" + i;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.media = 'all';
+
+    }
+}
+
+function removerCss() {
+    for (i = 0; i < 5; i++) {
+        var link = document.getElementById("cssComponente" + i);
+        if (link != null) {
+            document.body.removeChild(link);
+        }
+    }
+}
+
+var serviceFoundCallbackVar, serviceNotFoundRedirecionCallbackVar, portIndexVar, indexRetry = 0, limitRetry = 6;
+
+function detectingServiceByCSS (serviceFoundCallback, serviceNotFoundRedirecionCallback, portIndex) {
+    var scpSecStyle = document.getElementById("scp");
+    var info = callServiceByCSS(scpSecStyle);
+
+    if (info == "none") {
+        if (indexRetry < limitRetry) {
+            portIndex++;
+            serviceFoundCallbackVar = serviceFoundCallback;
+            serviceNotFoundRedirecionCallbackVar = serviceNotFoundRedirecionCallback;
+            portIndexVar = portIndex;
+            setTimeout('detectingServiceByCSS(serviceFoundCallbackVar, serviceNotFoundRedirecionCallbackVar, portIndexVar)', 1000);
+        }
+        else {
+            if (limitRetry == 6 && !cssLoaded) {
+                limitRetry = 12;
+            }
+            else {
+                indexRetry = 0;
+                limitRetry = 6
+                removerCss();
+                serviceNotFoundRedirecionCallback(portIndex);
+            }
+        }
+    }
+    else {
+        var info2 = info.split(',')[1];
+        var info3 = info2.split(")")[0];
+        info = info3.replace('"', '');
+        info = info.replace("'", "");
+        removerCss();
+        serviceFoundCallback(info);
+    }
+}
+
+function callServiceByCSS (scpSecStyle) {
+    if (scpSecStyle.currentStyle) { //IE"
+        return scpSecStyle.currentStyle['backgroundImage'];
+    }
+    else if (document.defaultView && document.defaultView.getComputedStyle) { //Firefox"
+        return document.defaultView.getComputedStyle(scpSecStyle, "")['backgroundImage'];
+    }
+    else { //try and get inline style"
+        return scpSecStyle.style['backgroundImage'];
+    }
+}

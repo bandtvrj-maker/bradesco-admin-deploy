@@ -1,0 +1,14 @@
+.ac_results {border:1px solid #7A7A7A;background-color:#FFF;overflow:hidden;z-index:99999;}
+.ac_results ul {width:100%;}
+.ac_results li {padding:2px 5px;cursor:default;display:block;font:menu;font-size:12px;line-height:16px;overflow:hidden;}
+.ac_odd {background-color:#DDD;}
+.ac_over {background-color:#666;color:#FFF;}
+
+.tabAutoCompleteAG2 {table-layout:auto;border-collapse:separate;*border-collapse:collapse;font-size:0.85em;width:407px;}
+.tabAutoCompleteAG2 tbody td {color:#333333;padding:2px 15px 2px 5px;border-bottom:solid 1px #E5E5E5 !important;vertical-align:top;}
+.tabAutoCompleteAG2 tbody tr {border-bottom:solid 1px #E5E5E5 !important;}
+.tabAutoCompleteAG2 thead th {-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background:#F3F3F3 none repeat scroll 0 0;olor:#666666;padding:2px 15px 2px 5px;text-align:left;}
+.tabAutoCompleteAG2 tr {height:auto !important;}
+.tabAutoCompleteAG2 td.codigo {-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background:#E1E1E1 none repeat scroll 0 0;margin-right:10px;padding-right:5px; vertical-align:top!important}
+.tabAutoCompleteAG2 td.titulo {padding-left:15px;}
+.tabAutoCompleteAG2 .ac_over {background:#F0F0F0 none repeat scroll 0 0;cursor:pointer;}

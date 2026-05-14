@@ -1,0 +1,2537 @@
+/* AFTERS */ 
+.box_grayLine_bottom:after,
+.conteudo_pagina .boxMenuDestaque:after,
+.boxDropShadow .bgrRight .content:after,
+#boxAtendimentoOnline .bgrSombra .window .view .chat ul li:after, #boxCalculadora .bgrSombra .view .boxCalc:after,
+#boxAtendimentoOnline .bgrSombra .window .final .boxEmail:after,
+.lstImgDesc li:after {content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden;}
+
+/* TWEAKS */
+a.bTip, span.bTip {background:url(../../../imagens/geral/ico_tip.gif) no-repeat; text-indent:-9999px; height:18px; width:18px; display:inline-block; cursor:pointer;  }
+a.bTip:hover, span.bTip:hover {cursor:help !important;}
+a.senha_Tip {float:left; padding-top:2px; margin:0 4px !important;}
+a.block_Tip {display:block !important;}
+a.auto_Tip {display:block !important;}
+a.seta{background:url(../../../imagens/geral/ico_setas.gif) no-repeat scroll 0 5px transparent;display:block;padding-left:10px;}
+span.data_Tip {margin: 0 4px;}
+
+.linhaClara,
+.linhaEscura {display:block;float:left;clear:both;margin:20px 0 0;overflow:hidden;width:100%;height:1px;line-height:0;font-size:0px;border-bottom:1px #E5E5E5 solid;}
+.linhaEscura {border-bottom-color:#BDBDBD;}
+
+/* LISTAS - As classes abaixo ficam no UL/OL */
+.lst-circle li { list-style-image:none !important; list-style-position:outside; list-style-type:circle !important; margin-left:15px; }
+.lst-disc li { list-style-image:none !important; list-style-position:outside; list-style-type:disc !important; margin-left:15px; }
+.lst-none li { list-style-image:none !important; list-style-position:outside; list-style-type:none !important; margin-left:15px; }
+
+input.rdo,
+input.rdo,
+input.chk { border:none !important; background:none !important; }
+
+/* INSTALAR ACTIVE X - EXEMPLO */
+.txt-instalar-activex img { float:left; }
+.txt-instalar-activex span { display:block;float:left;width:400px; }
+
+/* ICONS */
+.ico-ie { background:url(../../../imagens/geral/ico_ie_30.gif) no-repeat left top; }
+.ico-ie strong { font-size:1.15em; line-height:30px; height:30px; display:block; }
+.ico-excluir {background:url(../../../imagens/geral/ico_excluir.gif) left bottom; width:17px; height:17px; text-indent:-9999px; display:block; cursor:pointer !important;}
+.ico-reaproveitar {background:url(../../../imagens/geral/ico_reaproveitar.gif) left bottom; width:17px; height:17px; text-indent:-9999px; display:block; cursor:pointer !important;}
+.ico-seta-avancar {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat 0 4px;padding-left:10px;}
+.ico-external-link {background:transparent url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat 5px 2px; padding-right:15px;}
+
+/* LINKS */
+span.ctn-voltar { display:block; padding-top:10px; }
+
+.listaVoltar {float:left;line-height:170%;}
+.listaVoltar li {margin-bottom:0px;}
+.listaVoltar li.primeiro a {color: #CC092F;}
+
+/* voltar */
+.lnkVoltar {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat 0px -227px;padding-left:10px;color:#666;}
+.lnkVoltar:hover {text-decoration:underline;}
+
+/* avancar - pode ser usado genericamente, por exemplo: > Adicionar nova conta */
+.lnkAvancar {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat 0 4px;padding-left:10px;}
+.lnkAvancar:hover {text-decoration:underline;}
+
+/* link externo com seta cinza */
+.lnkExterno:hover {text-decoration:underline;}
+.lnk_ext_cinza { display: inline; background:url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat right 3px; padding-right:15px; } /*  no-repeat right 2px;no-repeat top right */
+.lnk_ext_cinza:hover {text-decoration:underline; background:transparent url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat right 3px; padding-right:15px;}
+
+/* pdf externo */
+.link_pdf_ext {background:url(../../../imagens/geral/ico_arquivos.png) top left no-repeat; padding-left:25px; display:block; float:left;}
+.link_pdf_ext a {background:url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat right 2px; padding:0 15px 0 0; font-size:12px;}
+.link_pdf_ext em {color:#333 !important; font-size:11px; display:block}
+
+.lnk_int a{color: #666666;text-decoration: underline;}
+.lnk_int a:hover {text-decoration:underline; color:#CC092F;}
+
+/* com icones */
+.lk_comprovantes,
+.lk_agendamentos {background:url(../../../imagens/geral/ico_funcoes.gif) left top no-repeat; padding-left:30px; line-height:26px; display:block; color:#666666; float:left}
+.lk_agendamentos {background-position:left -60px;}
+.lk_comprovantes:hover,
+.lk_agendamentos:hover {text-decoration:underline; color:#CC092F;}
+
+/* CONTEUDO */
+.conteudo_pagina .titulo {padding:10px 15px 13px 15px;}
+.conteudo_pagina .titulo p {clear:both;padding-top:13px;}
+.conteudo_pagina h2 {display:inline-block;font-size:2em;line-height:122%;width:auto;color:#CC092F;}
+.conteudo_pagina h2 sup {color:#666666;font-size:0.42em;padding-left:3px;padding-right:3px;vertical-align:top;position:relative;top:5px;line-height:normal;}
+.conteudo_pagina h2 sup:hover {background:none repeat scroll 0 0 #E7E9E6;}
+.conteudo_pagina h2 sup.tooltip {cursor:pointer;}
+
+.conteudo_pagina .titulo_extrato {padding-right:15px !important; padding-left:15px !important}
+
+h2.agrupador {font-weight: bold;padding: 20px 0 10px;}
+.conteudo_pagina h2.agrupador {color: #000000;font-size: 11px;width: auto;}
+
+.titulo ul { background-position: 10px -31px; }
+.titulo ul li { float: left; }
+/*#btn_ajuda { display: block;padding: 10px 10px 10px 30px;color: #666666;text-decoration: none;line-height: 84%; }*/
+#btn_ajuda { display: block;padding: 10px 10px 10px 30px;color: #666666;text-decoration: none;line-height: 84%;margin-right: -16px;}
+#btn_ajuda:hover { color:#CC092F;text-decoration: underline; }
+
+.lstUtil {float:right;}
+.lstUtil .tp1,
+.lstUtil .tp2,
+.lstUtil .tp3 {background:transparent url(../../../imagens/geral/ico_util.gif) no-repeat scroll 0 0;padding-right:10px;line-height:20px;margin-left:20px;float:left;vertical-align:middle;width:auto;}
+/*.lstUtil .tp3 {background:transparent url(../../../imagens/geral/ico_util.gif) no-repeat scroll 0 0;height:20px;line-height:20px;margin-left:20px;float:left;vertical-align:middle;width:auto;}*/
+.lstUtil .tp1 a,
+.lstUtil .tp2 a,
+.lstUtil .tp3 a {display:block;height:100%;padding-left:30px;color: #666666;text-transform:lowercase;}
+.lstUtil .tp1 a:first-letter,
+.lstUtil .tp2 a:first-letter,
+.lstUtil .tp3 a:first-letter {text-transform:uppercase;}
+.lstUtil .tp1 {background-position:0 0}
+.lstUtil .tp2 {background-position:0 -20px}
+.lstUtil .tp3 {background-position:0 -40px}
+
+.lstUtil .tp1 a:hover,
+.lstUtil .tp2 a:hover,
+.lstUtil .tp3 a:hover {text-decoration:underline; color:#CC092F !important;}
+
+.lstUtil .tp4 {float:left; margin-right:10px;}
+.lstUtil .tp4 {margin:0;margin-top:-8px;padding-right:6px;padding-top:5px;}
+.lstUtil .tp4 a { display:block; text-align:right; color:#666666; background:url("../../../imagens/geral/ico_mais_menos.gif") no-repeat scroll 10px 10px transparent; }
+.lstUtil .tp4 a.active { background-position: 10px -39px!important; background:url("../../../imagens/geral/ico_mais_menos.gif") no-repeat scroll 10px 10px transparent;color:#FFFFFF;background-color: #F0F0F0; clear: both; float: right; position: relative; z-index: 2; }
+
+.lstUtil .tp5,
+.lstUtil .tp6 {float:left; margin-right:10px;margin-top: -5px;}
+
+.mioloFs13 .lstUtil .tp4 a {font-size:0.92em;}
+.mioloFs14 .lstUtil .tp4 a {font-size:0.86em;}
+
+.conteudo_pagina .conteudo {padding:0 15px 0;}
+.conteudo_pagina .conteudo_linha {border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5; margin-top:20px; padding-bottom:20px;}
+.conteudo_pagina .conteudo_linha_brd0 {border-top:0px; border-bottom:1px solid #E5E5E5; margin-top:20px; padding-bottom:20px;}
+.conteudo_pagina .conteudo_linha_top4 {background:url(../../../imagens/geral/bg_top4.gif) repeat-x; margin:0 1px; border-top:1px solid #CCC;}
+.conteudo_pagina .conteudo_linha_left4 {background:url(../../../imagens/geral/bg_left4.gif) repeat-y right 0;}
+.conteudo_pagina .conteudo_linha_center4 {background:url(../../../imagens/geral/bg_left4.gif) repeat-y center 0;}
+
+.boxComprovante  .conteudo_linha {border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5; margin-top:20px; padding-bottom:20px;}
+
+.linhaComprovante .conteudo{padding:0 !important;}
+
+/* banners no final da pagina */
+.conteudo_pagina .banner_bottom { float:left; width:100%; height: 92px; }
+.conteudo_pagina .banner_bottom a { display:block; }
+.conteudo_pagina .banner_bottom img { float:left; margin-right:10px; border:0; }
+.conteudo_pagina .banner_bottom strong { display:block;font-weight:700; padding-bottom:5px; }
+.conteudo_pagina .box_praticidade { padding:15px 15px 20px; margin:0 1px; border-top:1px solid #E5E5E5; }
+.conteudo_pagina .box_praticidade h2 {color: #CC092F;font-size: 163% !important;font-weight: normal;}
+.conteudo_pagina .box_praticidade .praticidade_coluna1de2 { float:left; margin-top:5px; border-right:1px solid #E5E5E5 !important; padding-right:15px; width:344px; }
+.praticidade_coluna1de2 {padding-right:0 !important;}
+.conteudo_pagina .box_praticidade .praticidade_coluna2de2 { float:left; margin-top:5px; padding-left:15px; width:345px; }
+.conteudo_pagina .box_praticidade .praticidade_coluna1de3 { float:left; margin-top:5px; border-right:1px solid #E5E5E5 !important; padding-right:15px; width:219px; }
+.praticidade_coluna1de3 {padding-right:0 !important;}
+.conteudo_pagina .box_praticidade .praticidade_coluna2de3 { float:left; margin-top:5px; border-right:1px solid #E5E5E5 !important; padding-right:15px; padding-left:15px; width:219px; }
+.conteudo_pagina .box_praticidade .praticidade_coluna3de3 { float:left; margin-top:5px; padding-left:15px; width:220px; }
+.conteudo_pagina .box_praticidade .praticidade_coluna { float:right; padding-left:15px; width:418px; }
+.conteudo_pagina .box_praticidade .praticidade_linha { margin-top:5px; padding-bottom:10px; border-bottom:1px solid #E5E5E5 !important; }
+.conteudo_pagina .box_praticidade .praticidade_ultimalinha { margin-top:5px; padding-bottom:10px; border-bottom:none !important; }
+.conteudo_pagina .box_praticidade .selos_coluna1 { float:left; margin-top:5px; border-right:1px solid #E5E5E5 !important; padding-right:15px; width:344px; }
+.conteudo_pagina .box_praticidade .selos_coluna2 { float:left; margin-top:5px; padding-left:15px; width:345px; }
+
+.conteudo_pagina .selos_coluna1 { float:left; width:374px; }
+.conteudo_pagina .selos_coluna2 { float:right; width:374px; }
+
+/* menus da pagina inicial de cada produto */
+.conteudo_pagina .lnk_topo {float:right;font-size:11px;padding-left:13px;background:url(../../../imagens/geral/ico_setas.gif) no-repeat 0 -461px;}
+.conteudo_pagina .colMenu {width:350px;}
+.conteudo_pagina .colMenu.coluna1 {float:left !important;margin-right: 20px !important;}
+.conteudo_pagina .colMenu.coluna2 {float:left !important;}
+.conteudo_pagina .colMenu h3.submenu {font-weight:bold;padding-bottom:10px;}
+.conteudo_pagina .colMenu ul {border-bottom:1px solid #E5E5E5;margin-bottom:21px;padding-bottom:21px;}
+.conteudo_pagina .colMenu ul.ultimo {border-bottom:0;margin-bottom:0;padding-top:3px;}
+.conteudo_pagina .colMenu ul.nivel3semfilhos {border-bottom:0 !important;margin-bottom:0 !important;padding-bottom:0 !important;}
+.conteudo_pagina .colMenu ul.nivel3semfilhos + h3.submenu {padding-top:20px;}
+
+.conteudo_pagina .colMenu ul li {clear:both;overflow:hidden;zoom:1;padding:3px 0;}
+.conteudo_pagina .colMenu ul li a,
+.conteudo_pagina .colMenu ul li span {display:block;background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat scroll 0 3px;padding-left:10px;line-height:118% !important;}
+.conteudo_pagina .colMenu ul li a {float:left;line-height:1.4em;color: #666666;}
+.conteudo_pagina .colMenu ul li a.dp {background-position:0 -373px;}
+.conteudo_pagina .colMenu ul li span {background-position:-502px -258px;}
+.conteudo_pagina .colMenu ul li span.dp {background-position:0 -373px;}
+.conteudo_pagina .colMenu ul li a.desabilitado {zoom: 1; filter: alpha(opacity=50); opacity: 0.5;}
+
+.conteudo_pagina .colMenu ul li ul {border-bottom:0; margin-bottom:0;}
+.conteudo_pagina .colMenu ul li ul li {padding-left:15px;}
+
+
+.conteudo_pagina .colMenu2 ul {border-bottom:1px solid #E5E5E5;margin-bottom:20px;padding-bottom:20px;}
+.conteudo_pagina .colMenu2 ul li {clear:both;overflow:hidden;zoom:1;}
+.conteudo_pagina .colMenu2 {width:350px;}
+.conteudo_pagina .colMenu2 ul li {display:block;background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat scroll 0 7px;padding:3px 0 3px 10px;line-height:118% !important;}
+.conteudo_pagina .colMenu2 ul li a {float:left;line-height:1.4em;color: #666666;}
+		
+/* com icones */
+.conteudo_pagina .colMenu li.infoemail,
+.conteudo_pagina .colMenu li.X,
+.conteudo_pagina .colMenu li.autorizacoes {background:url(../../../imagens/geral/ico_funcoes.gif) 0 4px no-repeat;padding:4px 0;border-bottom: 1px solid #E5E5E5;}
+
+.conteudo_pagina .colMenu li.majoracao {background-position:0 -355px;}
+.conteudo_pagina .colMenu li.majoracao {border-bottom: 1px solid #E5E5E5;}
+.conteudo_pagina .colMenu ul li.majoracao a{display: block; background: transparent url(../../../imagens/geral/majoracao.png) no-repeat scroll; padding: 4px 0 4px 36px;}
+
+
+.conteudo_pagina .colMenu li.dashboard {padding:4px 4px;}
+.conteudo_pagina .colMenu ul li.dashboard a{display: block; background: transparent url(../../../imagens/geral/dashboard.png) no-repeat scroll 0 3px; padding-left: 34px; line-height: 28px !important}
+
+
+.conteudo_pagina .colMenu li.infoemail a,
+.conteudo_pagina .colMenu li.X a,
+.conteudo_pagina .colMenu li.autorizacoes a {background:none;line-height:28px !important;padding:0 0 0 37px;}
+
+.conteudo_pagina .colMenu li.infoemail {background-position:0 -175px;}
+.conteudo_pagina .colMenu li.autorizacoes {background-position:0 -355px;}
+.conteudo_pagina .colMenu li span.altNew {display:inline;background:#FFFFFF;padding:0 0 0 10px;}
+.conteudo_pagina .colMenu li span.altNew em {background-color:#BE0C0C;color:#FFFFFF;font-size:0.81em;padding:2px 3px;}
+.conteudo_pagina .rodape {border-top:1px solid #E5E5E5;clear:both;padding:20px 15px 12px 0;}
+.conteudo_pagina .rodape span {display:block; padding-bottom:10px;} /* na visualizacao eh 15 */
+.conteudo_pagina .miolo .boxP20 { padding-bottom:12px; } /* mesma distancia de margin no topo e no rodape do miolo */
+
+/* BOX DROPSHADOW */
+.boxDropShadow {background:#E5E5E5 url(../../../imagens/geral/pix_4br.gif) bottom left no-repeat;margin-bottom:15px;}
+.boxDropShadow .bgrRight {background:url(../../../imagens/geral/pix_4br.gif) top right no-repeat;padding:0 2px 2px 0;}
+.boxDropShadow .bgrRight .content {background-color:#FFF;border:solid 1px #E5E5E5;padding:8px 10px; height: auto !important;}
+.boxDropShadow .bgrRight .content:after {content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden;}
+.boxDropShadow .bgrRight .content ul {padding:0 !important;margin:0 !important;border:0 !important;}
+
+#mapaSite h2 a {color: #CC092F !important;font-size: 0.81em !important;font-weight: normal !important;text-decoration:none;}
+#mapaSite h2 a {color: #CC092F !important;font-size: 0.81em !important;font-weight: normal !important;text-decoration:none;}
+
+#mapaSite div.conteudo.box_grayLine_bottom {margin: 0 15px;}
+#mapaSite div.titulo {padding: 0 0 0 15px !important;position:relative;top:-9px;}
+#mapaSite a.lnk_topo {margin-top: 10px;}
+
+#mapaSite .boxLinksMapaSite {overflow:hidden;background-color: #F3F3F3;border-bottom: 1px solid #CCCCCC;padding: 15px;width: 692px;margin-left:15px;margin-bottom:25px;}
+#mapaSite .boxLinksMapaSite > div {overflow:hidden;}
+#mapaSite .boxLinksMapaSite > div > div {overflow:hidden;}
+#mapaSite .boxLinksMapaSite h2 {display: inherit !important;font-size: 100% !important;line-height: auto !important;width: auto !important;font-weight: bold !important;color: #333333 !important;}
+#mapaSite .boxLinksMapaSite ul {float: left !important;margin: 10px 40px 0 0;}
+.UIFontSize-level-2 #mapaSite .boxLinksMapaSite ul {margin: 10px 30px 0 0;}
+.UIFontSize-level-3 #mapaSite .boxLinksMapaSite ul {margin: 10px 20px 0 0;}
+#mapaSite .boxLinksMapaSite ul.last {margin-right: 0 !important;}
+#mapaSite .boxLinksMapaSite ul > li {padding: 5px 0;}
+#mapaSite .boxLinksMapaSite a {background: url("../../../imagens/geral/ico_setas.gif") no-repeat scroll 0 4px transparent;cursor: pointer !important;display: block;padding-left: 10px;color: #666666;font-weight:100%;line-height:118% !important;}
+
+/* BOX CONTEUDOS */
+.box_redLine_bottom {border:1px solid #CCCCCC; border-bottom:1px solid #CF3F3F; background:#FFFFFF url(../../../imagens/geral/bgr_box_redLine_bottom.jpg) left bottom repeat-x; margin-bottom:20px;}
+.box_redLine_bottom h3{font-size:1.42em; padding:15px 15px 15px 15px;}
+.sBorda  {border-top:none;}
+.sBordaT {border-top:none;}
+.sBordaB {border-bottom:none;}
+.sBorda3 {border:none;padding:13px 0px 3px 0;}
+.sBorda8 {border:none;padding:13px 0px 8px 0;}
+
+
+.sBorda10 {border:none;padding:13px 0px 10px 0 !important;}
+.box_grayLine_bottom_novo {border-top:solid 1px #E5E5E5; padding:5px 0px 5px 0;}
+.box_grayLine_bottom_novo_mensagem { border-top:solid 1px #E5E5E5; border-bottom:solid 1px #E5E5E5; padding:11px 0px 11px 0; margin-bottom:23px;}
+.box_grayLine_bottom {border-bottom:solid 1px #E5E5E5;padding:20px 0px 0px 0px;}
+.box_noline {padding:15px 0;}
+.box_grayLine_bottom_novo h3 {font-size:1.42em;padding-bottom:20px;}
+.box_grayLine_bottom h3 {padding-bottom:20px;font-weight:bold}
+.box_noline h3 {font-size:1.42em;padding-bottom:20px;}
+.mioloF13 .box_grayLine_bottom h3 {font-size:1.33em;}
+.box_grayLine_bottom .legendaBox {width:167px !important;}
+
+.box_degrade {padding:20px;border:solid 1px #E5E5E5;background:url(../../../imagens/geral/bgr_degrade.jpg) repeat-x;}
+
+/* Duplicado de box_degrade para o servico HiperPoup, pois existe uma classe especifica para [.mioloFs13 .horarios_e_limites .box_degrade], forcando seu font-size */
+.box_degrade_fonte_variavel {padding:20px;border:solid 1px #E5E5E5;background:url(../../../imagens/geral/bgr_degrade.jpg) repeat-x;}
+
+/* FORMS */
+.inativo {background-color:#FFFFFF; opacity: .30; filter:alpha(opacity=30); width:100%; -khtml-user-select: none; -moz-user-select: none; cursor:default !important; }
+.inativo input.numeric {font-size:0;}
+.inativo a {cursor:default !important; color:#333 !important; }
+.inativo a:hover {text-decoration:underline;}
+.inativo .box-alerta .ctn-box a { cursor:default !important; }
+.inativo .btnKeyboardVirtualSingle a,
+.inativo .btnKeyboardVirtual a { background-position:left top !important; }
+
+form input[type="file"],
+form input[type="hidden"],
+form input[type="password"],
+form input[type="text"],
+form input.UIAgencia,
+form input.UIConta,
+form input[type="text"],
+form textarea {font-family:Tahoma,Arial,Sans-Serif;border-bottom:1px solid #D4D4D4; border-right:1px solid #D4D4D4; border-left:1px solid #7A7A7A; border-top:1px solid #7A7A7A; padding:2px; background:#F4F4F4;font-size:1em;}
+
+form input.UIAgencia {width: 30px;}
+form input.UIConta.conta {width: 50px;}
+form input.UIConta.digito {width: 15px;}
+
+.formulario {width:100%;color:#333333}
+.formulario label.lbl_normal,
+.formulario .label.lbl_normal {display:inline;float:none;padding:0;text-align:left;vertical-align:middle;color:#333333;}
+.formulario em {clear:both;display:block;padding-top:2px;font-size:0.92%;color:#666666;}
+.formulario label,
+.formulario span.label {float:left;line-height:1.2em;width:120px;padding:1px 10px 0 0;text-align:right;color:#333333;}
+.formulario labeltb,
+.formulario span.labeltb {float:left;line-height:1.2em;width:auto;padding:1px 10px 0 0;text-align:right;color:#333333;}
+.formulario labelRadio,
+.formulario span.labelRadio {float:left;line-height:1.2em;width:auto;padding:0px 10px 0 0;text-align:right;color:#333333;cursor:pointer;}
+.formulario labelCheckbox,
+.formulario span.labelCheckbox {float:left;line-height:1.2em;width:auto;padding:0px 10px 0 0;text-align:right;color:#333333;cursor:pointer;}
+.formulario descricao,
+.formulario span.descricao {text-align:left!important; width:150px;!important}
+
+.formulario div {float:left;padding-right:5px;}
+.formulario em {clear:both;display:block;padding-top:2px;font-size:0.92em;color:#666666;}
+.mioloFs13 .formulario em .lbl_normal {font-size:0.92em;}
+.mioloFs14 .formulario em .lbl_normal {font-size:0.93em;}
+.formulario input {width:35px;margin-right:5px;vertical-align:middle;}
+.formulario input.inputCurrency {text-align:right;}
+
+.mioloFs12 .formulario input {height:13px;padding-right:1px;}
+.mioloFs13 .formulario input {height:15px;padding-right:2px;}
+.mioloFs14 .formulario input {height:16px;padding-right:3px;}
+.formulario li {clear:both;float:none;padding-bottom:0;width:100%;}
+.formulario li.last {padding-bottom:0;}
+
+/*.formulario input.radio {width:auto;background:none;border:0;float:none;margin-top: 1px;margin-bottom: 3px;margin-right: 0;}*/
+.formulario input.radio {width:auto;float:none;margin-top: 1px;margin-bottom: 3px;margin-right: 0;}
+.formulario input.checkbox {width:auto;background:none;border:0;margin: 0;}
+
+.formulario .lst-colunas {float:left; padding-right:30px;}
+.formulario .lst-colunas label,
+.formulario .lst-colunas span.label {width:auto; float:none;}
+.formulario .lst-colunas li {padding-bottom:5px;}
+
+.formulario span.asterisco {color:#666666;display:block;clear:both;padding:10px 0 0 150px;font-size:0.92em;}
+
+.formulario label.item,
+.formulario span.label.item {color:#666666;}
+
+.campos_form .erro_msg {display:none;}
+.campos_form .erro_msg label,
+.campos_form .erro_msg span.label {width:auto;float:none;text-align:left;padding:0;line-height:100%;}
+.form_erro .boxP14_nt {padding-bottom:0;}
+.campos_form td {white-space:nowrap;margin:0;}
+.campos_form td label,
+.campos_form td span.label {float:auto;width:auto;text-align:left;padding:0 10px 5px 0;margin:0;}
+.campos_form td label input,
+.campos_form td span.label input {width:auto;background:none;border:0;margin:-3px 0 0 0;float:none;}
+.campos_form select {white-space:nowrap;}
+
+/* VALIDAÃ‡ÃƒO DE GRUPOS */
+.campos_form_grupo .erro_msg_grupo {display:none;}
+.campos_form_grupo .erro_msg_grupo label,
+.campos_form_grupo .erro_msg_grupo span.label {width:auto;float:none;text-align:left;padding:0;line-height:100%;}
+.campos_form_grupo td {white-space:nowrap;margin:0;}
+.campos_form_grupo td label,
+.campos_form_grupo td span.label {float:auto;width:auto;text-align:left;padding:0 20px 5px 0;margin:0;}
+.campos_form_grupo td label input,
+.campos_form_grupo td span.label input {width:auto;background:none;border:0;margin:-3px 0 0 0;float:none;}
+.form_erro .erro_msg_grupo {display:block !important; padding-bottom:10px; padding-left:10px; color:#bf0000}
+.form_erro .erro_msg_grupo a {color:#bf0000 !important; cursor:default !important; text-decoration:none !important;}
+.form_erro .boxP14_nt_grupo {padding-bottom:0;}
+
+tr.erro td {border-top:1px dashed #BF0000 !important; border-left:none !important;}
+
+.form_erro {margin-bottom:10px;padding:10px 0;border:1px dashed #CC092F !important; background:#FFF3CB !important}
+.form_erroLote {margin-bottom:10px;padding:10px 0;border:1px dashed #CC092F !important; background:url("../../../imagens/geral/ico_alert.gif") no-repeat scroll 20px center #FFF3CB}
+.form_erroLote .erro_msg {display:block !important; padding-bottom:10px; color:#bf0000}
+.form_erro td label,
+.form_erro td span.label {background-color:#FFF7D9 !important;}
+
+.form_erro .erro_input {border:1px dashed #BF0000 !important;}
+.form_erro .erro_msg {display:block !important; padding-bottom:10px; color:#bf0000}
+.form_erro .erro_msg strong {margin-left: 0px;}
+.form_erro .erro_msg a{color:#bf0000 !important; cursor:default !important; text-decoration:none !important;}
+/* Anchor com icone de link externo vermelho */
+.form_erro .erro_msg  a.lnk_ext_vermelho{display:inline !important; color:#CF3F3F !important; padding-right: 15px; background:url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat top right !important; }
+
+.form_erro .boxP_erro_only {display:block; padding:0 14px 14px;}
+
+.erro_msg {margin-left:15px; width:690px;}
+#blocoAutenticador .erro_msg{width:auto !important;}
+
+.boxP14_erro_only {display:none;}
+
+.chk_exp {width:auto !important; margin:0 !important; padding:0 !important;}
+.formulario input.radio.marg_t2{ margin-top:4px;}
+
+.erro_radio {border:1px dashed #BF0000 !important; background:#FFF7D9 !important}
+
+.boxTp1, .boxTp2, .boxTp3,.boxTp4{background-color:#F3F3F3;border-bottom:1px solid #CCC;width:692px;padding:15px}
+.boxTp2{width:661px}
+.boxTp3,.boxTp4{width:auto}
+.boxTp4{border-left:1px solid #CCC;border-right:1px solid #CCC;border-top:1px solid #CCC;padding:10px 10px 15px 10px;}
+
+/*BOTOES ALINHAMENTO NOV0*/
+
+/*tela transferencias*/
+
+.alinhando110{ margin-top:-110px;}
+.alinhando105{ margin-top:-105px;}
+.alinhando95{ margin-top:-95px;}
+.alinhando90{ margin-top:-90px;}
+.alinhando80{ margin-top:-80px;}
+.alinhando75{ margin-top:-75px;}
+.alinhando70{ margin-top:-70px;}
+.alinhando68{ margin-top:-68px;}
+.alinhando65{ margin-top:-65px;}
+.alinhando60{ margin-top:-60px;}
+.alinhando40{ margin-top:-40px;}
+.alinhando30{ margin-top:-30px;}
+.alinhando13{ margin-top:-13px;}
+.alinhando10{ margin-top:-10px;}
+.alinhando5{ margin-top:-5px;}
+.alinhando0{ margin-top:0px;}
+
+.m10{ margin-bottom:-8px;}
+
+/* BOTOES */
+.icoAjuda, .icoCalendario, .icoCalendario2, .icoSenha, .icoFoto, .icoComprovante, .icoPointer{background-image:url(../../../imagens/geral/ico_formulario.gif);background-repeat:no-repeat;cursor:pointer;display:block;text-indent:-999999px;margin-right:5px;text-align:left}
+.icoAjuda{background-position:0 -17px;width:18px;height:18px;overflow:hidden;}
+.icoCalendario, .icoCalendario2{background-position:0 -36px;width:21px;height:19px}
+.icoSenha{background-position:0 -71px;cursor:default;text-indent:0px;padding:4px 0 4px 25px;font:bold 112% Tahoma}
+.icoFoto{background-position:0 -93px;width:17px;height:17px}
+.icoComprovante{background-position:0 -126px;width:17px;height:17px}
+.icoPointer {background-position: 0 -110px;height: 16px;width: 16px;}
+
+.btos_bottom {float:right;border-top: 0 none !important;}
+.btos_bottom li {float:left;}
+.btos_bottom .inativo {background-position:0 0 !important;}
+
+.btnAlterarDesabilitado {background:url(../../../imagens/geral/btnAlterarDesabilitado.gif) 0 0 no-repeat;float:left;width:124px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnConsultarPedidosAnteriores {background:url(../../../imagens/geral/btnConsultarPedidosAnteriores.gif) 0 0 no-repeat;float:left;width:174px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnExcluirDesabilitado {background:url(../../../imagens/geral/btnExcluirDesabilitado.gif) 0 0 no-repeat;float:left;width:124px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnFloat {background:url(../../../imagens/geral/btnFloat.gif) 0 0 no-repeat;float:left;width:40px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnFluxo {background:url(../../../imagens/geral/btnFluxo.gif) 0 0 no-repeat;float:left;width:43px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnTelaDeImpressao {background:url(../../../imagens/geral/btnTelaDeImpressao.gif) 0 0 no-repeat;float:left;width:117px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+
+.bt_importaConfig, .btnSalvarConfiguracoes, .btoAlterar, .bt_LiConcordo, .bt_Nao, .bt_Sim, .bt_imprimir, .bt_Assinar, .btoExcluir, .bt_avancar, .bt_cancelar, .bt_limpar, .bt_autorizar, .bt_confirmar, .bt_solicitar, .bt_ok, .bt_voltar, .bt_fechar, .bto_fechar, .btnVisualizarArquivo, .btnExtrairExtrato, .btnExportarArquivo, .bt_atualizar, .btnAplicar, .btnCancelarAplicacao, .btnCancelarResgate, .btnResgateParcial, .btnResgateTotal, .btnAlterarUsuario, .bt_pagar, .bt_care, .bt_consultar, .btnAddFavorecido, .btnAddOutroFavorecido, .bt_salvar, .bt_enviar, .bto_imprimir {background:url(../../../imagens/botoes/btn_geral.gif) 0 0 no-repeat;float:left;width:79px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnSalvarConfiguracoes { background-position: 0 -1254px;  width: 151px; }
+.bt_avancar {background: linear-gradient(to bottom, #e74c3c, #c0392b) !important;width:79px;height:20px;margin-right:15px;border:1px solid #a93226;border-radius:3px;color:white;font-weight:bold;font-size:12px;text-indent:0 !important;padding:0 !important;display:block !important;cursor:pointer;text-align:center;line-height:20px;}
+.bt_avancar:hover {background: linear-gradient(to bottom, #c0392b, #a93226) !important;}
+.bt_cancelar {background-position:0 -182px;width:76px;margin-right:15px;}
+.bt_autorizar {background-position: 0 -267px;width: 78px;}
+.bt_confirmar {background-position:0 -60px;width:83px;}
+.bt_ok {background-position:0 -1153px;width:38px;height:21px;}
+.bt_voltar {background-position:0 -20px;margin-right:15px;width:60px;}
+.bt_fechar {background-position: 0 -244px;height: 22px;margin-left: 15px;width: 56px;}
+.bto_fechar {background-position: 0 -244px;height: 22px;margin-left: 15px;width: 56px;}
+.bt_atualizar {background-position: 0 -3114px;height: 21px;margin-left: 15px;width: 77px;}
+.btnAplicar {background-position: 0 -412px;width: 64px;}
+.btnCancelarAplicacao {background-position: 0 -4754px;width: 135px;}
+.btnCancelarResgate {background-position: 0 -4734px;width: 127px;}
+.btnResgateParcial {background-position: 0 -4714px;width: 115px; margin-right: 15px;}
+.btnResgateTotal {background-position: 0 -4694px;width: 104px;}
+.btnAlterarUsuario {background-position: 0 -753px;width: 101px;}
+.btnBloquearUsuario {background-position: 0 -773px;width: 111px;}
+.btnDesbloquearUsuario {background-position: 0 -793px;width: 131px;}
+.btnExcluirUsuario{background-position: 0 -813px;width: 101px;}
+.bt_limpar {background-position: 0 -4854px;width: 52px;}
+.bt_solicitar {background-position: 0 -2174px;margin-right: 15px;width: 73px;}
+.btoExcluir {background-position: 0 -472px;margin-right: 15px;width: 56px;}
+.bt_imprimir {background-position: 0 -224px;height: 20px;margin-left: 15px;width: 76px;}
+.bt_pagar {background-position: 0 -1214px;margin-right: 15px;width: 52px;}
+.bt_care {background-position: 0 -1234px;margin-right: 15px;width: 240px;}
+.bt_consultar {background-position: 0 -1073px;margin-right: 15px;width: 80px;}
+.btnAddFavorecido {background-position: 0 -202px;margin-right: 15px;width: 149px;}
+.btnAddOutroFavorecido {background-position: 0 -2094px;margin-right: 15px;width: 187px;}
+.bt_Assinar {background-position: 0 -1954px;margin-right: 15px;width: 67px;}
+.bt_Sim {background-position: 0 -432px;height: 20px;margin-left: 15px;width: 44px;}
+.bt_Nao {background-position: 0 -452px;height: 20px;margin-left: 15px;width: 42px;}
+.bt_LiConcordo {background-position: 0 -993px;margin-right: 15px;width: 104px;}
+.bt_salvar{background-position: 0 -162px;margin-right: 15px;width: 60px;}
+.bt_enviar {background-position: 0 -309px;margin-right: 15px;width: 60px;}
+.btoAlterar {background-position: 0 -492px;width: 56px;}
+.bto_imprimir{background-position: 0 -372px;margin-right: 15px;width: 66px;}
+.bt_importaConfig {background-position: 0 -733px;margin-right: 15px;width: 165px;}
+.bt_buscar {background:url(../../../imagens/geral/bt_buscar.gif) 0 0 no-repeat;float:left;width:63px;height:50px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+.bt_excluir {background:url(../../../imagens/botoes/btnExcluir.jpg) 0 0 no-repeat;float:left;width:52px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.bt_alterar {background:url(../../../imagens/botoes/btnAlterar.jpg) 0 0 no-repeat;float:left;width:62px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.bt_adicionar {background:url(../../../imagens/botoes/btnAdicionar.jpg) 0 0 no-repeat;float:left;width:78px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+.bt_telaDeImpressao {background:url(../../../imagens/geral/telaDeImpressao.png) 0 0 no-repeat;float:left;width:133px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+.btnSustar {background:url(../../../imagens/geral/Sustar.gif) 0 0 no-repeat;float:left;width:49px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnTransferir-Baixar {background:url(../../../imagens/geral/Transferir-Baixar.gif) 0 0 no-repeat;float:left;width:104px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnProtestar {background:url(../../../imagens/geral/Protestar.gif) 0 0 no-repeat;float:left;width:65px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnNegativar {background:url(../../../imagens/geral/Negativar.png) 0 0 no-repeat;float:left;width:68px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnExclNegativacao {background:url(../../../imagens/geral/ExcluirNegativacao.png) 0 0 no-repeat;float:left;width:126px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+.btnNConcordo {background:url(../../../imagens/geral/btn_nao-concordo.png) 0 0 no-repeat;float:left;width:104px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnConcordo {background:url(../../../imagens/geral/btn_concordo.png) 0 0 no-repeat;float:left;width:76px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+.btnDesautorizarPagamento {background:url(../../../imagens/geral/bt_DesautorizarPagamento.gif) 0 0 no-repeat;float:left;width:168px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnAutorizarPagamento {background:url(../../../imagens/geral/bt_AutorizarPagamento.gif) 0 0 no-repeat;float:left;width:147px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnDesautorizar {background:url("../../../imagens/geral/bt_Desautorizar.gif") 0 0 no-repeat;float:left;width:91px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+
+.btnIcoSalvarArquivo, .btnIcoImprimir, .btnRecusar, .btnIcoEnviarEmail, .btnAutorizar, .btnAlterar, .btnExcluir, .btnBuscar, .btnRecarga, .btnComprar, .btnComprovante,
+.btnGrafico, .btnDetalhe, .btnReaproveitar, .btnAlterarLimCtas, .btnAcao, .btnSalvarExtArq, .btnEfetuarDownload, .btnIcoDesbloquear, .btnInserirQuebra, .btnSalvar {background:url(../../../imagens/geral/btn_acoes_tabelas.gif) 0px 0px no-repeat;display:block;height:17px;width:17px;text-indent: -9999px; cursor: pointer; cursor: hand;}
+
+
+
+.btnExcluir{background-position:0px -51px;}
+.btnIcoImprimir {background-position: 0 -153px;height: 17px;width: 17px;}
+.btnBuscar{background-position:0px -68px;}
+.btnComprovante{background-position:0px -204px;}
+.btnAutorizar {background-position: 0 0;}
+.btnAlterar{background-position: 0 -34px;}
+.btnRecusar{background-position: 0 -17px;}
+.btnIcoDesbloquear{background-position: 0 -306px;}
+.btnComprar{background-position: 0px -103px;}
+.btnAcao{background-position: 0px -272px}
+.btnSalvar{background-position: 0 -171px;height: 17px;width: 17px;}
+.btnIcoSalvarArquivo{background-position: 0 -171px;}
+.btnAlterarLimCtas{background-position:0px -255px;}
+.btnAlterar {background-position: 0 -34px;}
+.btnDetalhe {background-position: 0px -187px;}
+.btnIcoEnviarEmail{background-position: 0 -137px}
+
+.icoOcorrencias {background:url(../../../imagens/geral/ocorrencias.gif) 0px 0px no-repeat;display:block;height:17px;width:17px;text-indent: -9999px;}
+.icoLotes {background:url(../../../imagens/geral/lotes.gif) 0px 0px no-repeat;display:block;height:17px;width:17px;text-indent: -9999px;}
+
+.icoOcorrencias a, .icoLotes a,.ico_reaproveitar a, .ico_consultar a, .btnEfetuarDownload a, .btnIcoSalvarArquivo a, .btnIcoEnviarEmail a, .btnRecusar a, .btnIcoImprimir a, .btnAutorizar a, .btnAlterar a, .btnExcluir a,.btnBuscar a,.btnRecarga a,.btnComprar a,.btnGrafico a, .btnDetalhe a, .btnReaproveitar a , .btnAlterarLimCtas a,.btnAcao a, .btnSalvar a{text-indent:-9999px;display:block;height:17px;cursor:pointer;}
+
+.btnAcaoDesabilitado, .btnSalvarDesabilitado {background:url(../../../imagens/geral/btn_acoes_tabelas.gif) 0 -171px no-repeat;display:block;height:17px;width:17px;filter: alpha(opacity=50); opacity: 0.5;}
+.btnAcaoDesabilitado{background-position: 0px -273px}
+.btnSalvarDesabilitado {background-position: 0 -171px;}
+
+.btnEnviarEmailGrupo, .btnSalvarArquivoGrupo, .btnImprimirGrupo {background-attachment: scroll;background-clip: border-box;background-color: transparent;background-image: url("../../../imagens/geral/btns_acao_para_grupo.gif");background-origin: padding-box;background-position: 0 0;background-repeat: repeat;background-size: auto auto;display: block;height: 21px;text-indent: -9999px;}
+.btnEnviarEmailGrupo {background-position: 0 0;width: 122px;}
+.btnSalvarArquivoGrupo {background-position: 0 -42px;width: 134px;}
+.btnImprimirGrupo {background-position: 0 -21px;width: 78px;}
+
+.btn_modal { width: 232px; float: right; margin-top: 25px; }
+.close_modal {width: 24px; height: 23px; border: 1px solid #D4D4D4; opacity: 1; float: right; font-size: 30px; color: #808080; cursor: pointer; justify-content: center; align-items: center; display: inline-flex; padding-top: 1px; font-family: none; }
+.bt_modal_voltar {background: url(../../../imagens/botoes/btnVoltarContinuar.png) 0 0 no-repeat; height: 21px; width: 110px; margin-right: 15px; float: left; border: none; cursor: pointer; text-indent: -9999px; padding: 0 !important; }		
+.bt_modal_continuar {background: url(../../../imagens/botoes/btnVoltarContinuar.png) 0 0 no-repeat; height: 21px; width: 107px; background-position: -124px 0px !important; float: left; border: none; cursor: pointer; text-indent: -9999px; padding: 0 !important; }
+/* BOTOES */
+
+/* STEPS */
+.steps {width:100%;height:20px;font-size:10px;}
+.steps_nh {height:auto !important;clear:both;}
+.steps li {float:left;}
+.mioloFs13 .steps li, .UIFontSize-level-2 .UISequenciaPasso-steps li {font-size:1.1em;}
+.mioloFs14 .steps li, .UIFontSize-level-3 .UISequenciaPasso-steps li {font-size:1.2em;}
+.steps li div {float:left;background:url(../../../imagens/geral/pix_cinza2.gif) right bottom repeat-x;margin-right:2px}
+.steps li div.active {background:url(../../../imagens/geral/pix_vermelho2.gif) right bottom repeat-x}
+.steps li strong {background:url(../../../imagens/geral/ico_passos_seta.gif) right bottom no-repeat;color:#6C6C6C;padding:0 12px 4px 3px;display:block}
+.steps li div.active strong {background:url(../../../imagens/geral/ico_passos_seta_on.gif) right bottom no-repeat;color:#CC092F}
+.steps li.last strong {background:url(../../../imagens/geral/ico_passos_final.gif) right bottom no-repeat}
+.steps li.last .active strong {background:url(../../../imagens/geral/ico_passos_seta_final_on.gif) right bottom no-repeat;color:#CC092F}
+.steps strong {font-weight:normal;line-height:12px;}
+/* STEPS */
+/* SUCESSO*/
+.box-confirma { background: url("../../../imagens/geral/ico_confirma.gif") no-repeat scroll 20px center #FFF3CB;border: 1px solid #E0D9BB;color: #333333;}
+.box-confirma .ctn-box { background: url("../../../imagens/geral/bgr_boxAviso.gif") no-repeat scroll right bottom transparent;left: 1px;padding: 13px 25px 15px 55px;position: relative;top: 1px; }
+.box-confirma .ctn-box p { padding-bottom:0px; }
+.box-confirma .ctn-box em { color:#BF0000; }
+.box-confirma .ctn-box a , .link_ext { background:url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat right 2px; padding-right:15px; color:#666666 !important; text-decoration:underline; }
+.no-link-ico .box-confirma .ctn-box a  { background:transparent !important; padding-right:0px; color:#666666 !important; text-decoration:underline; }
+.no-link-ico .box-confirma .ctn-box a:hover { background:transparent !important; padding-right:0px; color:#CC092F !important; text-decoration:underline; }
+.box-confirma .ctn-box a:hover , .link_ext:hover { background:url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat right 2px; padding-right:15px; text-decoration:underline;color:#CC092F !important; }
+.box-confirma .lk_int {background-image:none !important; padding-right:0 !important;}
+
+
+
+
+
+/* ALERTAS */
+.box-comprovante { background: #FFF3CB;border: 1px solid #E0D9BB;color: #333333;}
+.box-comprovante .ctn-boxcomp { background: transparent;left: 1px;padding: 13px 25px 15px 55px;position: relative;top: 1px; }
+.box-comprovante .ctn-boxcomp p { padding-bottom:0px; margin-left: 35px;padding-top: 3px;width: 500px;}
+.box-comprovante .ctn-boxcomp em { color:#BF0000; }
+.box-comprovante .ctn-boxcomp a , .link_ext { background:url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat right 2px; padding-right:15px; color:#666666 !important; text-decoration:underline; }
+.box-comprovante .ctn-boxcomp {background: none repeat scroll 0 0 transparent;left: 1px;padding: 17px 156px 0 23px;position: relative;top: 1px;height:42px;}
+.box-comprovante .ctn-boxcomp input {position: absolute;}
+.box-comprovante .ctn-boxcomp input.dobra {margin-left: 671px;}
+
+
+.box-alerta-cinza { background: url("../../../imagens/geral/ico_alert.gif") no-repeat scroll 20px center #FFF3CB;border: 1px solid #E0D9BB;color: #333333;}
+.box-alerta-cinza .ctn-box { background: url("../../../imagens/geral/bgr_boxAviso_cinza.gif") no-repeat scroll right bottom transparent;left: 1px;padding: 13px 25px 15px 55px;position: relative;top: 1px; }
+.box-alerta-cinza .ctn-box p { padding-bottom:0px; }
+.box-alerta-cinza .ctn-box em { color:#BF0000; }
+.box-alerta-cinza .ctn-box a , .link_ext { background:url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat right 2px; padding-right:15px; color:#666666 !important; text-decoration:underline; }
+.box-alerta-cinza .ctn-box a , .link_ext { padding-right:0px; color:#666666 !important;}
+.no-link-ico .box-alerta-cinza .ctn-box a  { background:transparent !important; padding-right:0px; color:#BF0000 !important; text-decoration:underline; }
+.no-link-ico .box-alerta-cinza .ctn-box a:hover  { background:transparent !important; padding-right:0px; color:#CC092F !important; text-decoration:underline; }
+.box-alerta-cinza .ctn-box a:hover , .link_ext:hover { background:url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat right 2px; padding-right:15px; text-decoration:underline;color:#CC092F !important; }
+
+.box-alerta-cinza .lk_int {background-image:none !important; padding-right:0 !important;}
+
+
+.box-alerta { background: url("../../../imagens/geral/ico_alert.gif") no-repeat scroll 20px center #FFF3CB;border: 1px solid #E0D9BB;color: #333333;}
+.box-alerta .ctn-box { background: url("../../../imagens/geral/bgr_boxAviso.gif") no-repeat scroll right bottom transparent;left: 1px;padding: 13px 25px 15px 55px;position: relative;top: 1px; }
+.box-alerta .ctn-box p { padding-bottom:0px; }
+.box-alerta .ctn-box em { color:#BF0000; }
+.box-alerta .ctn-box a , .link_ext { background:url(../../../imagens/geral/ico_external_link_cinza.gif) no-repeat right 2px; padding-right:15px; color:#666666 !important; text-decoration:underline; }
+/*.box-alerta .ctn-box a , .link_ext { padding-right:0px; color:#666666 !important;}*/
+.no-link-ico .box-alerta .ctn-box a  { background:transparent !important; padding-right:0px; color:#666666 !important; text-decoration:underline; }
+.no-link-ico .box-alerta .ctn-box a:hover { background:transparent !important; padding-right:0px; color:#CC092F !important; text-decoration:underline; }
+.box-alerta .ctn-box a:hover , .link_ext:hover { background:url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat right 2px; padding-right:15px; text-decoration:underline;color:#CC092F !important; }
+.box-alerta .lk_int {background-image:none !important; padding-right:0 !important;}
+
+.box-alerta .ctn-box .btn a { display:block; text-indent:-9999px; float:right; padding:0; text-decoration:none; margin-right:8px; height:25px; line-height:25px; background:url(../../../imagens/geral/bto_recebi_nao_cartao.gif) no-repeat 0 0; }
+.box-alerta .ctn-box .btn a.recebi { width:122px; background-position:-160px 0; }
+.box-alerta .ctn-box .btn a.nao-recebi { width:146px; }
+.box-alerta .ctn-box .btn a.recebi:hover { background-position:-160px -27px; }
+.box-alerta .ctn-box .btn a.nao-recebi:hover { background-position:0 -27px; }
+.box-alerta .ctn-box div.txt-cartao-seguranca { float:left; width:450px; }
+.box-alerta .ctn-box div.img-cartao-seguranca { float:right; padding-bottom:10px; background:url(../../../imagens/login/img_chave_seg_solic.gif) no-repeat left top; width:148px; height:97px; }
+
+
+
+.alerta {background:url("../../../imagens/geral/ico_alert.gif") no-repeat scroll 20px center #FFF3CB; padding:3px 0 3px 55px !important;}
+.alertaTxt {color: #CC092F; font-weight: bold}
+
+.box-ok { color:#BF0000 !important; background:#FFF7D9 url(../../../imagens/geral/ico_alert_ok_yellow.jpg) no-repeat 20px center; border-bottom:1px #E0D9BC solid; }
+.box-ok .ctn-box { padding:15px 30px 5px 70px; line-height:1.35em; }
+.box-ok .ctn-box p { padding-bottom:10px; }
+.box-ok .ctn-box em { color:#BF0000; }
+.box-ok .ctn-box a , .link_ext { background:url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat right 2px; padding-right:15px; color:#BF0000 !important; text-decoration:underline; }
+.no-link-ico .box-ok .ctn-box a  { background:transparent !important; padding-right:0px; color:#BF0000 !important; text-decoration:underline; }
+.box-ok .ctn-box a:hover , .link_ext:hover { text-decoration:underline; }
+.box-ok .lk_int {background-image:none !important; padding-right:0 !important;}
+
+.box-erro{ color:#BF0000 !important; background:#FFF3CB url(../../../imagens/geral/ico_alert_error_yellow.gif) no-repeat 20px center; border:1px #E0D9BC solid; }
+.box-erro .ctn-box { background: url("../../../imagens/geral/bgr_boxAviso.gif") no-repeat scroll right bottom transparent;left: 1px;padding: 13px 25px 15px 55px;position: relative;top: 1px; }
+.box-erro .ctn-box em { color:#BF0000; }
+.box-erro .ctn-box a , .link_ext { background:url(../../../imagens/geral/ico_external_link_vermelho.gif) no-repeat right 2px; padding-right:15px; color:#BF0000 !important; text-decoration:underline; }
+.no-link-ico .box-erro .ctn-box a { background:transparent !important; padding-right:0px; color:#BF0000 !important; text-decoration:underline; }
+.box-erro .ctn-box a:hover , .link_ext:hover { text-decoration:underline; }
+.box-erro .lk_int {background-image:none !important; padding-right:0 !important;}
+
+.box-erro .ctn-err-box { padding:15px 30px 5px 70px; line-height:1.35em; }
+.box-erro .ctn-err-box em { color:#BF0000; }
+.box-erro .ctn-err-box a, .link_int { background-image:none  no-repeat right 2px; padding-right:0px;}
+.box-erro .ctn-err-box a:hover, .link_int:hover  { text-decoration:underline; }
+
+.lk_int {color:#BF0000;}
+
+.link_ext {text-decoration:none !important;}
+.link_ext:hover {text-decoration:underline !important;}
+
+/* TEXTOS GERAIS */
+.ctn-textoGeral {padding:0 14px;}
+.ctn-textoGeral p {padding-bottom:15px;}
+.ctn-textoGeral ul,
+.ctn-textoGeral ol {padding-bottom:15px;}
+.ctn-textoGeral ul li,
+.ctn-textoGeral ol li {list-style-image:none; list-style-position:outside; padding:0 0 10px;margin-left:15px;}
+.ctn-textoGeral h3 {padding:10px 0;}
+.ctn-textoGeral a {color:#BF0000;}
+
+/* AJUDA */
+/*.box-ajuda  {background: url(../../../imagens/geral/pix_cinza.gif) repeat-x scroll left top #F0F0F0;clear: both;left: -15px;margin: 0 5px 20px;padding: 15px;position: relative;top: -1px;width: 712px !important;z-index: 1;right: 10px;display: none;}*/
+
+/*.box-ajuda {background: url("../../../imagens/geral/pix_cinza.gif") repeat-x scroll left top #F0F0F0;clear: both;display: none;left: -5px;margin: 0 5px 20px;padding: 15px;position: relative;right: 10px;top: -1px;width: 687px;z-index: 1;}
+.box-ajuda a.btn-fechar {text-indent:-9999px; position:absolute; top:12px; right:22px; display:block; width:17px; height:17px; background:url(../../../imagens/geral/btn_fechar.gif);display:none;}
+.box-ajuda h2 {font-size:1.4em !important;display: block !important;}
+.box-ajuda p,
+.box-ajuda ul {line-height: 130%;color:#333;padding: 0 0 0 0 !important;margin: 0 0 15px 0 !important;display: block !important;}
+.box-ajuda ul {list-style-image:none; list-style-position:outside; list-style-type:disc; padding-left:15px; margin-left:15px; }
+
+#UIHelp_content_panel strong.subtitulo {display:block;}*/
+.box-ajuda .esquerda, #UIHelp_content_panel .esquerda {	text-align: justify; margin-left: 0px; width: 325px;float:left;}
+.box-ajuda .direita, #UIHelp_content_panel .direita {float:right;text-align: justify; margin-right: 20px; width: 325px;}
+/*.box-ajuda-div, .box-ajuda {background: url(../../../imagens/geral/pix_cinza.gif) repeat-x scroll left top #F0F0F0;clear: both;left: -5px;margin: 0 5px 20px;padding: 15px;position: relative;top: -1px;width: 687px !important;z-index: 1;right: 10px;display: none;}*/
+.box-ajuda-div, .box-ajuda {background: url(../../../imagens/geral/pix_cinza.gif) repeat-x scroll left top #F0F0F0;clear: both;left: -15px;margin: 0 5px 20px;padding: 15px;position: relative;top: -1px;width: 712px !important;z-index: 1;right: 10px;display: none;}
+.box-ajuda-div h2, .box-ajuda h2{font-size: 1.4em !important;display: block !important;}
+.box-ajuda-div p, .box-ajuda-div ul, .box-ajuda p, .box-ajuda ul{line-height: 130%;color: #333;padding: 0 0 0 0 !important;margin: 0 0 15px 0 !important;display: block !important;}
+.box-ajuda-div ul, .box-ajuda ul{list-style-image: none;list-style-position: outside;list-style-type: disc;padding-left: 15px;margin-left: 15px;}
+.box-ajuda-inner-div{voice-family: inherit;padding: 0;width: 100%;display: block;}
+.box-ajuda-close, .box-ajuda a.btn-fechar{text-indent: -9999px;position: absolute;top: 12px;right: 22px;display: block;width: 17px;height: 17px;background: url(../images/UIHelp_btn_close.gif);display:none;}
+.box-ajuda{
+	display: inline-block;
+	position: relative;
+	width: 712px;
+}
+
+.carregando { background:#FFF7D9 url(../../../imagens/geral/ico_alert_carregando_yellow.gif) no-repeat 35px 10px;}
+
+/* LISTAS */
+.conteudo_pagina .lstTp1 {margin-bottom:10px !important;padding-bottom:10px !important;}
+.conteudo_pagina .lstTp1 li {background:url(../../../imagens/geral/ico_funcoes.gif) 0 0 no-repeat;padding:3px 0;}
+.conteudo_pagina .lstTp1 li.tp1 {background-position:0 5px;}
+.conteudo_pagina .lstTp1 li.tp2 {background-position:0 -55px;}
+.conteudo_pagina .lstTp1 li.tp3 {background-position:0 -115px;}
+.conteudo_pagina .lstTp1 li.tp4 {background-position:0 -175px;}
+.conteudo_pagina .lstTp1 li.tp5 {background-position:0 -240px;}
+.conteudo_pagina .lstTp1 li.tp6 {background-position:0 -295px;}
+.conteudo_pagina .lstTp1 li.tp7 {background-position:0 -355px;}
+.conteudo_pagina .lstTp1 li.tp8 {background-position:0 -415px;}
+.conteudo_pagina .lstTp1 li.tp9 {background-position:0 -475px;}
+.conteudo_pagina .lstTp1 li.tp10 {background-position:0 -535px;}
+.conteudo_pagina .lstTp1 li.tp11 {background-position:0 -595px;}
+
+.lst_leg_check li{padding:0 20px; color:#999; font-size:0.92em !important;}
+.lst_leg_check li div{float:left; padding-left:10px;}
+
+.lstAcaoEmGrupo{clear:both;padding:10px 0}
+.lstAcaoEmGrupo:after{content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden}
+.lstAcaoEmGrupo li{float:left;margin-right:10px;}
+.lstAcaoEmGrupo li.label{padding-top:4px}
+
+/* FILTRO */
+.filtro div.combo {float:left;margin-right:5px;}
+.filtro {height:31px;border-top:solid 1px #CCCCCC;background:#E5E5E5 url(../../../imagens/geral/bgr_filtro.gif) repeat-x;clear:both;color:#666666;font-size:0.92em;line-height:28px;}
+.filtro .overlay {display:none;}
+.filtro select {font-size:11px;}
+.filtro .filtro_extrato {float:left;padding:0 6px;height:24px;padding-top:6px;border-left:solid 1px #FFFFFF;border-right:solid 1px #CBCBCB;border-bottom:solid 1px #E5E5E5;line-height:100%;}
+.filtro .filtro_extrato1 {width:105px;margin-right:5px;}
+.filtro .filtro_extrato2 {width:123px;}
+.filtro .filtro_extrato3 {width:238px;}
+
+.filtro .label_exibir,
+.filtro .label_ultimos,
+.filtro .link_busca,
+.filtro li {float:left;border-left:solid 1px #FFFFFF;border-right:solid 1px #CBCBCB;height:30px;padding:0 6px;}
+
+.filtro_20 li span a{padding:0 20px !important}
+
+.filtro .link_busca {float:right; width:109px;}
+
+.filtro .label_exibir {border-left:0;background:#F0F0F0;}
+.filtro .label_ultimos {background:#F0F0F0;cursor:default;}
+.filtro .link_busca {border-right:0;padding:0;}
+.filtro .link_busca .bgr_seta {float:left;background:url(../../../imagens/geral/ico_setas.gif) 96px -289px no-repeat;}
+.filtro .link_busca a {float:left;padding:0 19px 0 10px;height:30px;}
+
+.filtro li.on {position:relative;background:url(../../../imagens/geral/bgr_filtro.gif) 0 -80px repeat-x;padding:0;border-bottom:0;height:30px;/*border-bottom:solid 1px #900000;*/}
+.filtro li.on a {float:left;height:30px;padding:0 6px;color:#FFFFFF;cursor:default;background:url(../../../imagens/geral/bgr_filtro.gif) 0 -40px no-repeat;}
+.filtro li.on a:hover {text-decoration:none;}
+.filtro li.on span {float:left;background:url(../../../imagens/geral/bgr_filtro.gif) 100% -120px no-repeat;}
+.filtro li.on .seta_baixo {width:9px;height:5px;position:absolute;top:30px;left:50%;margin-left:-4px;background:url(../../../imagens/geral/bgr_filtro.gif) 100% -160px no-repeat;}
+
+.filtro_detalhado .link_busca {background:url(../../../imagens/geral/bgr_filtro.gif) 0 -80px repeat-x;border-bottom:0;height:31px;border-bottom:solid 1px #900000;}
+.filtro_detalhado .link_busca a {background:url(../../../imagens/geral/bgr_filtro.gif) 0 -40px no-repeat;color:#FFFFFF;}
+.filtro_detalhado .link_busca .bgr_seta {background-position:-403px -322px;height:30px;}
+.filtro_detalhado .link_busca .bgr_direita {background:url(../../../imagens/geral/bgr_filtro.gif) 100% -120px no-repeat;float:left;height:30px;}
+
+.filtro_detalhado {position:relative;}
+.filtro_detalhado .overlay {display:block;position:absolute;left:0;top:-1px;z-index:2;opacity:0.70;filter:alpha(opacity=70);background:#FFFFFF;width:613px;height:32px;}
+.filtro_detalhado {height:32px;}
+.filtro_detalhado .seta_baixo {display:none !important;}
+
+.filtro_mes li,
+.filtro_mes li.on a,
+.filtro_mes .label_exibir,
+.filtro_mes .label_ultimos {padding:0 8px;}
+.filtro_mes .filtro_extrato1 {margin-right:6px;}
+
+/* configuracoes especificas do filtro para mudanca do tamanho de fonte*/
+.UIFontSize-level-1 .filtro .link_busca,
+.mioloFs12 .filtro .link_busca{width:109px;}
+.UIFontSize-level-2 .filtro .link_busca,
+.mioloFs13 .filtro .link_busca{width:119px;}
+.UIFontSize-level-3 .filtro .link_busca,
+.mioloFs14 .filtro .link_busca{width:129px;}
+.UIFontSize-level-1 .filtro .link_busca .bgr_seta,
+.mioloFs12 .filtro .link_busca .bgr_seta{background-position:96px -289px;}
+.UIFontSize-level-2 .filtro .link_busca .bgr_seta,
+.mioloFs13 .filtro .link_busca .bgr_seta{background-position:106px -289px;}
+.UIFontSize-level-3 .filtro .link_busca .bgr_seta,
+.mioloFs14 .filtro .link_busca .bgr_seta{background-position:116px -289px;}
+
+.UIFontSize-level-1 .filtro_detalhado .overlay,
+.mioloFs12 .filtro_detalhado .overlay{width:613px;}
+.UIFontSize-level-2 .filtro_detalhado .overlay,
+.mioloFs13 .filtro_detalhado .overlay{width:603px;}
+.UIFontSize-level-3 .filtro_detalhado .overlay,
+.mioloFs14 .filtro_detalhado .overlay{width:593px;}
+.UIFontSize-level-1 .filtro_detalhado .link_busca .bgr_seta,
+.mioloFs12 .filtro_detalhado .link_busca .bgr_seta{background-position:-403px -322px;}
+.UIFontSize-level-2 .filtro_detalhado .link_busca .bgr_seta,
+.mioloFs13 .filtro_detalhado .link_busca .bgr_seta{background-position:-393px -322px;}
+.UIFontSize-level-3 .filtro_detalhado .link_busca .bgr_seta,
+.mioloFs14 .filtro_detalhado .link_busca .bgr_seta{background-position:-383px -322px;}
+
+.tabTp1 tbody.on {background:#E4E4E4;border-top:1px solid #CCC;}
+.tabTp1 tbody.on2 {background:#CACACA;}
+.tabTp1 tbody.over2 {background:#CACACA;}
+.tabTp1 tbody.on2 .tdT {border-top:solid 1px #AAA;}
+.tabTp1 tbody.on2 .tdB {border-bottom:solid 1px #AAA;}
+.tabTp1 tbody.on2 tr.click td {font-weight:bold;}
+.tabTp1 tbody tr.click td {cursor:pointer;}
+.tabTp1 tbody tr.indisponivel td, .tabTp1 tbody tr.indisponivel td a {color:#999;}
+.tabTp1 tbody tr.indisponivel td span.disponivel {color:#333;}
+.tabTp1 tbody tr.desc td {color:#666;padding:0 !important;}
+.tabTp1 tbody tr.even {background:#E4E4E4;}
+.tabTp1 tbody tr.on {background:#E4E4E4;border-top:1px solid #CCC;border-top:1px solid #CCC;}
+.tabTp1 tbody td {line-height:140%;padding:8px 0;}
+.tabTp1 tbody td span.expansivel {background:url(../../../imagens/geral/ico_mais_menos.gif) 0 0 no-repeat;font-size:1px;display:block;text-indent:-9999px;width:11px;height:11px;cursor:pointer;margin-top:2px;}
+.tabTp1 tbody td span.expansivelOn {background:url(../../../imagens/geral/ico_mais_menos.gif) 0 -49px repeat-x;}
+.tabTp1 tbody td span.desc {color:#666;display:block;}
+.tabTp1 tbody.total {background:#E4E4E4 !important;font-weight:bold;}
+.tabTp1 tbody.total2 {background:#CACACA;font-weight:bold;}
+.tabTp1 tbody.total3 {background:#999;font-weight:bold;}
+.tabTp1 tbody.total3 * {color:#FFF;}
+.tabTp1 tbody.total4 {background:#E4E4E4;}
+.tabTp1 tbody.total4 td {border-bottom:1px solid #CDCDCD;}
+.tabTp1 tbody.total5 {background:#CACACA;}
+.tabTp1 tbody.total5 td {border-bottom:1px solid #999;}
+.tabTp1 tbody.total tr.expansive {font-weight:normal;}
+
+/* transferencias limites */
+.novasContas th a {padding:0 6px !important; line-height:40px !important; height:41px !important;}
+.novasContas th a:hover {background:#E2E2E2 url(../../../imagens/geral/ico_sort.gif) no-repeat scroll center 33px !important;}
+.novasContas th, .novasContas th div{height:40px !important}
+
+.novasContas th a.sortAsc {background-position:center 33px !important;}
+.novasContas th a.sortAsc:hover {background-position:center -207px !important; }
+
+.novasContas th a.sortDesc {background-position:center -87px !important; }
+.novasContas th a.sortDesc:hover {background-position:center -327px !important; }
+
+.infoConta { padding:1px 0 20px 0 !important; background:#FFFFFF; border:1px #BEBEBE solid;border-top:0;}
+.infoConta .tabSaldosExtratos { margin-top:0; }
+.infoConta div.boxEsq,
+.infoConta div.boxDir { float:left; width:344px; margin:15px 0 0 0; padding:0;}
+.infoConta div.boxDir { float:right; padding:0;}
+
+.infoConta div.boxEsq strong,
+.infoConta div.boxDir strong{ display:block; padding:0 0 8px 5px; }
+
+.infoConta .total {height:30px; line-height:30px; padding:0 0 0 6px !important; background:#E2E2E2 url(../../../imagens/geral/bgr_total_detalhamento.jpg) repeat-x left top; border-bottom:1px #CF3F3F solid;}
+
+.infoConta div.boxEsq .total strong,
+.infoConta div.boxDir .total strong {display:block;float:left;padding:0;}
+.infoConta div.boxEsq .total span,
+.infoConta div.boxDir .total span {display:block; float:right; padding-right:7px;}
+
+.infoConta div.boxEsq .total strong em,
+.infoConta div.boxDir .total strong em {font-size:18px;color:#BF0000;float:none;display:inline;font-weight:normal;}
+
+.infoConta h3 {font-size:1.08em ;padding-bottom:7px;zoom:1;overflow:hidden;padding-left:5px;}
+.infoConta h3 strong {float:left;font-size:18px;color:#BF0000;font-weight:normal;padding:0 10px 0 0 !important;line-height:100%;}
+.infoConta h3 span {float:left;padding-top:5px;}
+
+.infoP_news {padding:30px 20px 0 !important;}
+
+/* detalhamento das contas em saldos */
+.infoConta .detalhamento { margin-top:0; }
+.infoConta .detalhamento .total { background:#F0F0F0 url(../../../imagens/geral/bgr_total_detalhamento.jpg) repeat-x left top; }
+.infoConta .detalhamento tbody tr.over { background-color:#F0F0F0; cursor:pointer; }
+.infoConta .detalhamento tbody tr.ativo { background-color:#E5E5E5; }
+.infoConta .detalhamento tbody tr.ultimo td { border-bottom:1px #BDBDBD solid; }
+.infoConta .detalhamento tbody td.total { padding:0 21px 0 6px; }
+.infoConta .detalhamento tbody td.total span { padding:0; background:none; }
+.infoConta .detalhamento tbody td { padding:7px 0 8px 6px; }
+.infoConta .detalhamento tbody td a { color:#333333; text-decoration:none; }
+.infoConta .detalhamento tbody td span { text-align:right; display:block; height:17px; padding-right:25px; margin-right:3px; background:url(../../../imagens/geral/ico_saldos_extratos.gif) no-repeat right -120px; }
+.infoConta .detalhamento tbody td span.sem_icone {background:none;padding-right:5px;}
+.infoConta .legenda { color:#666666; border-bottom:0; padding:7px 0 8px 6px; }
+
+.saldo .detalhamento thead th div { height:30px; padding:0 6px; }
+
+a.lnkSeta { display:block; color:#000000; text-decoration:none; padding:0 0 0 10px; background:url(../../../imagens/geral/ico_setas.gif) no-repeat left 5px; }
+a.lnkSeta:hover { color:#BF0000; text-decoration:underline;}
+
+/* ESTILO LINHAS DAS TABELAS DE LIMITES DE SALDOS E EXTRATOS */
+
+.btn_collapse {display:block;height:36px;line-height:35px;padding-left:30px;background:url(../../../imagens/geral/btn_collapse.jpg) no-repeat;font-size:0.92em;cursor:pointer;}
+.btn_collapse em {display:block;height:34px;padding-left:10px;border-top:solid 1px #E5E5E5;border-bottom:solid 1px #E5E5E5;}
+.btn_collapse div {display:block;height:34px;padding-left:10px;border-top:solid 1px #E5E5E5;border-bottom:solid 0px #E5E5E5;}
+.btn_collapse_linha_final{display:block;height:1px;padding-left:10px;border-top:solid 1px #E5E5E5;border-bottom:solid 0px #E5E5E5;}
+.btn_collapse:hover {text-decoration:none;color:#333333;background-color:#F0F0F0;background-position:0 -50px;}
+.btn_collapse_on {background-position:0 -100px !important;background-color:#FFFFFF !important;border-right:solid 1px #BEBEBE;}
+.btn_collapse_on em {font-weight:bold;border-bottom:none;border-top:solid 1px #BEBEBE;}
+
+/* BUSCA DETALHADA */
+.busca_detalhada { clear:both; color:#333333; padding:20px 15px 15px 20px; font-size:0.92em; border:2px #900000 solid; border-width:2px 0 2px 0;background:url(../../../imagens/geral/bgr_ajuda.jpg) repeat-x #F8F8F8; }
+.busca_detalhada span { display:block; }
+.busca_detalhada input,
+.busca_detalhada select { font-size:11px; width:auto; background-color:#FFFFFF; height:auto !important; }
+
+.busca_detalhada label,
+.busca_detalhada span.label,
+.busca_detalhada .historico span,
+.busca_detalhada .descricao span,
+.busca_detalhada .contas span { padding:3px 10px 0 0;width:130px; line-height:1.2em; }
+
+.busca_detalhada .historico span,
+.busca_detalhada .descricao span,
+.busca_detalhada .contas span { float:left; text-align:right; padding-top:0; padding-right:10px; }
+
+.busca_detalhada input#rdoPorMes1,
+.busca_detalhada input#rdoPorMes2,
+.busca_detalhada input#rdoPorMes2x,
+.busca_detalhada input#rdoPorMes2xAnual,
+.busca_detalhada input#rdoPorMes2Anual,
+.busca_detalhada input#rdoPorMes3,
+.busca_detalhada input#rdoPorMes4,
+.busca_detalhada input#rdoPorMes5,
+.busca_detalhada input#rdoPorMes6,
+.busca_detalhada input#rdoApartir1,
+.busca_detalhada input#rdoApartir2,
+.busca_detalhada input#rdoApartir2x,
+.busca_detalhada input#rdoApartir3,
+.busca_detalhada input#rdoApartir4,
+.busca_detalhada input#rdoApartir5,
+.busca_detalhada input#rdoApartir6 { float:left; }
+
+.busca_detalhada input.apartir { margin-left:140px; }
+
+.busca_detalhada label.apartir,
+.busca_detalhada span.label.apartir,
+.busca_detalhada label.pormes,
+.busca_detalhada span.label.pormes { width:auto; margin-left:3px; }
+
+.busca_detalhada .lstContas {clear:both;padding-left:140px; padding-right:0; padding-top:0; width:545px;}
+.busca_detalhada .lstContas li {clear:none;white-space:nowrap;float:left;padding-right:15px;padding-top:10px; width:auto;}
+.busca_detalhada .lstContas li input {margin-right:3px;}
+
+.busca_detalhada input#hstCompensados,
+.busca_detalhada input#hstPagos,
+.busca_detalhada input#hstDevolvidos,
+.busca_detalhada input#chkContasTodas,
+.busca_detalhada select#operacoes {float:left; margin-right:3px; }
+
+.busca_detalhada select option { padding:2px 0; vertical-align:middle; background-color:#F6F6F6; color:#333333; }
+select option.group { font-weight:bold; background-color:#E1E1E1; color:#000000; }
+select option.disabled { background-color:#FFFFFF; color:#666666; }
+
+.busca_detalhada .carregando { width:85px; height:22px; padding:0 0 0 30px; margin:10px 0 10px 140px; color:#BF0000; background:#FFF7D9 url(../../../imagens/geral/carregando.gif) no-repeat left top;}
+.busca_detalhada span { padding:2px 0 0 0; }
+
+.bto_salvar_carregando{border:0;display:block;height:24px;padding:0;text-indent:-9999px;}
+.bto_salvar_carregando {background:url(../../../imagens/geral/carregando.gif) 0 0 no-repeat;width:72px;}
+
+.bto_enviar_carregando{border:0;display:block;height:24px;padding:0;text-indent:-9999px;}
+.bto_enviar_carregando {background:url(../../../imagens/geral/carregando.gif) 0 0 no-repeat;width:72px;}
+
+.busca_detalhada_simples { padding:0; background:none; border:none; }
+.busca_detalhada_simples h2 { font-size:1.38em !important; width:100%; margin-bottom:20px; }
+.busca_detalhada_simples input,
+.busca_detalhada_simples select { background-color:#F4F4F4; }
+
+/* Excecoes */
+.conta_unica .contas,
+.conta_selecionada .box_contas_marcado,
+.box_contas_uma,
+.box_7dias,
+.box_15dias,
+.box_pormes,
+.box_porano,
+.box_operacoes_cheques,
+.box_operacoes_cartao,
+.box_operacoes_doc_ted,
+.busca_7dias .box_3dias,
+.busca_15dias .box_3dias,
+.busca_pormes .box_3dias,
+.busca_porano .box_3dias,
+.busca_operacoes_cheques .box_operacoes,
+.busca_operacoes_cheques .box_descricao,
+.consolidado_anual .box_consolidada {display:none;}
+
+.busca_7dias .box_7dias,
+.busca_15dias .box_15dias,
+.busca_pormes .box_pormes,
+.busca_porano .box_porano,
+.conta_selecionada .box_contas_uma,
+.busca_operacoes_cheques .box_operacoes_cheques {display:block;}
+
+.busca_extrato_tarifas .contas,
+.busca_extrato_tarifas .box_operacoes,
+.busca_extrato_tarifas .box_3dias,
+.busca_extrato_tarifas .buscaDescricao,
+.busca_extrato_tarifas .box_descricao,
+.busca_extrato_tarifas .box_documento,
+.busca_extrato_tarifas .box_apartir,
+.busca_extrato_tarifas .box_outras_infos {display:none}
+
+.busca_contas_marcado .box_operacoes,
+.busca_contas_marcado .box_3dias,
+.busca_contas_marcado .buscaDescricao,
+.busca_contas_marcado .box_descricao,
+.busca_contas_marcado .box_documento,
+.busca_contas_marcado .box_apartir,
+.busca_contas_marcado .box_outras_infos,
+.busca_contas_marcado .box_contas {display:none}
+
+.busca_extrato_tarifas .box_consolidada,
+.busca_extrato_tarifas .box_contas_uma,
+.consolidado_anual .box_consolidada_anual {display:block !important}
+.consolidado_anual .box_consolidada {display:none !important}
+
+.busca_operacoes_cheques #buscaHistoricoCheque,
+.busca_operacoes_cheques #buscaNumeroCheque {display:block !important;}
+
+#busca_detalhada_extrato .box_contas {display:none;}
+
+.busca_operacoes_cartao .box_operacoes,
+.busca_operacoes_cartao .box_operacoes_cheques {display:none;}
+.busca_operacoes_cartao .box_operacoes_cartao {display:block;}
+
+.busca_operacoes_doc_ted .box_operacoes,
+.busca_operacoes_doc_ted .box_operacoes_cheques {display:none;}
+.busca_operacoes_doc_ted .box_operacoes_doc_ted {display:block;}
+
+/* HORARIOS E LIMITES */
+.horarios_e_limites {font-size:0.92em;}
+.horarios_e_limites h3 {font-size:1.42em;}
+.mioloF13 .horarios_e_limites h3 {font-size:1.33em;padding-bottom:20px;}
+.horarios_e_limites h3 a {display:block;padding-left:14px;background: url(../../../imagens/geral/ico_setas.gif) 3px -66px no-repeat;border-bottom:solid 1px #E5E5E5;padding-bottom:4px;}
+.horarios_e_limites h3 a.active {background-position:-497px -32px !important;border-bottom:0;}
+.horarios_e_limites .box_degrade,
+.horarios_e_limites .box_degrade_fonte_variavel,
+.UICollapsibleArea .UICollapsibleArea-area {font-size:0.92em;}
+.horarios_e_limites dt, .horarios_e_limites dd {float:left;padding-bottom:8px;}
+.horarios_e_limites dt {width:125px;padding-right:8px;text-align:right;}
+.horarios_e_limites dd {width:510px;color:#000000;}
+.horarios_e_limites .informacoes,
+.UICollapsibleArea .informacoes {float:left;}
+.horarios_e_limites .mais_detalhes,
+.UICollapsibleArea .mais_detalhes {float:right;padding-left:12px;background:url(../../../imagens/geral/ico_setas.gif) no-repeat 0 5px;}
+.horarios_e_limites_espaco_acima {padding-top:20px;}
+
+.horarios_e_limites table,
+.UICollapsibleArea table {width:100%;}
+.horarios_e_limites .nome,
+.UICollapsibleArea .nome {padding-bottom:8px;min-width:150px !important;width:auto;padding-right:8px;text-align:right;white-space:nowrap !important;}
+.horarios_e_limites .texto,
+.UICollapsibleArea .texto {padding-bottom:8px;width:auto;}
+
+.G_pagamentos .btnModalBoleto {float:right;padding-left:12px;margin-right:105px;background:url(../../../imagens/geral/ico_setas.gif) no-repeat 0 5px;}
+/*alinhamento comprovantes novos*/
+
+.list_infos_aliNov {width:100%;}
+.list_infos_aliNov li {float:left; font-size:1.0em; padding-bottom:6px}
+.list_infos_aliNov li.itemUltimo { margin-bottom:-12px;}
+.list_infos_aliNov li.itemFirst { margin-top:5px;}
+.list_infos_aliNov li.item {color:#666; width:160px; padding-right:15px; text-align:right}
+.list_infos_aliNov li.info {color:#000; width:500px;}
+.box_grayLine_bottom_novo .list_infos_aliNov li.info {color:#000; width:auto;}
+
+.list_infos_aliNov li.itemQuebPeq {color:#666; width:160px; padding-right:15px; text-align:right; margin-top:-8px;}
+.list_infos_aliNov li.infoQuebPeq {color:#000; width:500px; margin-top:-8px;}
+.list_infos_aliNov li.quebra {width:100% !important; padding:0; margin:0; }
+.list_infos_aliNov li.quebra_linha {width:100%; padding:0; margin:0; height:1px; line-height:1px; background-color:#E5E5E5; }
+.list_infos_aliNov li.linha {width:100%;}
+.margem30{ margin-left:30px;}
+
+/* CABECALHO DE COMPROVANTES */
+.tabela_comprovante .cabecalho {width:690px;padding:15px;border-bottom:1px solid #E5E5E5;line-height:100%;}
+.tabela_comprovante .cabecalho li {float:left;}
+.tabela_comprovante .cabecalho li.logo {margin: 6px 26px 0;}
+.tabela_comprovante .cabecalho li.logo.agendamento {margin: 6px 26px 0 !important;}
+.tabela_comprovante .cabecalho li.info h2 {color:#000;font-size:1.27em !important;font-weight:bold;line-height:150%;}
+.tabela_comprovante .cabecalho li.info p {line-height:150%;clear:both;}
+
+/* GUIAS DE PAGAMENTOS (P.EX. DARF) */
+.G_pagamentos {width:100%;}
+.tabGuia {width:100%;font-size:0.92em;border-collapse:collapse;}
+.tabGuia td {border:1px solid black;vertical-align:top;text-align:left;}
+.tabGuia tbody.darf td {border:1px solid #E5E5E5;vertical-align:top;text-align:left;}
+.tabGuia tbody.gare td {border:1px solid #E5E5E5;vertical-align:top;text-align:left;}
+.tabGuia tbody.darf .info {padding-top:5px!important;}
+.tabGuia tbody.gare .info {padding-top:5px!important;}
+.tabGuia .item {text-align:left;vertical-align:top;padding-left:5px;}
+.tabGuia .item ul li {font-weight:bold;padding:0 10px;}
+.tabGuia .info {vertical-align:middle;padding-left:5px;height:27px;font-weight:bold;font-size:1.08em;}
+.tabGuia .informativo {vertical-align:top;font-size:1.22em;}
+.tabGuia .informativo strong {display:block;padding:5px 0 10px;text-align:center;}
+.tabGuia .informativo p {padding: 0 10px;text-align:justify;}
+
+/* LISTA INFOS */
+.list_infos li {float: left;padding-bottom:10px; padding-top:0px;}
+.list_infos li.item {color:#333333; width:120px; padding-right:10px; text-align:right}
+.list_infos li.info {color:#000000; width:560px; font-weight:bold; padding-right:15px;}
+.list_infos li.infoQueb {color:#000000; width:560px; font-weight:bold; padding-right:15px;}/* utilizado quando o info qebra em treis linhas e desalinha o conteudo do dois pontos. */
+.list_infos li.itemQuebPeq {color:#666; width:160px; padding-right:15px; text-align:right; margin-top:-8px;}
+.list_infos li.infoQuebPeq {color:#000; width:500px; margin-top:-8px;}
+.list_infos li.quebra {width:100%; padding:0; margin:0; }
+.list_infos li.quebra_linha {width:100%; padding:0; margin:0; height:1px; line-height:1px; background-color:#E5E5E5; }
+.list_infos li.linha {width:100%;}
+.list_infos li.coluna {margin-right:50px;}
+.list_infos li h2, .conteudo_linha h2 {color:#000; font-size:1.30em !important; font-weight:bold;line-height:150%;}
+.list_infos li h2, .conteudo_linha_brd0 h2 {color:#000; font-size:1.30em !important; font-weight:bold;line-height:150%;}
+.list_infos li p {line-height:120%};
+.margem_comprovante .list_infos li h2,
+.margem_comprovante .conteudo_linha h2{color:#000; font-size:1.50em !important;}
+.margem_comprovante .conteudo_linha_brd0 h2{color:#000; font-size:1.50em !important;}
+
+
+.listTitulo_infos { width:100% }
+.listTitulo_infos li {display:inline-block; padding-bottom:0px; padding-top:0px;}
+.listTitulo_infos li.item {color:#333333; width:120px; padding-left:15px; padding-right:10px; text-align:right; vertical-align:top;float:left;}
+.listTitulo_infos li.item2 {color:#333333; width:70px; padding-left:15px; padding-right:10px; text-align:right}
+.listTitulo_infos li.info {color:#000000; width:700px; font-weight:bold; padding-right:15px; vertical-align:bottom;float:left;}
+.listTitulo_infos li.info2 {color:#000000; width:50px; font-weight:bold; padding-right:15px;}
+
+
+.list_infos li h3 {color:#000; font-size:1.42em;}
+.list_infos li h4 {color:#000; font-size:0.92em;}
+.list_infos li.linha label,
+.list_infos li.linha span.label {font-size:1.09em; line-height:150%;}
+.list_infos li .list_cols li{padding:0 5px 0 0;}
+.list_infos li .list_cols li input {font-size:1.0em; line-height:150%}
+.list_infos li .list_cols li.sep {border-left:1px solid #E5E5E5; padding-left:35px; margin-left:35px; height:30px;}
+.list_infos li .ip_form_bt input {padding:4px 2px;}
+.list_infos li .ip_form_bt label,
+.list_infos li .ip_form_bt span.label {line-height:180%}
+.list_infos li.last {padding-bottom:0}
+.list_infos li.lastNormal {font-weight:normal !important;}
+
+.list_infos li a.lk_normal {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat scroll 0 5px;padding-left:10px;}
+
+.black li.item {color:#000000;}
+
+
+.list_busca_cedente li{float:left; padding-bottom:10px;}
+.list_busca_cedente li.item{width:130px; text-align:right; padding-right:10px;}
+.list_busca_cedente li.quebra{width:100%;clear:both;padding:0;margin:0;height:1px;font-size:1px;line-height:1px;float:none;}
+
+
+.baseSac, .basesac  {padding:10px 0;width:100%;line-height:110%;font-size:1.06em;}
+.baseSac  div.sac, .basesac div.sac {border-right:1px solid #CCCCCC;float:left;padding:0 10px;width:575px;}
+.baseSac ul.sac, .basesac ul.sac {border-bottom:1px solid #CCCCCC;margin-bottom:5px;padding-bottom:5px;width:100%;}
+.baseSac ul.sac li, .basesac ul.sac li {float:left;}
+.baseSac ul.sac li.sac, .basesac ul.sac li.sac {font-weight:bold;padding-right:15px;text-align:right;width:95px;font-size:95%;}
+.baseSac ul.sac li span, .basesac ul.sac li span {display:block;}
+.baseSac ul.sac li.alo, .basesac ul.sac li.alo {width:95px;font-size:95%;}
+.baseSac ul.sac li.deficiente, .basesac ul.sac li.deficiente {width:165px;font-size:95%;}
+/*.baseSac ul.sac li.mensagem, .basesac ul.sac li.mensagem {font-size:85% !important;line-height:120% !important;width:200px;}*/
+.baseSac ul.sac li.mensagem, .basesac ul.sac li.mensagem {font-size:85% !important;line-height:120% !important; width: 200px;}
+.baseSac ul.sac li .fone, .basesac ul.sac li .fone {color:#CC092F;}
+.baseSac ul.ouvidoria li.ouvidoria, .basesac ul.ouvidoria li.ouvidoria {font-weight:bold;}
+.baseSac ul.ouvidoria li, .basesac ul.ouvidoria li {display:inline;margin-right:15px;font-size:95%;}
+.baseSac ul.ouvidoria li.mensagem, .basesac ul.ouvidoria li.mensagem {font-size:85% !important;line-height:120% !important;}
+.baseSac ul.ouvidoria li.fone, .basesac ul.ouvidoria li.fone {color:#CC092F;font-size:95%;}
+.baseSac div.fale, .basesac div.fale {float:left;font-size:85% !important;line-height:120% !important;padding:0 10px;width:78px;}
+.baseSac div.fale a, .baseasac div.fale a {text-decoration:underline;}
+
+
+.sac .linha h2 { font-size:1.21em !important; font-weight:bold; }*/ /* 14px */
+.sac li { font-size:0.94em !important; }*/ /* 11px */
+.sac ul.list_cols li { font-size:1em !important; padding:0 0 0 5px;  } *//* 11px, IE */
+.sac ul.list_cols li.sep { padding:0 0 2px 0 !important; margin:0 20px !important; }*/
+
+.conteudo_sac .list_infos li h2 { font-size:1.21em !important; } /* Correção do SAC para o SEI. */
+
+/* Comprovantes transferencia*/
+.btop{ border:1px solid #E5E5E5;}
+.list_infos_transf{width:500px;}
+.list_infos li.itemQualFunc {color:#000; width:500px; text-align:left; margin-top:-15px;}
+.list_infos li.itemData{width:100px; height:20px; display:block; text-align:left; position:absolute; right:0px; margin-right:23px; top:17px;}
+.list_infos li.itemData110 {width:100px; height:20px; display:block; text-align:left; position:absolute; top:110px; right:0px; margin-right:23px;}
+.list_infos li.itemData120 {width:100px; height:20px; display:block; text-align:left; position:absolute; top:120px; right:0px; margin-right:23px;}
+.list_infos li.itemData140 {width:100px; height:20px; display:block; text-align:left; position:absolute; top:140px; right:0px; margin-right:23px;}
+.list_infos li.itemData130{width:100px; height:20px; display:block; text-align:left; position:absolute; top:130px; right:0px; margin-right:23px;}
+.list_infos li.itemData150{width:100px; height:20px; display:block; text-align:left; position:absolute; top:150px; right:0px; margin-right:23px;}
+.list_infos li.itemData155{width:100px; height:20px; display:block; text-align:left; position:absolute; top:155px; right:0px; margin-right:23px;}
+.list_infos li.itemData160{width:100px; height:20px; display:block; text-align:left; position:absolute; top:160px; right:0px; margin-right:23px;}
+.list_infos li.itemData295{width:100px; height:20px; display:block; text-align:left; position:absolute; top:295px; right:0px; margin-right:23px;}
+.list_infos li.itemCabeca { margin-top:-5px;}
+.list_infos li.itemCabeca2 { margin-top:3px;}
+.list_infos li.itemCabecalho { margin-bottom:-2px; margin-top:-12px;}
+.infoCabeca {color:#000;}
+
+/* menus praticidade internet banking */
+.menuPraticidade ul {border-bottom:1px solid #E5E5E5;margin-bottom:20px;padding-bottom:20px;}
+.menuPraticidade ul.ultimo {border-bottom:0;}
+.menuPraticidade li {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat scroll 0 7px;padding:2px 0 10px 10px;}
+.menuPraticidade li.ultimo {padding-bottom:0;}
+.menuPraticidade li.dp {background-position:0 -373px;}
+
+/* EXCESSOES DOS BOXES DE PRATICIDADE */
+.praticidade ul {display:none;}
+.personalizarPosicaoFinanceira .personalizarPosicaoFinanceira,
+.senhaEletronica .senhaEletronica,
+.alterarDiasHorariosAcesso .alterarDiasHorariosAcesso,
+.alterarEndereco .alterarEndereco,
+.personalizacao .personalizacao,
+.cadastrarEmail .cadastrarEmail,
+.ativarLeitorOptico .ativarLeitorOptico,
+.mensagem_aviso .mensagem_aviso,
+.adicionarContas .adicionarContas {display:block;}
+.adicionarContas a.ico-comprovante,
+.cadastrarEmail a.ico-infoemail {background:url(../../../imagens/geral/ico_funcoes.gif) no-repeat 0 -180px;display:block;height:26px;line-height:26px;padding-left:35px;}
+.adicionarContas a.ico-comprovante {background-position:0 0;}
+.cadastrarEmail a.ico-infoemail {background-position:0 -180px;}
+.praticidadeSaldoExtrato a.ico-infoemail {background:url(../../../imagens/geral/ico_funcoes.gif) no-repeat 0 -178px;display:block;height:28px;line-height:26px;padding-left:35px;}
+
+/* TABELAS */
+.tb_autenticacao {margin:auto;}
+.tb_autenticacao td{padding:0 10px 0 0; font-size:0.92em; text-align:left}
+
+.info_tabela {color:#666666;padding:10px 0 25px 0;font-size:0.9em;}
+.ttl_subTitulo {font-size:17px;padding-bottom:10px;}
+
+.no_mt .ttl_subTitulo {margin-top:0 !important}
+
+/* RESULTADO DE FILTRO EM EXTRATO */
+.ctn-filtro .headerExtrato {padding-top:0;clear:both;}
+.ctn-filtro .lnkTop {font-size:11px;background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat left -460px;float:right;padding-left:12px;}
+
+.boxFeedback {font-size:11px;padding:20px 0 20px;}
+.boxFeedback label,
+.boxFeedback span.label,
+.boxFeedback ul,
+.boxFeedback li {float:left;}
+
+.boxFeedback li {padding-left:5px;}
+
+.boxFeedback p {clear:both;font-size:11px;padding-top:3px;}
+.boxFeedback #feedBack td {padding-top:3px;}
+.boxFeedback .lnkRemover {float:right;padding:0 0 10px 10px; background:url(../../../imagens/geral/ico_setas.gif) no-repeat -501px -101px;}
+.boxFeedback a.scrollTo {color:#666666; padding-right:15px;}
+
+.boxFeedback .info {float:left;width:515px;}
+.boxFeedback .info ul {width:450px; padding-top:3px; padding-left:5px;}
+.boxFeedback .info li {padding:0;}
+
+.boxFeedback .modo_visualizacao {float:right;}
+
+/* CODIGO DE TELAS */
+.txt-codigoTela {position:absolute; bottom:0; left:50%; font-size:0.81em; color:#999999; margin-left:-15px;}
+.jqmWrapper .txt-codigoTela {position:relative; bottom:0; left:50%; font-size:0.81em; color:#999999; margin-left:-15px;z-index: 1;width:30px;}
+.miolo .txt-codigoTela {position:absolute; bottom:0; left:50%; font-size:0.81em; color:#999999; margin-left:-15px;}
+
+
+/* PAGINACAO */
+.paginacao {position:relative;background:#F0F0F0;height:40px;line-height:40px;border-bottom:solid 1px #E5E5E5;padding-bottom: 0 !important;padding-left: 10px !important;padding-right: 10px !important;padding-top: 0 !important;color:#BE0C0C;font-size:10px;overflow:hidden;}
+.paginacao a {color:#BE0C0C;}
+.paginacao a.desabilitado {color:#BE0C0C;filter:alpha(opacity=30);opacity:0.3;cursor:default !important; }
+
+.paginacao ol,
+.paginacao .ultima,
+.paginacao .primeira,
+.paginacao .anterior,
+.paginacao .proxima,
+.paginacao .ultima {float:left;}
+
+.paginacao .ultima,
+.paginacao .primeira,
+.paginacao .anterior,
+.paginacao .proxima {margin-right:0px;text-transform: uppercase;}
+
+
+.paginacao .primeira_anterior {float:left;}
+.paginacao .proxima_ultima {float:right;}
+
+.paginacao .primeira {background:url(../../../imagens/geral/ico_setas.gif) no-repeat -495px -406px;padding-left:15px;text-decoration:none;}
+.paginacao .anterior {background:url(../../../imagens/geral/ico_setas.gif) no-repeat 12px -213px;padding-left:20px;text-decoration:none;}
+.paginacao .proxima {background:url(../../../imagens/geral/ico_setas.gif) no-repeat 50px 17px;padding-right:25px;text-decoration:none;}
+.paginacao .ultima {background:url(../../../imagens/geral/ico_setas.gif) no-repeat 44px -363px;padding-right:20px;text-decoration:none;}
+
+.paginacao ol {display:block;width:300px;text-align:center;position:absolute;left:50%;margin-left:-150px;}
+.paginacao li {display:inline;}
+.paginacao li a {padding:0 7px 0 7px;}
+.paginacao li span {padding:7px 7px 7px 7px;}
+.paginacao .pontilhado {display:inline !important;}
+
+.paginacao_parte1 .pagina_1 a,
+.paginacao_parte2 .pagina_2 a,
+.paginacao_parte3 .pagina_7 a {color:#FFFFFF;background:url(../../../imagens/geral/bgr_paginacao_on.jpg) 50% 33% no-repeat;display:inline-block;padding:0 10px 7px 11px;font-weight:bold;cursor:default;}
+.paginacao_parte1 .pagina_1 a:hover,
+.paginacao_parte2 .pagina_2 a:hover,
+.paginacao_parte3 .pagina_7 a:hover {text-decoration:none;}
+.paginacao_parte1 .pontilhado_primeira,
+.paginacao_parte2 .pontilhado_primeira,
+.paginacao_parte3 .pontilhado_ultima,
+.paginacao_parte1 .pagina_6,
+.paginacao_parte2 .pagina_6,
+.paginacao_parte3 .pagina_2{display:none;}
+
+.lstPag{display:block;background:#F0F1F2;padding:6px 10px;clear:both;margin:20px 0 10px;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border: 1px solid #F0F1F2;}
+.lstPagExpansivel{background:#CACACA !important;border:none !important}
+.lstPag li{display:block;float:left;}
+.lstPag span{display:block;float:left;}
+.lstPagNum li{margin:1px 0 0}
+.lstPagNum span{margin:1px 0 0}
+.lstPagNum li.on{background-color: rgb(195, 16, 16); border-right-width: 0px; margin: 0px; padding-top: 5px;padding-bottom: 5px;padding-left: 3px;padding-right: 3px;}
+.lstPagNum li.on a {color:#fff}
+.lstPag li.on{margin:0}
+.lstPagNum span.on{background-color: rgb(195, 16, 16); border-right-width: 0px; margin: 0px; padding-top: 5px;padding-bottom: 5px;padding-left: 3px;padding-right: 0px;}
+.lstPagNum span.on a {color:#fff}
+.lstPag span.on{margin:0}
+.lstPag li.off{filter:alpha(opacity=30);opacity:0.3}
+.lstPag li.off a{cursor:default;}
+.lstPag li a{display:block;text-indent:-999999px;height:24px;line-height:24px;}
+.lstPag li.btnFirst a,
+.lstPag li.btnLast a,
+.lstPag li.btnPrev a,
+.lstPag li.btnNext a{height:10px;width:58px;margin:5px 0 0;background:url(../../imagens/geral/btns_pag.gif) no-repeat 0 2px;}
+.lstPag li.btnNext a{width:52px;background-position:0 -48px;}
+.lstPag li.btnLast a{width:48px;background-position:-7px -107px;margin-top:6px;margin-left:20px;}
+.lstPag li.btnFirst a{width:57px;background-position:0 -58px;margin-top:7px;margin-right:20px;}
+.lstPag li.boxPagNum{width:445px}
+.lstPagExpansivel li.boxPagNum{width:575px !important}
+.lstPag li .lstPagNum, .lstPag span .lstPagNum{margin:0 auto;}
+.lstPag li .lstPagNum a, .lstPag span .lstPagNum a{text-indent:0;color:#C31010;padding:0 7px;line-height:20px !important;float:left;height:auto;}
+.lstPag li .lstPagNum a:hover, .lstPag span .lstPagNum a:hover{text-decoration:underline;}
+.lstPag .lstPagNum.on a{text-indent:0;color:#C31010;padding:0 7px;line-height:20px !important;float:left;height:auto;}
+.lstPag .lstPagNum.on a:hover{text-decoration:underline;}
+.lstPag li .lstPagNum li.on a, .lstPag span .lstPagNum span.on a{background:#C31010;color:#fff;font-weight:700;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border: 1px solid #C31010;cursor:default;text-decoration:none !important}
+.boxPagNum ul.lstPagNum {width: 315px !important;}
+
+.paginacao_cabecalho {height:40px;font-size:12px;}
+.paginacao_cabecalho p {float:left;}
+.paginacao_cabecalho p a {color:#BE0C0C;}
+.paginacao_cabecalho .lnk_topo {float:right;font-size:11px;padding-left:13px;background:url(../../../imagens/geral/ico_setas.gif) no-repeat 0 -461px;}
+
+
+/* Lista SEI*/
+.boxListaComprovante {zoom:1;}
+.listaComprovante {float: right;padding-bottom: 10px;}
+.listaComprovante li {background-image: url("../../../imagens/geral/ico_comprovante.gif");background-repeat: no-repeat;display: inline;float: left;margin-left: 20px;}
+.listaComprovante li.imprimir {background-position: 0 -20px;}
+.listaComprovanteIco li a , .listaComprovante li a{line-height:20px;padding-left:30px}
+
+/* LISTA DE PERSONALIZACAO */
+.lista_personalizacao {border-top:1px solid #E5E5E5; padding-bottom:30px;float:left;}
+.lista_personalizacao li {display:block;border-bottom:1px solid #E5E5E5; padding:5px 0; vertical-align:middle;float:left;width:690px; padding-right:5px;}
+.lista_personalizacao li span {font-size:18px; color:#999999; padding:0 10px;display:block;float:left;line-height:20px;height:20px;}
+.lista_personalizacao li a {cursor:default; display:block;float:left;}
+.lista_personalizacao li.fill a {color:#333333 !important; text-decoration:none;}
+.lista_personalizacao li.fill span {color:#BF0000 !important;}
+.lista_personalizacao li a.bto_excluir {background:url(../../../imagens/geral/ico_excluir.gif) left bottom; width:17px; height:17px; text-indent:-9999px; float:right; cursor:pointer !important; margin-top:1px; display:none;}
+.lista_personalizacao li.fill a.bto_excluir {display:block;}
+
+/* EXPANSIVEL PERSONALIZACAO */
+.conteudo_aba_personalizacao {width:743px !important}
+.conteudo_aba_personalizacao .colMenu {width:307px !important}
+.conteudo_aba_personalizacao .btn_collapse span{font-size:12px !important}
+.fs12 {font-size:12px !important}
+
+/* LISTA CIDADES - FINALIZACAO SENHA ELETRONICA */
+.lst-demaisRegioes li {padding:5px 0 0 !important;list-style-type:none !important;clear:both;}
+.lst-demaisRegioes li div {float:left; width:85px;}
+.lst-demaisRegioes li span {float:left; text-align:right; padding-right:35px;}
+
+.carregando_nav_content, .carregando_nav_saldos {position:absolute; top:0; left:0; background:#FFFFFF; width:217px; height:116px;}
+.carregando_nav_content .carregando_nav, .carregando_nav_saldos .carregando_nav { width:85px; height:22px; padding:0 0 0 30px; margin:46px 0 0 49px; color:#BF0000; background:#FFFFFF url(../../../imagens/geral/carregando.gif) no-repeat left top;}
+.carregando_nav_content .carregando_nav span, .carregando_nav_saldos .carregando_nav span{line-height:22px}
+.carregando_nav_saldos {height:99px !important}
+
+/* CADASTRO / EXCLUSAO DE COMPUTADOR */
+.computadorReconhecido td { background-color:#E2E2E2 !important; color:#BF0000 !important; } /* computador sendo usado no momento */
+.computadorExcluir td { background-color:#FFFFFF !important; color:#000000 !important; cursor:default !important; } /* sem mouseover */
+
+/* BOTOES + MENSAGENS E AVISOS */
+.bto_msg li{float:left; padding-right:10px; line-height:26px;}
+.msg_lida span, .msg_lida div  {color:#999999}
+.contaAtiva span, .contaAtiva div  {color:#333333}
+.mensagens_avisos .data {border-bottom:1px dotted #666666; display:block; padding:0 0 5px 0}
+.mensagens_avisos h3 {font-size:1.42em; padding:15px 0; font-weight:bold;}
+.mensagens_avisos .image {width:130px; height:100px; overflow:hidden; float:left; border:1px solid #CCCCCC; margin:0 20px 20px 0}
+.mensagens_avisos .image img {float:left}
+.mensagens_avisos .bottom {border-top:1px dotted #666666; padding-top:20px !important}
+
+.mensagens_avisos .bto_excluir {background-image:url(../../../imagens/geral/bto_excluir.gif); width:78px; height:26px !important; display:block; text-indent:-9999px}
+.mensagens_avisos .bto_excluir:hover {background-position:left bottom}
+.mensagens_avisos .lstUtil li {float:left}
+
+
+/* LOGOUT - SHOPPING */
+.logout_shopping .box_acesso_finalizado {padding:20px;}
+.logout_shopping .box_acesso_finalizado .ir_pagina_inicial {padding:15px 0 0 70px;}
+.logout_shopping .box_acesso_finalizado .ir_pagina_inicial a {float:left;}
+
+.conteudo_pagina .box_super_ofertas {padding:0 20px;}
+.conteudo_pagina .box_super_ofertas .titulo {padding:16px 0 0 0;border-bottom:solid 1px #E5E5E5;padding-bottom:6px;}
+.conteudo_pagina .box_super_ofertas h2 {float:left;color:#1D3F80;font-size:1.23em;}
+.conteudo_pagina .box_super_ofertas .titulo a {float:right;width:85px;height:22px;background:url(../../../imagens/geral/img_shopfacil.jpg) no-repeat;text-indent:-9999px;overflow:hidden;}
+
+.box_super_ofertas .carrossel {padding-top:15px;height:179px;overflow:hidden;position:relative;}
+.box_super_ofertas .carrossel a {text-decoration:none;}
+.box_super_ofertas .carrossel .btn_voltar,
+.box_super_ofertas .carrossel .btn_avancar {background:url(../../../imagens/geral/ico_setas.gif);width:8px;height:14px;text-indent:-9999px;overflow:hidden;padding:0 8px;}
+.box_super_ofertas .carrossel .btn_voltar {float:left;background-position:8px -141px;margin:30px 0 0 0;}
+.box_super_ofertas .carrossel .btn_avancar {float:right;background-position:-490px -186px;margin:30px 0 0 0;}
+.box_super_ofertas .carrossel .jcarousel-prev-disabled {opacity: .30; filter:alpha(opacity=30);cursor:default;}
+.box_super_ofertas .carrossel .jcarousel-next-disabled {opacity: .30; filter:alpha(opacity=30);cursor:default;}
+
+.box_super_ofertas .carrossel .jcarousel-clip {float:left;width:895px;}
+.box_super_ofertas .carrossel li {float:left;width:182px;margin-right:55px;text-align:center;}
+.box_super_ofertas .carrossel li.last {margin-right:0;}
+.box_super_ofertas .carrossel li strong {display:block;color:#1D3F80;font-size:0.85em;padding:10px 0;border-bottom:solid 1px #E5E5E5;}
+.box_super_ofertas .carrossel li .preco {padding-top:10px;font-size:0.85em;}
+.box_super_ofertas .carrossel li .parcelamento {float:left;text-align:left;}
+.box_super_ofertas .carrossel li .parcelamento span {color:#666666;}
+.box_super_ofertas .carrossel li dl {float:right;text-align:right;}
+.box_super_ofertas .carrossel li dt,
+.box_super_ofertas .carrossel li dd {display:inline;}
+.box_super_ofertas .carrossel .valor_de {color:#666666}
+.box_super_ofertas .carrossel .valor_de_riscado {color:#666666;text-decoration:line-through;}
+
+/* CAROUSEL */
+.jcarousel-container {position:relative;}
+.jcarousel-clip {z-index:2;padding: 0;margin: 0;overflow: hidden;position: relative;}
+.jcarousel-list {z-index:1;overflow: hidden;position:relative;top:0;left:0;margin:0;padding:0;}
+
+/* CANAIS DE ATENDIMENTO */
+.atendimento .ico-telefones {background:url(../../../imagens/geral/bgr_lstAssistentes.gif) no-repeat left top; font-size:1.21em; font-weight:bold; padding-left:34px; height:33px; line-height:33px; }
+.atendimento .ico-gerente {background:url(../../../imagens/geral/bgr_lstAssistentes.gif) no-repeat left -53px; font-size:1.21em; font-weight:bold; padding-left:34px; height:33px; line-height:33px; }
+.atendimento .ico-contato {background:url(../../../imagens/geral/bgr_lstAssistentes.gif) no-repeat left -150px; font-size:1.21em; font-weight:bold; padding-left:40px; height:33px; line-height:33px; }
+.atendimento .ico-atendimento {background:url(../../../imagens/geral/bgr_lstAssistentes.gif) no-repeat left -200px; font-size:1.21em; font-weight:bold; padding-left:40px; height:33px; line-height:33px; }
+.atendimento .ico-rede {background:url(../../../imagens/geral/bgr_lstAssistentes.gif) no-repeat left -250px; font-size:1.21em; font-weight:bold; padding-left:45px; height:33px; line-height:33px; }
+.atendimento .ico-tutoriais {background:url(../../../imagens/geral/bgr_lstAssistentes.gif) no-repeat left -100px; font-size:1.21em; font-weight:bold; padding-left:40px; height:33px; line-height:33px; }
+
+.atendimento .txt-telefone {color:#BF0000; font-size:1.46em; padding-bottom:5px; display:block; }
+.atendimento .txt-disponivel {font-size:0.88em;padding-top:15px;}
+
+
+/* TABELA DE EXPANSIVEL GRANDE */
+
+.tabExpansivelGrande .btn_collapse {visibility:hidden;}
+.tabExpansivelGrande .btn_expand {width:31px; background-position:0 -1px !important}
+.tabExpansivelGrande .btn_expand a {width:1px;}
+.tabExpansivelGrande .btn_expand {background:url(../../../imagens/geral/btn_collapse_big.jpg) no-repeat 0 0;}
+.tabExpansivelGrande tr.over .btn_expand {background-position:0 -201px !important;}
+.tabExpansivelGrande tr.contaAtiva .btn_expand {background-position:0 -401px !important;border-right:0;}
+.saldo table.tabExpansivelGrande tbody tr.contaAtiva {font-weight:normal !important;}
+
+.tabExpansivelGrande .btn_collapse {height:65px; width:30px !important; overflow:hidden; padding:0 !important;}
+.tabSacado .btn_collapse {height:40px !important;}
+.saldo table.tabExpansivelGrande tbody tr.contaAtiva a.btnSaldo {height:65px;}
+
+.tabExpansivelGrande thead th div {height:40px !important}
+.tabExpansivelGrande thead th span {padding-left:1px !important}
+.tabExpansivelGrande tbody tr.linhaConta div {padding:9px 1px !important;}
+.tabSacado tbody tr.linhaConta {padding: 9px 1px 0px 10px !important;}
+.tabExpansivelGrande tbody tr.linhaConta div.descricao { padding:9px 0px 0px 10px !important;}
+
+.tabExpansivelGrande .list_infos .item{width:145px !important; font-size:1.08em}
+.tabExpansivelGrande .list_infos .info{font-size:1.08em}
+.tabExpansivelGrande .box_grayLine_bottom {padding:20px 0}
+.tabExpansivelGrande .box_grayLine_bottom10 {padding:10px 0 !important; border-bottom:1px solid #E5E5E5}
+.tabExpansivelGrande .f108{font-size:1.08em}
+.tabExpansivelGrande .sac .linha h2 {font-size:1.29em !important}
+
+.tabExpansivelGrande .tdCheck{width:26px !important; overflow:hidden !important}
+.tabExpansivelGrande .infoConta{width:694px !important; overflow:hidden}
+.tabExpansivelGrande .infoP_news {padding:0 !important}
+
+.bg_status {background:url(../../../imagens/geral/bg_status.gif) no-repeat; width:63px; text-indent:-9999px; display:block}
+.status_efetivado {height:18px; background-position:0 -56px;}
+.status_nao {height:28px; background-position:0 0;}
+.status_agendado{height:18px; background-position:0 -28px;}
+
+/* PERSONALIZAR POSICAO FINANCEIRA */
+.posicaoFinanceira table.tabSaldosExtratos {margin-left:30px; width:662px;}
+.posicaoFinanceira {font-size:1em;}
+.posicaoFinanceira thead th {font-size:1.13em;}
+.posicaoFinanceira input {margin:0; border:0; background:none;}
+
+/* MEU BRADESCO */
+.meuBradesco  {font-size:1em !important;}
+.meuBradesco .ctn-infoConta .boxEsq table.tabSaldosExtratos,
+.meuBradesco .ctn-infoConta .boxEsq table.tabSaldosExtratos th,
+.meuBradesco .ctn-infoConta .boxDir table.tabSaldosExtratos {font-size:1em;}
+.meuBradesco .ctn-infoConta .boxDir table.tabSaldosExtratos td {font-size:0.92em;}
+.meuBradesco .infoConta {padding:20px !important;}
+.meuBradesco .infoConta .boxDir,
+.meuBradesco .infoConta .boxEsq {margin:0 0 30px 0;width:343px;}
+.meuBradesco .infoConta .boxDir {width:305px;}
+.meuBradesco .infoConta .boxLast {margin-bottom:0;}
+.meuBradesco .infoConta .boxDir strong,
+.meuBradesco .infoConta .boxEsq strong {padding:0;font-size:0.88em;}
+.meuBradesco .infoConta .detalhamento tbody tr.over { background-color:#FFFFFF; cursor:default; }
+.meuBradesco .infoConta .detalhamento tbody td { padding:6px; }
+.meuBradesco .infoConta .detalhamento tbody td.last { border-color:#BDBDBD; }
+.meuBradesco .infoConta .detalhamento tbody td span { display:block; white-space:nowrap; float:left; clear:both; padding:0 0 3px 10px; background:url(../../../imagens/geral/ico_setas.gif) no-repeat left 5px; }
+.meuBradesco .infoConta .detalhamento tbody td span a { color:#000000; text-decoration:none; }
+.meuBradesco .infoConta .detalhamento tbody td span a:hover { color:#BF0000; text-decoration:underline; }
+.meuBradesco .list_infos li { width:230px; }
+.meuBradesco .list_infos li.linha { width:100%; }
+.meuBradesco a.btn_collapse { font-size:0.96em; }
+
+/* MENSAGENS E AVISOS - RESIZE FONTS */
+.mensagensAvisos {font-size:1em;}
+.mensagensAvisos .tabSaldosExtratos {font-size:0.96em;}
+.mensagensAvisos .tabSaldosExtratos th {font-size:1em;}
+.mensagensAvisos a.btn_collapse {font-size:0.96em;}
+.mensagensAvisos .link_pdf_ext a {font-size:0.96em;}
+.mensagensAvisos .link_pdf_ext em {font-size:0.96em;}
+
+/* PRIMEIRO ACESSO */
+.seuNome { font-size:1.27em; font-weight:bold; }
+.box-main .form_erro { padding:14px !important; }
+.box-main .legendaBox { width:150px !important; }
+.box-main a.bTip { margin-top:0; }
+.box-main .list_login_nome {padding-top:0px}
+.box-main .list_login_nome li {float:left; padding-right:15px}
+.box-main .list_login_nome li input {padding:0; margin:0; width:18px; height:18px;border:0;background:none;}
+.box-main .list_login_nome li .bTip {margin:0;}
+.box-main .list_login_nome li label,
+.box-main .list_login_nome li span.label {font-size:1.54em;}
+
+/* BOX RELEVO */
+.box_relevo {border:1px solid #E5E5E5; border-bottom-width:3px; border-right-width:3px; position:relative; font-size:0.92em}
+.box_relevo .dot {width:2px; height:2px; background:#fff;}
+.box_relevo .dot_left {position:absolute; bottom:-3px; left:-1px}
+.box_relevo .dot_right {position:absolute; top:-1px; right:-3px}
+.box_relevo .box_relevoP {padding:12px 16px;}
+.box_relevo .header {border-bottom:1px solid #E5E5E5;}
+.box_relevo .header span {padding-bottom:10px;}
+.box_relevo .main {padding-top:10px;}
+.box_relevo .main li {float:left; padding-right:15px;}
+
+/* Atendimento Online */
+#boxAtendimentoOnline,
+#boxConsultorOnline {width:439px;position:absolute;display:none;}
+#boxAtendimentoOnline .bgrSombra,
+#boxConsultorOnline .bgrSombra, #boxCalculadora .bgrSombra {padding:0 3px 3px 0px;background:url(../../../imagens/geral/pix_4br.gif) top right no-repeat;}
+#boxAtendimentoOnline .bgrSombra .window,
+#boxConsultorOnline .bgrSombra .window, #boxCalculadora .window {background: #FFF;border:2px #C3C3C3 solid;}
+#boxAtendimentoOnline .bgrSombra .window .barra {background:url(../../../imagens/geral/barra_arrasta_atonline.jpg) no-repeat 0 0;height:30px;}
+#boxConsultorOnline .bgrSombra .window .barra {background:url(../../../imagens/geral/barra_arrasta_atconsultor.jpg) no-repeat 0 0;height:30px;}
+#boxAtendimentoOnline .bgrSombra .window .barra .handle,
+#boxConsultorOnline .bgrSombra .window .barra .handle, #boxCalculadora .bgrSombra .window .barra .handle {display:block;color:#242424;font:15px Arial; font-weight:500;padding:5px;cursor:move;width:350px; text-indent:-9999px;}
+#boxAtendimentoOnline .bgrSombra .window .barra .min,
+#boxConsultorOnline .bgrSombra .window .barra .min,
+#boxAtendimentoOnline .bgrSombra .window .barra .max,
+#boxConsultorOnline .bgrSombra .window .barra .max,
+#boxCalculadora .bgrSombra .window .barra a.min,
+#boxCalculadora .bgrSombra .window .barra a.max {display:block;float:right;width:17px;height:17px;text-indent:-9999px;margin-top:7px;}
+#boxAtendimentoOnline .bgrSombra .window .barra .close,
+#boxCalculadora .bgrSombra .window .barra .close,
+#boxConsultorOnline .bgrSombra .window .barra .close {display:block;float:right;width:17px;height:17px;text-indent:-9999px;margin:7px 15px 0 5px;}
+#boxAtendimentoOnline .bgrSombra .window .barra a.min,
+#boxConsultorOnline .bgrSombra .window .barra a.min, #boxCalculadora .bgrSombra .window .barra a.min {background:transparent url(../../../imagens/geral/ico_max_min.gif) no-repeat scroll -120px 0;}
+#boxAtendimentoOnline .bgrSombra .window .barra a.min:hover,
+#boxConsultorOnline .bgrSombra .window .barra a.min:hover, #boxCalculadora .bgrSombra .window .barra a.min:hover {background:transparent url(../../../imagens/geral/ico_max_min.gif) no-repeat scroll -88px 0;}
+#boxAtendimentoOnline .bgrSombra .window .barra a.max,
+#boxConsultorOnline .bgrSombra .window .barra a.max, #boxCalculadora .bgrSombra .window .barra a.max {background:transparent url(../../../imagens/geral/ico_max_min.gif) no-repeat scroll -56px 0;}
+#boxAtendimentoOnline .bgrSombra .window .barra a.max:hover,
+#boxConsultorOnline .bgrSombra .window .barra a.max:hover, #boxCalculadora .bgrSombra .window .barra a.max:hover {background:transparent url(../../../imagens/geral/ico_max_min.gif) no-repeat scroll -23px 0;}
+#boxAtendimentoOnline .bgrSombra .window .barra a.close,
+#boxConsultorOnline .bgrSombra .window .barra a.close, #boxCalculadora .bgrSombra .window .barra a.close {background:transparent url(../../../imagens/geral/ico_max_min.gif) no-repeat scroll -182px 0;}
+#boxAtendimentoOnline .bgrSombra .window .barra a.close:hover,
+#boxConsultorOnline .bgrSombra .window .barra a.close:hover, #boxCalculadora .bgrSombra .window .barra a.close:hover {background:transparent url(../../../imagens/geral/ico_max_min.gif) no-repeat scroll -152px 0;}
+#boxAtendimentoOnline .bgrSombra .window .hora,
+#boxConsultorOnline .bgrSombra .window .hora{padding:8px 0 8px 17px; font-size:11px;}
+#boxAtendimentoOnline .bgrSombra .window .msgAtd,
+#boxConsultorOnline .bgrSombra .window .msgAtd {padding:15px 0 0 0; height:16px; font-size:0.92em;}
+#boxAtendimentoOnline .bgrSombra .window .view,
+#boxConsultorOnline .bgrSombra .window .view{padding:0px 15px 15px 15px;}
+#boxAtendimentoOnline .bgrSombra .window .view .chat,
+#boxConsultorOnline .bgrSombra .window .view .chat{background:#FFF;border:solid 1px #C3C3C3;overflow:auto;overflow-x:hidden;height:194px;margin-bottom:10px;}
+#boxAtendimentoOnline .bgrSombra .window .view .chat ul li,
+#boxConsultorOnline .bgrSombra .window .view .chat ul li{width:100%;float:left;padding:8px 8px;font-size:11px; border-bottom:1px solid #C3C3C3; background:#F3F3F3;}
+#boxAtendimentoOnline .bgrSombra .window .view .chat ul li span,
+#boxConsultorOnline .bgrSombra .window .view .chat ul li span{display:block;text-align:center;float:left;line-height:15px;color:#666666;}
+#boxAtendimentoOnline .bgrSombra .window .view .chat ul li p span.usuario,
+#boxConsultorOnline .bgrSombra .window .view .chat ul li p span.usuario{color:#BF0000;display:inline;float:none;}
+#boxAtendimentoOnline .bgrSombra .window .view .chat ul li p span.atendente,
+#boxConsultorOnline .bgrSombra .window .view .chat ul li p span.atendente{color:#000000;display:inline;float:none;}
+#boxAtendimentoOnline .bgrSombra .window .view .chat ul li p,
+#boxConsultorOnline .bgrSombra .window .view .chat ul li p{float:left;width:310px;line-height:15px;padding-right:15px;padding-left:10px;color:#000000;}
+#boxAtendimentoOnline .bgrSombra .window .view textarea,
+#boxConsultorOnline .bgrSombra .window .view textarea{border-top:solid 1px #7A7A7A;border-left:solid 1px #7A7A7A;border-bottom:solid 1px #D4D4D4;border-left:solid 1px #D4D4D4;font:11px Tahoma;color:#6C6C6C;padding:4px 0 0 5px;height:56px;width:398px;}
+#boxAtendimentoOnline .bgrSombra .window .view input,
+#boxConsultorOnline .bgrSombra .window .view input{margin-top:9px;}
+#boxAtendimentoOnline .bgrSombra .window .final,
+#boxConsultorOnline .bgrSombra .window .final{background:#FFF;padding:15px;display:none;}
+#boxAtendimentoOnline .bgrSombra .window .final h2,
+#boxConsultorOnline .bgrSombra .window .final h2 {font-size:17px; font-family:Tahoma; color:#000; margin-bottom:10px;}
+#boxAtendimentoOnline .bgrSombra .window .final .ttl,
+#boxConsultorOnline .bgrSombra .window .final .ttl{font-size:14px;font-weight:bold;padding:5px 0 15px 0;}
+#boxAtendimentoOnline .bgrSombra .window .final .boxEmail,
+#boxConsultorOnline .bgrSombra .window .final .boxEmail{margin:10px 0 20px 0;width:380px;}
+#boxAtendimentoOnline .bgrSombra .window .final .boxEmail input,
+#boxConsultorOnline .bgrSombra .window .final .boxEmail input{float:left;margin-right:5px;}
+#boxAtendimentoOnline .bgrSombra .window .final .boxEmail label,
+#boxConsultorOnline .bgrSombra .window .final .boxEmail label{float:left;font-size:11px;}
+#boxAtendimentoOnline .bgrSombra .window .final .btnsBottom,
+#boxConsultorOnline .bgrSombra .window .final .btnsBottom{clear:both;border-top:solid 1px #E5E5E5;padding-top:10px; height:22px;}
+#boxAtendimentoOnline .bgrSombra .window .final .containerYellowAlert,
+#boxConsultorOnline .bgrSombra .window .final .containerYellowAlert {font-size:11px; color:#BF0000;background:#FFF7D9 url(../../../imagens/geral/ico-alert-y.gif) no-repeat scroll 17px center;padding:10px 20px 10px 60px;}
+#boxAtendimentoOnline .btos_bottom li .bt_voltar_batepapo,
+#boxConsultorOnline .btos_bottom li .bt_voltar_batepapo{background-image:url(../../../imagens/geral/bto_voltar_batepapo.gif); width:183px; height:26px;}
+#boxAtendimentoOnline .btos_bottom li .bt_voltar_batepapo:hover,
+#boxConsultorOnline .btos_bottom li .bt_voltar_batepapo:hover{background-position:left bottom}
+#boxAtendimentoOnline .btos_bottom li .bt_finalizar_atendimento{background-image:url(../../../imagens/geral/bto_finalizar_atendimento.gif); width:183px; height:26px;}
+#boxConsultorOnline .btos_bottom li .bt_finalizar_atendimento{background-image:url(../../../imagens/geral/bto_finalizar_atendimento_cons.gif); width:171px; height:26px;}
+#boxAtendimentoOnline .btos_bottom li .bt_finalizar_atendimento:hover,
+#boxConsultorOnline .btos_bottom li .bt_finalizar_atendimento:hover{background-position:left bottom}
+#boxAtendimentoOnline .btn_enviar,
+#boxConsultorOnline .btn_enviar{background:transparent url(../../../imagens/geral/bto_enviar.gif) no-repeat;width:72px;text-indent:-9999em;border:0;height:26px;display:block;padding:0;}
+#boxAtendimentoOnline .btn_enviar:hover,
+#boxConsultorOnline .btn_enviar:hover{background-position:left bottom;}
+
+.boxGerente {background:url(../../../imagens/home/bgr_tooltip_bottom.gif) bottom left no-repeat;padding-bottom:18px;position:absolute;left:-60px;bottom:37px;width:248px;z-index:99999;display:none;}
+.boxGerente .b1 {background:url(../../../imagens/home/bgr_tooltip_top.gif) top left no-repeat;padding-top:3px;}
+.boxGerente .b2 {background:url(../../../imagens/home/bgr_tooltip_right.png) top right repeat-y;}
+.boxGerente .b3 {background:url(../../../imagens/home/bgr_tooltip_left.png) top left repeat-y;padding:4px 10px 0px 7px;}
+.boxGerente .b4 {background:#FFF;padding:10px;}
+.boxGerente .b4 strong {color:#BE0C0C;display:block;padding-bottom:3px;}
+.boxGerente .b4 a {color:#666;display:block;padding-bottom:10px;}
+.boxGerente .b4 ul {border-top:solid 1px #E0E0E0;padding-top:10px;}
+.boxGerente .b4 ul li {padding-bottom:5px;float:none;width:auto;}
+.boxGerente .b4 .btnFecharGerente {float:right;background:url(../../../imagens/geral/btn_finalizar_atendimento.gif) top left no-repeat;display:block;text-indent:-9999px;width:11px;height:11px;}
+.interna {left:100px !important;background:url(../../../imagens/home/bgr_tooltip_bottom_left.gif) bottom left no-repeat !important;}
+/* Atendimento Online */
+
+/* Calculadora */
+
+#boxCalculadora .handle {width:auto !important;}
+#boxCalculadora {width:205px;position:absolute;display:none;top:0;left:380px;z-index:2;}
+#boxCalculadora .barra {background:url(../../../imagens/geral/barra_arrasta_calc.png) scroll 0 0 ;width:auto;height:30px;border-bottom:1px solid #C3C3C3;}
+#boxCalculadora .close, #boxCalculadora .min, #boxCalculadora .max {margin:6px 10px 0 5px !important;}
+#boxCalculadora .min, #boxCalculadora .max {margin-right:0 !important;}
+#boxCalculadora .boxVisor {height:28px;background:url(../../..//imagens/geral/bgr-visor-calc.png) no-repeat 0 0;margin:10px 0 0;padding:4px 5px 6px 5px;text-align:right;font-size:12px;}
+#boxCalculadora .boxCalc ul {width:178px;}
+#boxCalculadora .view {padding:0 10px 10px;}
+#boxCalculadora .boxCalc ul li {float:left;margin:7px 7px 0 0;}
+#boxCalculadora .boxCalc ul li.lstTotal ul, #boxCalculadora .boxCalc ul li.lstTotal {margin:0;}
+#boxCalculadora .boxCalc ul li.lstTotal {width:148px;}
+#boxCalculadora .boxCalc ul li.last,#boxCalculadora .boxCalc ul li.clr {margin-right:0;}
+#boxCalculadora .boxCalc ul li a {background:url(../../../imagens/geral/btns_calc.png) no-repeat 0 0;display:block;width:30px;height:24px;text-indent:-9999px;}
+
+#boxCalculadora .boxCalc ul li.item1 a {background-position:0 0;}
+#boxCalculadora .boxCalc ul li.item2 a {background-position:-37px 0;}
+#boxCalculadora .boxCalc ul li.item3 a {background-position:-74px 0;}
+#boxCalculadora .boxCalc ul li.item4 a {background-position:-111px 0;}
+#boxCalculadora .boxCalc ul li.item5 a {background-position:-148px 0;}
+
+#boxCalculadora .boxCalc ul li.item6 a {background-position:0 -31px;}
+#boxCalculadora .boxCalc ul li.item7 a {background-position:-37px -31px;}
+#boxCalculadora .boxCalc ul li.item8 a {background-position:-74px -31px;}
+#boxCalculadora .boxCalc ul li.item9 a {background-position:-111px -31px;}
+#boxCalculadora .boxCalc ul li.item10 a {background-position:-148px -31px;}
+
+#boxCalculadora .boxCalc ul li.item11 a {background-position:0 -62px;}
+#boxCalculadora .boxCalc ul li.item12 a {background-position:-37px -62px;}
+#boxCalculadora .boxCalc ul li.item13 a {background-position:-74px -62px;}
+#boxCalculadora .boxCalc ul li.item14 a {background-position:-111px -62px;}
+#boxCalculadora .boxCalc ul li.item15 a {background-position:-148px -62px;}
+
+#boxCalculadora .boxCalc ul li.item16 a {background-position:0 -93px;}
+#boxCalculadora .boxCalc ul li.item17 a {background-position:-37px -93px;}
+#boxCalculadora .boxCalc ul li.item18 a {background-position:-74px -93px;}
+#boxCalculadora .boxCalc ul li.item19 a {background-position:-111px -93px;}
+
+#boxCalculadora .boxCalc ul li.item20 a {background-position:0 -124px;}
+#boxCalculadora .boxCalc ul li.item21 a {background-position:-37px -124px;width:67px;}
+#boxCalculadora .boxCalc ul li.item22 a {background-position:-111px -124px;}
+#boxCalculadora .boxCalc ul li.item23 a {background-position:-148px -93px;height:55px;}
+
+/*Hover Calculadora*/
+#boxCalculadora .boxCalc ul li.item1 a:hover {background-position:0 -155px;}
+#boxCalculadora .boxCalc ul li.item2 a:hover {background-position:-37px -155px;}
+#boxCalculadora .boxCalc ul li.item3 a:hover {background-position:-74px -155px;}
+#boxCalculadora .boxCalc ul li.item4 a:hover {background-position:-111px -155px;}
+#boxCalculadora .boxCalc ul li.item5 a:hover {background-position:-148px -155px;}
+#boxCalculadora .boxCalc ul li.item6 a:hover {background-position:0 -186px;}
+#boxCalculadora .boxCalc ul li.item7 a:hover {background-position:-37px -186px;}
+#boxCalculadora .boxCalc ul li.item8 a:hover {background-position:-74px -186px;}
+#boxCalculadora .boxCalc ul li.item9 a:hover {background-position:-111px -186px;}
+#boxCalculadora .boxCalc ul li.item10 a:hover {background-position:-148px -186px;}
+#boxCalculadora .boxCalc ul li.item11 a:hover {background-position:0 -217px;}
+#boxCalculadora .boxCalc ul li.item12 a:hover {background-position:-37px -217px;}
+#boxCalculadora .boxCalc ul li.item13 a:hover {background-position:-74px -217px;}
+#boxCalculadora .boxCalc ul li.item14 a:hover {background-position:-111px -217px;}
+#boxCalculadora .boxCalc ul li.item15 a:hover {background-position:-148px -217px;}
+#boxCalculadora .boxCalc ul li.item16 a:hover {background-position:0 -248px;}
+#boxCalculadora .boxCalc ul li.item17 a:hover {background-position:-37px -248px;}
+#boxCalculadora .boxCalc ul li.item18 a:hover {background-position:-74px -248px;}
+#boxCalculadora .boxCalc ul li.item19 a:hover {background-position:-111px -248px;}
+#boxCalculadora .boxCalc ul li.item20 a:hover {background-position:0 -279px;}
+#boxCalculadora .boxCalc ul li.item21 a:hover {background-position:-37px -279px;width:67px;}
+#boxCalculadora .boxCalc ul li.item22 a:hover {background-position:-111px -279px;}
+#boxCalculadora .boxCalc ul li.item23 a:hover {background-position:-148px -248px;height:55px;}
+
+#boxCalculadora .btnsExpansiveis .botoes {width:100%;position:relative;}
+#boxCalculadora .btnsExpansiveis .botoes > li {cursor:pointer; position:relative}
+
+#boxCalculadora .btnsExpansiveis .botoes > li.clr {background:none;display:none ;}
+#boxCalculadora .btnsExpansiveis .botoes > li {float:left;margin-right:6px;background:url(../../../imagens/geral/btn-calc.png) no-repeat;width:86px;height:26px;text-indent:-9999px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.cc {background-position:0 0;}
+#boxCalculadora .btnsExpansiveis .botoes > li.ccOff { background-position:right 0!important; cursor:default!important}
+#boxCalculadora .btnsExpansiveis .botoes > li.ccOff span {display:none}
+#boxCalculadora .btnsExpansiveis .botoes > li.pop {background-position:0 -52px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.popOff {background-position:right -52px!important; cursor:default!important}
+#boxCalculadora .btnsExpansiveis .botoes > li.popOff span {display:none}
+#boxCalculadora .btnsExpansiveis .botoes > li.inv {background-position:0 -104px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.invOff {background-position:right -104px!important; cursor:default!important}
+#boxCalculadora .btnsExpansiveis .botoes > li.invOff span,
+#boxCalculadora .btnsExpansiveis .botoes > li.invOff a  {display:none!important}
+#boxCalculadora .btnsExpansiveis .botoes > li.crd {background-position:0 -156px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.crdOff {background-position:right -156px!important; cursor:default!important}
+#boxCalculadora .btnsExpansiveis .botoes > li.crdOff span,
+#boxCalculadora .btnsExpansiveis .botoes > li.crdOff a  {display:none!important}
+
+#boxCalculadora .btnsExpansiveis .botoes > li.cc:hover {background-position:0 -26px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.pop:hover {background-position:0 -78px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.inv:hover {background-position:0 -130px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.crd:hover {background-position:0 -182px;}
+
+#boxCalculadora .btnsExpansiveis .botoes > li.icoMaisMenos.on {background:#FFF url(../../../imagens/geral/btn-calc.png) no-repeat;border:1px solid #C9C9C9;border-bottom:0;width:84px;height:26px;position:relative;z-index:1;padding-bottom:2px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.icoMaisMenos.on.inv {background-position:0 -208px;}
+#boxCalculadora .btnsExpansiveis .botoes > li.icoMaisMenos.on.crd {background-position:0 -235px;}
+
+#boxCalculadora .btnsExpansiveis .botoes > li.icoMaisMenos.on a {background-position:-86px -83px;}
+
+#boxCalculadora .btnsExpansiveis .botoes > li.icoMaisMenos > a {background:url(../../../imagens/geral/ico_maisMenos.gif) no-repeat 4px 7px;height:100%;display:block;}
+#boxCalculadora .exp {border:1px solid #C9C9C9;background:#FFF;z-index:0;padding:10px;width:156px;height:auto; position:relative }
+#boxCalculadora .exp span {position:absolute; top:-1px; height:1px; background:#fff;}
+#boxCalculadora .exp ul li {text-indent:0px !important;}
+#boxCalculadora .exp ul li a {color:#333;font-size:11px;}
+
+
+/* // Calculadora */
+
+/*Alert*/
+.containerYellowAlert {
+background:#FFF7D9 url(../../../imagens/geral/ico_alerta.gif) no-repeat scroll left center;border-bottom:1px solid #E0D9BC;line-height:15px;padding:10px 20px 10px 40px;}
+/*Alert*/
+
+/* TABELA LIMITES */
+.tabLimites tbody td{font-size:1.0em}
+
+/* THEAD */
+.tabela-expansivel {border-bottom:1px solid #E5E5E5;table-layout:fixed;width:100%;}
+.tabela-expansivel thead {background:#F0F0F0;}
+.tabela-expansivel th {border-left:1px solid #CACACA;vertical-align:middle;}
+.tabela-expansivel th div,
+.tabela-expansivel th a {border-left:1px solid #FFF;padding:8px;text-align:left;line-height:30px;min-height:30px;}
+.tabela-expansivel th a.indice{min-height:24px;}
+.tabela-expansivel th div.reset {line-height:1.2em;}
+.tabela-expansivel th div.direita {padding-right:10px;text-align:right;}
+.tabela-expansivel th.check {border:0;width:25px;}
+.tabela-expansivel th.sem-borda {border-color:#F0F0F0;}
+.tabela-expansivel th.sem-borda div {border-color:#F0F0F0;}
+.tabela-expansivel-1linha th a {line-height:normal;}
+.tabela-expansivel-1linha td.icone.bdr {border-right:1px solid #CACACA;}
+.tabela-expansivel-1linha tbody.ativo tr.expansor{ font-weight:bold;}
+.tabela-expansivel-1linha thead th div { padding:0px;}
+/* THEAD */
+
+.tabela-expansivel-callback {display:none;}
+
+.tabela-expansivel tfoot td,
+tfoot.tfoot-total td {background:transparent url(../../../imagens/geral/bgr_tabFooter.jpg) repeat-x scroll 0 0;border-bottom:1px solid #CF3F3F !important;font-weight:bold;height:40px;line-height:40px;}
+
+/* ORDENACAO */
+.tabela-expansivel th a.reset {line-height:1.2em;}
+.tabela-expansivel th a {display:block;position:relative;}
+.tabela-expansivel th a:hover {background-color:#E2E2E2;text-decoration:none;}
+.tabela-expansivel th span {border-color:transparent transparent #333333;border-style:solid;border-width:0 4px 4px;border-width:0 5px 5px\9;bottom:2px;display:none;height:0;margin-left:-4px;left:50%;position:absolute;width:0;}
+.tabela-expansivel th a:hover span {border-color:transparent transparent #BF0000;display:block;}
+.tabela-expansivel th a.direita {padding-right:10px;text-align:right;}
+.tabela-expansivel th.sem-borda a {border-color:#F0F0F0;}
+.tabela-expansivel th.desc span {border-color:#333333 transparent transparent;border-width:4px 4px 0;display:block;}
+.tabela-expansivel th.desc a:hover span {border-color:#BF0000 transparent transparent;}
+.tabela-expansivel th.asc span {display:block;}
+
+/* ORDENACAO */
+
+/* TD E CLASSES */
+.tabela-expansivel .expansor td,
+.tabela-expansivel .detalhes td {border-top:1px solid #E5E5E5;border-left:1px solid #FFF;padding:5px 0 5px 10px;vertical-align:top;}
+.tabela-expansivel-1linha .expansor td,
+.tabela-expansivel-1linha .detalhes td,
+.tabela-expansivel-1linha th.sem-borda {border-left:none;}
+
+.tabela-expansivel td.check {text-align:left;padding:0;width:25px;text-align:center;vertical-align:middle;}
+.tabela-expansivel td.icone {padding-left:0;padding-right:0;}
+.tabela-expansivel td.borda-ativa-esquerda {border-left:1px solid #FFF;}
+.tabela-expansivel td.borda-ativa-direita {border-right:1px solid #FFF;}
+.tabela-expansivel td.lnk-expansor {background:#E2E2E2 url(../../../imagens/geral/bgr_tabela-expansivel.jpg) 0 0 no-repeat;border-left:1px solid #C9C9C9;border-right:1px solid #C9C9C9;overflow-x:hidden;padding:0;vertical-align:middle;width:29px;}
+.tabela-expansivel td.lnk-expansor a,
+.tabela-expansivel td.lnk-expansor-on a{background:url(../../../imagens/geral/ico_maisMenos.gif) 9px 5px no-repeat;display:block;text-indent:-9999px;width:100%;}
+.tabela-expansivel td.lnk-expansor-on{background:url(../../../imagens/geral/ico_maisMenos.gif) 9px 5px no-repeat;}
+.tabela-expansivel td.direita {text-align:right !important;padding-right:10px;}
+.tabela-expansivel span.descricao {color:#666;display:block;padding-top:2px}
+.tabSaldosExtratos span.descricao {color:#666;display:block;padding-top:2px}
+.tabela-expansivel .check input {background:transparent;border:0;height:13px;width:13px;}
+
+.tabela-expansivel td.positivo,
+.tabela-expansivel td.negativo {color:#0000A0;text-align:right;padding-left:0;}
+.tabela-expansivel td.negativo {color:#BF0000;}
+.tabela-expansivel input {font-size:11px;}
+.tabela-expansivel td.borda-erro {border-left:1px solid #FFF7D9;}
+
+.bordaTotal td {border-bottom: 1px solid #cc092f;border-top: 1px solid #999999;background: none repeat scroll 0 0 #CACACA;}
+/* TD E CLASSES */
+
+/* ATIVO */
+.tabela-expansivel .ativo td.check {border:0;}
+.tabela-expansivel .ativo .expansor td {border-top:1px solid #C9C9C9;border-bottom:0;}
+.tabela-expansivel .ativo .expansor td.check {border-top:1px solid #E5E5E5;}
+.tabela-expansivel .ativo .expansivel td.td-expansivel {border-top:0;border-bottom:1px solid #C9C9C9;}
+.tabela-expansivel .ativo td.borda-ativa-esquerda {border-left:1px solid #C9C9C9;}
+.tabela-expansivel .ativo td.borda-ativa-direita {border-right:1px solid #C9C9C9;}
+.tabela-expansivel .ativo .td-expansivel {border:1px solid #C9C9C9;}
+
+.tabela-expansivel .ativo td.lnk-expansor {background:#FFF;border-left:1px solid #C9C9C9;border-right:1px solid #FFF;width:29px;}
+.tabela-expansivel .ativo td.lnk-expansor a {background-position:-80px -84px;}
+/* ATIVO */
+
+/* HOVER */
+.tabela-expansivel .hover .expansor td {background-color:#F0F0F0;border-left:1px solid #F0F0F0;cursor:pointer;}
+.tabela-expansivel-1linha .hover .expansor td {background-color:#F0F0F0;border-left:none;cursor:pointer;}
+.tabela-expansivel .hover .expansor td.lnk-expansor {background-position:-29px 0px;border-left:1px solid #C9C9C9;border-top:1px solid #C9C9C9;}
+/* HOVER */
+
+/* EXPANSIVEL */
+.tabela-expansivel .expansivel {display:none;}
+.tabela-expansivel .box-expansivel {display:none;overflow-x:hidden;overflow-y:hidden;padding:10px 20px; position:relative;}
+.tabela-expansivel .box-expansivel-callback {display:none;}
+.tabela-expansivel li.info,
+.tabela-expansivel li.info h2 {width:400px;}
+/* EXPANSIVEL */
+
+.ico_excluir,
+.ico_alterar,
+.ico_selecionar,
+.ico_detalhar,
+.ico_reativar,
+.ico_consultar,
+.ico_reaproveitar {display:block;height:17px;margin-top:0;text-indent:-9999px;width:17px;border:none;padding:0px;}
+
+.ico_excluir {background:url(../../../imagens/geral/ico_excluir.gif) 0 0 no-repeat;}
+.ico_alterar {background:url(../../../imagens/geral/ico_alterar.gif) 0 0 no-repeat;}
+.ico_selecionar {background:url(../../../imagens/geral/ico_selecionar.gif) 0 0 no-repeat;}
+.ico_reaproveitar {background:url(../../../imagens/geral/ico_reaproveitar.gif) 0 0 no-repeat;}
+.ico_detalhar {background:url(../../../imagens/geral/ico_detalhar.gif) 0 0 no-repeat;}
+.ico_reativar {background:url(../../../imagens/geral/ico_reativar.png) 0 0 no-repeat;}
+.ico_consultar {background:url(../../../imagens/geral/ico_consultar.gif) 0 0 no-repeat;}
+.ico_comprar{background: url("../../../imagens/geral/btn_acoes_tabelas.gif") no-repeat scroll 0 -103px transparent;display: block;height: 17px;text-indent: -9999px;width: 17px;}
+
+.titFidelidade{font-weight:bold; font-size:13px;}
+.fidelidadePrime h3{font-weight:bold; padding-bottom:10px;}
+.fidelidadePrime ul{margin-left:15px; padding-bottom:5px;}
+.fidelidadePrime li{padding:0 0 5px 5px;}
+.fidelidadePrime p{padding-bottom:15px;}
+.fidelidadePrime .obs {font-size:11px; color:#666666; padding-top:10px;}
+
+.tbl_programa_fidelidade .btn_collapse{height:35px !important;}
+
+.tbl_beneficios,.tbl_pontuacao{width:100%;}
+.tbl_beneficios th div, .tbl_pontuacao th div{background-color:#F0F0F0; border-left:solid 1px #FFFFFF !important; border-right:solid 1px #CACACA; text-align:left;}
+.tbl_beneficios th div{padding:5px;}
+.tbl_pontuacao th div{padding:13px 5px;}
+.tbl_beneficios tr td{padding:8px 0; text-align:center; width:25%; font-size:11px; border-top:1px solid #E5E5E5;}
+.tbl_pontuacao tr td{padding:8px 5px; text-align:left; width:50%; vertical-align:top; font-size:11px; border-top:1px solid #E5E5E5;}
+
+/* mini icones de enviar por email, imprimir e salvar como */
+.ico-email,
+.ico-imprimir,
+.ico-salvar { float:left; margin-left:5px; width:17px; height:17px; background:url("../../../imagens/geral/btn_acoes_tabelas.gif") no-repeat scroll left top transparent; text-indent:-9999px; cursor:pointer !important;}
+.ico-imprimir {background-position:0 -154px;}
+.ico-salvar {background-position:0 -171px;}
+.ico-email {background-position: 0 -137px;}
+.bto_excluir_x { float:left; margin-left:5px;  width:17px; height:17px; background:url(../../../imagens/geral/ico_excluir.gif) left bottom; text-indent:-9999px; cursor:pointer !important;}
+
+.contaAtiva .bto_excluir_x {display:none}
+.contaAtiva .ico-email {display:none}
+.contaAtiva .ico-imprimir {display:none}
+.contaAtiva .ico-salvar {display:none}
+
+.over .contaAtiva .bto_excluir_x {display:block}
+.over .contaAtiva .ico-imprimir {display:block}
+.over .contaAtiva .ico-salvar {display:block}
+
+.ico-imprimir-mensagens,
+.ico-salvar-mensagens {background:url("../../../imagens/geral/btn_acoes_tabelas.gif") left bottom; width:17px; height:17px; text-indent:-9999px; display:block; float:right; cursor:pointer !important; margin:8px 5px 0 0; display:none}
+.ico-imprimir-mensagens {background-position:0 -154px;}
+.ico-salvar-mensagens {background-position:0 -171px;}
+
+.over .ico-imprimir-mensagens {display:block}
+.over .ico-salvar-mensagens {display:block}
+.contaAtiva .ico-imprimir-mensagens {display:none !important;}
+.contaAtiva .ico-salvar-mensagens {display:none !important;}
+
+.ico-salvar-maior {float:left; margin-right:10px;}
+.ico-salvar-maior {background:transparent url(../../../imagens/geral/ico_util.gif) no-repeat scroll 0 0;height:24px;}
+.ico-salvar-maior {background-position:0 -40px; width:21px;}
+
+ul.legenda{float:left;}
+ul.legemnda li{font-size:11; color:#999999;display:inline;float:left;font-family:Tahoma;line-height:1.2;margin-right:1em;}
+
+/* DV */
+.erroLabel a{cursor:default !important; text-decoration:none !important; color:#BF0000 !important;}
+
+/* CORRECOES */
+.tabela-cedente-head thead th div  {height:38px !important;}
+/*Sacados*/
+.tabela-expansivel-1linha .sacados thead tr th.cedente{width:92px; text-align:left; height:45px;padding-left:10px;}
+.tabela-expansivel-1linha .sacados thead tr th.cnpj{width:141px; height:45px; text-align:left; padding-left:10px;}
+bto_msg li.alignRight {text-align:right;}
+
+.data_comprovante {position:absolute; right:-54px; top:0}
+
+/* COMPROVANTES */
+.boxComprovantePendente hr {margin-bottom: 0;margin-top: 0;width: 678px!important;}
+.boxComprovantePendente{border:1px solid #CCCCCC;width:720px;}
+/*.boxComprovantePendente{border:1px solid #CCCCCC;width:708px;}*/
+#tabelaFrame .boxComprovante{border:1px solid #CCCCCC;width:708px;}
+.ne-tabela-expansivel .boxComprovante .dados{width: 678px;}
+.ne-tabela-expansivel .boxComprovante .tabela_comprovante .cabecalho{width: 666px;}
+.ne-tabela-expansivel .boxComprovante{border:1px solid #CCCCCC;width:708px; margin-bottom:0;}
+.boxComprovante{border:solid 1px #CCC;width:720px; margin-bottom:5px;}
+.boxComprovante .tabTp3 td{padding:4px 0;}
+
+.boxComprovante .topo,
+.boxComprovantePendente .topo,
+.boxComprovante .dados,
+.boxComprovantePendente .dados,
+.boxComprovantePendente .topoModal,
+.boxComprovante .topoModal,
+.boxComprovante .topo {padding:0 15px 15px 15px;border-bottom:solid 1px #E5E5E5;width:690px}
+.jqmWindow .boxComprovante .topo{width:690px}
+.boxComprovante .topo,
+.boxComprovante .topoModal {padding-top:15px}
+.boxComprovante .topo .icoLogo,
+.boxComprovante .topo .icoLogo2, .boxComprovante .topo .icoLogo3,
+.boxComprovante .topoModal .icoLogo,
+.boxComprovante .topoModal .icoLogo2 {display:block;float:left;}
+.boxComprovante .topo h2,
+.boxComprovante .topoModal h2 {font-size:128%;line-height:150%;font-weight:bold;float:left;width:520px}
+.boxComprovante .topo ul.lstTopoComp,
+.boxComprovante .topoModal ul.lstTopoComp {float:left;width:570px;font-size:100%}
+.boxComprovante .topo ul.lstTopoComp li,
+.boxComprovante .topoModal ul.lstTopoComp li {margin-top:3px}
+
+.boxComprovante .dados table{width:100%}
+
+.boxComprovante .base{background:none !important;width:705px !important;padding-left:15px}
+.boxComprovante .base h3{background:url(../../imagens/geral/ico_funcoes.gif) 0 -383px no-repeat;font-weight:bold;line-height:30px;padding-left:40px;margin:15px 0}
+.boxComprovanteLinha {border-top: 1px solid #E5E5E5;border-width: 1px 0 0;clear: both;display: block;height: 1px;margin: auto;width: 95% !important;}
+
+.logo_bradesco2_pb {background: url("../../../imagens/geral/logo_bradesco2_pb.gif") no-repeat scroll 0 0 transparent;font-weight: bold;height: 48px;line-height: 30px;margin: 15px 0;padding-left: 40px;width: 133px;}
+
+.tabTp3 tr.borda5 td {border-bottom:#E5E5E5 1px solid;}
+.tabTp3 tr.borda5 td {border-bottom:#E5E5E5 1px solid;}
+
+.tabTp3 tr.on td{background:#E4E4E4}
+.tabTp3 tbody tr.desc td{color:#666;padding-top:0 !important}
+.tabTp3 tbody td{line-height:140%;padding:4px 0}
+
+.tabbranco{background:#FFF;}
+
+/* Comprovante Lote */
+.boxComprovanteLote, .boxComprovanteLote1 {padding:20px 0 0 0;background:#FFF;border:1px solid #CCCCCC;margin-bottom:10px;}
+
+.boxComprovanteLote .topo, .boxComprovanteLote .dados, .boxComprovanteLote .base,
+.boxComprovanteLote1 .topo, .boxComprovanteLote1 .dados, .boxComprovanteLote1 .base {background:none !important;padding:0 15px 10px 15px;border-bottom:1px solid #E5E5E5}
+.boxComprovanteLote .topo h2, .boxComprovanteLote1 .topo h2 {font-size:128%;line-height:150%;font-weight:bold;float:left;width:500px}
+.boxComprovanteLote .topo ul.lstTopoComp, .boxComprovanteLote1 .topo ul.lstTopoComp  {float:left;width:520px}
+.boxComprovanteLote .topo .icoLogo, .boxComprovanteLote1 .topo .icoLogo  {display:block;float:left;}
+
+.boxComprovanteLote .dados table, .boxComprovanteLote1 .dados table{width:100%;}
+.boxComprovanteLote .base {padding:10px 15px 10px 15px;border-bottom:none !important;}
+
+.borderPreta {border-bottom:1px solid #000000!important}
+
+.efetuado .topo .icoLogo,
+.efetuado .topoModal .icoLogo {background:url(../../../imagens/geral/ico_logo_comprovante_print.gif) top left no-repeat;width:86px;height:85px;margin-right:30px;}
+
+/*
+.comprovante h2 {width:auto !important;float:left;}
+.comprovante p.data {float:right;font-size:0.96em;padding-top:4px;}
+.comprovante p.dataHorario {font-size:1em;padding-top:10px;}
+table .comprovante .list_infos li.info {width:470px;}
+.boxComprovante {border: 1px solid #CCCCCC;width: 720px;}
+.boxComprovante hr {width:692px;margin-bottom:0;margin-top:0;}
+.boxComprovante .texto {margin-left:15px;margin-right:15px;}
+*/
+/*ORDENA*/
+.tabOrdena thead th div {padding:0}
+.tabOrdena thead th div a { display:block; line-height:normal; padding:12px 0 0 8px; height:28px; text-decoration:none; white-space:nowrap; }
+.tabOrdena thead th div a:hover{background:#F0F0F0 url(../../../imagens/geral/ico_sort.gif) no-repeat center -209px; }
+.tabOrdena thead th div a.sortDesc { background-position:center -77px; }
+.tabOrdena thead th div a.sortDesc:hover { background-color:#E2E2E2; background-position:center -317px; }
+.tabOrdena thead th div a.sortAsc,
+.tabOrdena thead th div a.sortDesc { background:#F0F0F0 url(../../../imagens/geral/ico_sort.gif) no-repeat 0 0; text-decoration:none; }
+.tabOrdena thead th div a.sortAsc { background-position:center 31px; }
+.tabOrdena thead th div a.sortAsc:hover{ background-color:#E2E2E2; background-position:center -209px; }
+.tabOrdena thead th div a.sortDesc { background-position:center -89px; }
+.tabOrdena thead th div a.sortDesc:hover { background-color:#E2E2E2; background-position:center -329px; }
+
+
+/*VALIDADORES JSF*/
+.erro_campo {visibility: hidden;}
+
+
+.margens_laterais {padding-left:15px; padding-right:15px;}
+.margem_superior {padding-top:15px;}
+.margem_inferior {padding-bottom:15px;}
+.sem_margem_superior {padding-top:0px;}
+.sem_margem_inferior {padding-bottom:0px;}
+.tabela_comprovante {padding:0; margin:0; border-spacing:0; width:100%; border:0;}
+.sem_margens {padding:0; margin:0; border-spacing:0; width:100%; border:0;}
+
+.tp5 tr td {padding: 5px;vertical-align: top;}
+.tp5 tr td table tr td {padding: 0px;}
+
+
+/*TABELA LISTAGEM (Similar a tabSaldosExtratos, para uso generico)*/
+.listagem { padding:1px 9px 20px 9px; }
+.listagem .tabelaListagem { margin-top:0; }
+.listagem div.boxEsq,
+.listagem div.boxDir { float:left; width:344px; margin:15px 0 0 0; padding:0;}
+.listagem div.boxDir { float:right; padding:0;}
+.listagem div.boxEsq strong,
+.listagem div.boxDir strong{ display:block; padding:0 0 8px 0; }
+.listagem .total {height:30px; line-height:30px; padding:0 0 0 6px !important; background:#E2E2E2 url(../../../imagens/geral/bgr_total_detalhamento.jpg) repeat-x left top; border-bottom:1px #CF3F3F solid;}
+.listagem div.boxEsq .total strong,
+.listagem div.boxDir .total strong {display:block;float:left;padding:0;}
+.listagem div.boxEsq .total span,
+.listagem div.boxDir .total span {display:block; float:right; padding-right:7px;}
+.listagem div.boxEsq .total strong em,
+.listagem div.boxDir .total strong em {font-size:18px;color:#BF0000;float:none;display:inline;font-weight:normal;}
+.listagem h3 {font-size:13px;padding-bottom:7px;zoom:1;overflow:hidden;}
+.listagem h3 strong {float:left;font-size:18px;color:#BF0000;font-weight:normal;padding:0 10px 0 0 !important;line-height:100%;}
+.listagem h3 span {float:left;padding-top:5px;}
+.listagem .tabelaListagem th {height:30px !important;}
+.listagem .tabelaListagem th div {line-height:30px;}
+.listagem .detalhamento { margin-top:0; }
+.listagem .detalhamento .total { background:#F0F0F0 url(../../../imagens/geral/bgr_total_detalhamento.jpg) repeat-x left top; }
+.listagem .detalhamento tbody tr.over { background-color:#F0F0F0; cursor:pointer; }
+.listagem .detalhamento tbody tr.ativo { background-color:#E5E5E5; }
+.listagem .detalhamento tbody tr.ultimo td { border-bottom:1px #BDBDBD solid; }
+.listagem .detalhamento tbody td.total { padding:0 21px 0 6px; }
+.listagem .detalhamento tbody td.total span { padding:0; background:none; }
+.listagem .detalhamento tbody td { padding:7px 0 8px 6px; }
+.listagem .detalhamento tbody td a { color:#333333; text-decoration:none; }
+.listagem .detalhamento tbody td span { text-align:right; display:block; height:17px; padding-right:25px; margin-right:3px; background:url(../../../imagens/geral/ico_saldos_extratos.gif) no-repeat right -120px; }
+.listagem .detalhamento tbody td span.sem_icone {background:none;padding-right:5px;}
+.listagem .legenda { color:#666666; border-bottom:0; padding:7px 0 8px 6px; }
+
+.tabelaListagem {width:100%;font-size:0.92em; margin-top:20px;}
+.tabelaListagem .cursorSimples { cursor:default; }
+.tabelaListagem thead th {background: url(../../../imagens/geral/bgr_tabela4.gif) no-repeat scroll left top transparent;height: 37px;font-weight: bold;text-align: left;border: medium none !important;font-weight: bold;vertical-align: middle;font-size: 1.08em;padding-left: 6px;padding-right: 6px;}
+.tabelaListagem thead tr.tres_linhas th{background: url(../../../imagens/geral/bgr_tabela2.jpg) repeat scroll left top transparent;height: 47px;font-size: 1.04em;}
+.tabelaListagem thead tr.tres_linhas th.sep {background: url(../../../imagens/geral/bgr_tabela2_sep.gif) no-repeat scroll left top transparent;font-weight: bold;height: 47px;width: 2px;padding-left: 0px !important;padding-right: 0px !important;}
+.tabelaListagem thead th.headExpand {background: url(../../../imagens/geral/bgr_tabela3.jpg)!important;}
+.tabelaListagem thead th.sem_divisoria {background: url(../../../imagens/geral/bgr_tabela1.jpg) scroll left top transparent;height: 37px;font-weight: bold;text-align: left;border: medium none !important;font-weight: bold;vertical-align: middle;padding-right: 6px;padding-left: 6px;font-size: 1.08em;}
+.tabelaListagem thead th .duas_linhas {line-height:16px !important;padding:4px 6px 0; height:36px }
+.tabelaListagem thead th .tres_linhas {line-height:16px !important;padding:4px 6px 0; height:50px;}
+.tabelaListagem tbody tr.over {background-color:#F0F0F0; cursor:pointer;}
+.tabelaListagem tbody tr.linhaConta div {padding:9px 6px;}
+.tabelaListagem tbody tr.odd {background: none repeat scroll 0 0 #F3F3F3;}
+.tabelaListagem tbody tr.bgBranco {background: none repeat scroll 0 0 #ffffff;}
+.tabelaListagem tbody tr:hover {background: none repeat scroll 0 0 #E4E4E4;}
+.tabelaListagem tbody.semhover tr.odd {background: none repeat scroll 0 0 #F3F3F3;}
+.tabelaListagem tbody.semhover tr.odd:hover {background:none repeat scroll 0 0 #F3F3F3;}
+.tabelaListagem tbody.semhover tr:hover {background:none}
+.tabelaListagem tbody.expOn tr:hover {background: none repeat scroll 0 0 #E4E4E4;}
+.tabelaListagem tbody td {line-height: 140%;padding: 8px 6px;font-size: 1.08em;}
+.tabelaListagem tbody td.pdl0 {line-height: 140%;padding: 8px 0px !important;font-size: 1.08em;}
+.tabelaListagem tbody tr.ultimo td { border-bottom-color:#BDBDBD;border-bottom-style:solid;border-bottom-width: 1px; }
+.tabelaListagem tfoot td {font-weight:bold;border-color:#CF3F3F;background:url(../../../imagens/geral/bgr_tabFooter.jpg) repeat-x;vertical-align:middle;}
+.tabelaListagem tfoot td div {padding:0 6px;}
+.tabelaListagem td em {display:block;color:#666666;clear:both;}
+.tabelaListagem td em a {color:#666666;}
+.tabelaListagem td em a:hover {color:#666666; text-decoration:none}
+.tabelaListagem .ico_comprovante,
+.tabelaListagem .ico_foto {float:right;}
+.tabelaListagem .ano {border-bottom: 1px solid #BDBDBD; padding: 10px 0pt 10px 7px; font-weight:bold;}
+.tabelaListagem .sem_data {padding-left:37px;}
+.tabelaListagem .radio {border:0px; margin:0px; width:auto; background:none transparent scroll repeat 0% 0%; float:none;}
+.tabelaListagem input {font-size:1.02em;}
+
+.tabelaListaTitulo {width:100%;font-size:0.92em; margin-top:20px;}
+.tabelaListaTitulo .cursorSimples { cursor:default; }
+.tabelaListaTitulo thead th {background: url(../../../imagens/geral/bgr_tabela4.gif) no-repeat scroll left top transparent;height: 37px;font-weight: bold;text-align: left;border: medium none !important;font-weight: bold;vertical-align: middle;padding-right: 6px;padding-left: 6px;font-size: 1.08em;}
+.tabelaListaTitulo thead th.sem_divisoria {background: url(../../../imagens/geral/bgr_tabela1.jpg) scroll left top transparent;height: 37px;font-weight: bold;text-align: left;border: medium none !important;font-weight: bold;vertical-align: middle;padding-right: 6px;padding-left: 6px;font-size: 1.08em;}
+.tabelaListaTitulo thead th.bgbranco {height: 10px;padding-right: 6px;padding-left: 6px;background: none repeat scroll 0 0 #ffffff;}
+.tabelaListaTitulo thead th.bgbranco:hover {height: 10px;padding-right: 6px;padding-left: 6px;background: none repeat scroll 0 0 #ffffff;}
+.tabelaListaTitulo tbody tr.odd {background: none repeat scroll 0 0 #F3F3F3;}
+.tabelaListaTitulo tbody tr.bgBranco {background: none repeat scroll 0 0 #ffffff;}
+.tabelaListaTitulo tbody td {line-height: 140%;padding: 8px 6px !important;font-size: 1.08em;}
+.tabelaListaTitulo tbody td.smallLine {line-height: 0% !important;padding: 5px 6px;font-size: 1.08em;}
+.tabelaListaTitulo tbody td.bold {line-height: 140%;padding: 8px 6px !important;font-size: 1.08em;font-weight:bold;}
+.tabelaListaTitulo tbody td.pdl0 {line-height: 140%;padding: 8px 0px !important;font-size: 1.08em;}
+.tabelaListaTitulo tbody tr.ultimo td { border-bottom-color:#BDBDBD;border-bottom-style:solid;border-bottom-width: 1px; }
+.tabelaListaTitulo .radio {border:0px; margin:0px; width:auto; background:none transparent scroll repeat 0% 0%; float:none;}
+.tabelaListaTitulo .bgdark {background: none repeat scroll 0 0 #E4E4E4;}
+
+.odd {background: none repeat scroll 0 0 #F3F3F3;}
+
+.tbListaSemHover {width:100%;font-size: 0.92em;margin-top:20px;}
+.tbListaSemHover thead th {background: url(../../../imagens/geral/bgr_tabela4.gif) no-repeat scroll left top transparent;height: 37px;font-weight: bold;text-align: left;border: medium none !important;font-weight: bold;vertical-align: middle;padding-right: 6px;padding-left: 6px;font-size: 1.08em;}
+.tbListaSemHover tbody td.listaTitulo {padding: 2px !important;}
+.tbListaSemHover tbody tr.bgBranco {background: none repeat scroll 0 0 #ffffff;}
+.tbListaSemHover tbody.semhover tr.bgBranco:hover {background: none repeat scroll 0 0 #ffffff !important;}
+.tbListaSemHover tbody td {line-height: 140%;padding: 8px 6px;font-size: 1.08em;}
+.tbListaSemHover tbody td.smallLine {line-height: 0% !important;padding: 5px 6px;font-size: 1.08em;}
+.tbListaSemHover thead th.cab {background: none repeat scroll 0 0 #CACACA; border: 1px solid #999999!important;font-weight:bold;padding: 8px 6px !important;}
+.tbListaSemHover tbody td.corp {border: 1px solid #999999;}
+
+/*TransferÃªncia em processamento*/
+.status_processamento {background-position:0 -84px;height:18px;}
+
+.em_processamento {background:url(../../../imagens/geral/bg_aguarde_processamento.jpg) no-repeat; width:77px; height: 29px; text-indent:-9999px; display:block}
+
+/*Status link*/
+.transf_status_lnk {color: #CF3F3F;}
+
+/*BotÃ£o atualizar*/
+.bt_atualizar_lista { display:block; width:77px; height:20px; text-indent:-9999px; background:url(../../../imagens/geral/btn_atualizar.jpg) no-repeat 0 0; float:right;}
+
+/*BotÃ£o efetuar nova transferÃªncia*/
+.bt_nova_transacao { display:block; width:197px; height:26px; text-indent:-9999px; background:url(../../../imagens/geral/btn_efetuar_nova_transferencia.gif) no-repeat 0 0; }
+.bt_nova_transacao:hover { background-position:0 -26px; }
+
+/*Status link*/
+.transf_status_lnk {color: #CF3F3F;}
+
+/*BotÃ£o adicionar novo favorecido*/
+.bto_adicionar_novo_favorecido { display:block; width:197px; height:26px; text-indent:-9999px; background:url(../../../imagens/geral/btn_adicionar_novo_favorecido.gif) no-repeat 0 0; }
+.bto_adicionar_novo_favorecido:hover { background-position:0 -26px; }
+
+/*Classes para tabelas pre formatadas (ex.:Informe de Rendimentos)*/
+.tabelaPre .destaque{ background-color:#E9E9E9; }
+.mioloFs12 .tabelaPre pre{ font-size:12px; }
+.mioloFs13 .tabelaPre pre{ font-size:13px; }
+.mioloFs14 .tabelaPre pre{ font-size:14px; }
+
+.UIFontSize-level-1 .tabelaPre pre{ font-size:12px; }
+.UIFontSize-level-2.tabelaPre pre{ font-size:13px; }
+.UIFontSize-level-3 .tabelaPre pre{ font-size:14px; }
+
+select optgroup.optGrupo {background-color:#E1E1E1 !important; color:#000000 !important; font-weight:bold !important; font-style: normal !important;}
+
+.list_infos input.radio{background: none repeat scroll 0 0 transparent; border: 0 none; float: none; margin: 0; width: auto;margin-bottom: 3px;}
+.list_infos input{margin-right: 5px; vertical-align: middle; width: auto;}
+
+/*Ajuste do tamanho de fonte das caixas de alerta para o login e modais*/
+.login .box-alerta{font-size:0.92em;}
+.jqmWrapper .box-alerta{font-size:0.92em;}
+
+/*Ajuste para correcao de estilos em telas de replicacao (ex.:TED DOC) */
+.saldo .tabSaldosExtratos td div.margens_laterais{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.tabSaldosExtratos .list_infos li.info{
+	width: 460px;
+}
+.frmCheck, .frmRadio {margin-right:5px!important;width:13px!important;height:13px!important;vertical-align: top!important;margin-bottom:3px!important;background: none !important;padding:0 !important;float:none;}
+/*.chkDesSel, .chkParcSel, .chkSel {background:url(../../../imagens/geral/bgr_checkbox3estados.gif) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 13px;width:77px;}*/
+
+/* INICIO - Inclusao Lote - Pagamento de Tributos GARE*/
+.boxLote {background-color:#F3F3F3;border:1px solid #F3F3F3;border-bottom:1px solid #CCC;width:690px;padding:0 15px}
+
+/* FIM - Inclusao Lote - Pagamento de Tributos GARE*/
+
+/*---------------------MIGRACAO VISUAL------------------*/
+.listapraticidades{/*width:100%*/width:725px;}
+.listapraticidades li{float:left;margin-top:10px;/*width:199px;*/padding:0 0 0 10px; border-right: 1px solid #E5E5E5;min-height: 80px;}
+.listapraticidades li:last-child{border-right: none;}
+.listapraticidades li table {/*border-right:1px solid #E5E5E5;*/padding-left:10px}
+.listapraticidades li a {display:inline-block !important;}
+.listapraticidades li p{margin-bottom:10px}
+.listapraticidades li span.comprovante,
+.listapraticidades li span.agendamento {background:url(/NetEmpresa/imagens/geral/ico_funcoes.gif) 0 0 no-repeat;display:block}
+.listapraticidades li span.comprovante{background-position:0 -25px}
+.listapraticidades li span.agendamento{background-position:0 -75px}
+.listapraticidades li span.agendamento a,
+.listapraticidades li span.comprovante a {line-height:25px;display:block;padding-left:30px}
+.listapraticidades li span.lnk1 {padding:0 0 7px 10px;}
+.listapraticidades li span.lnk1,
+.listapraticidades li span.lnk1 a {display:inline-block;}
+.listapraticidades li.li1{padding-left:10px;padding-right:10px}
+.listapraticidades li.li2 span{background:none}
+.listapraticidades li.li2 a,
+.listapraticidades2 li.li2 a{background:url(/NetEmpresa/imagens/geral/seta1.gif) 0 4px no-repeat;line-height:120%;padding:0 0 7px 10px}
+.listapraticidades li.li3{border:none;padding-right:0}
+.listapraticidades li.li4{width:600px;border-right:none}
+.listapraticidades li.li5{width:auto;height:auto;border-right:none;padding:0 0 20px 0}
+.listapraticidades li.li6{border:none}
+.listapraticidades li.li6 span{background:none}
+.listapraticidades li.li5 a,
+.listapraticidades li.li6 a,
+.listapraticidades li.li7 a,
+.listapraticidades li.li8 a,
+.listapraticidades3 li a,
+.listapraticidades4 li a {background:url(/NetEmpresa/imagens/geral/seta1.gif) 0 4px no-repeat;line-height:120%;padding:0 0 7px 10px;display:block}
+.listapraticidades li.li7{width:320px;float:left;}
+.listapraticidades li.li7 span.comprovante a {background:none !important;}
+.listapraticidades li.li8{border:none;width:455px;float:left}
+.listapraticidades li.li8 span{background:none}
+.listapraticidades li.li9 {padding-left:0 !important;}
+.listapraticidades li.li9 span{background:none;}
+.listapraticidades li.li9 a{background:url(/NetEmpresa/imagens/geral/seta1.gif) 0 4px no-repeat;line-height:120%;padding:0 0 7px 10px}
+.listapraticidades li.li10{border-right:none !important;width:640px;float:left}
+.listapraticidades li.li10 span{background:none}
+.listapraticidades li.li10 a{background:url(/NetEmpresa/imagens/geral/seta1.gif) 0 4px no-repeat;line-height:120%;padding:0 0 7px 10px;display:inline-block;}
+
+.listaPraticidades2 li.li2 a{background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat scroll 0 7px;padding:2px 0 2px 10px}
+.listaPraticidades2 {width:100%}
+.listaPraticidades2 li {float:left;border-right:1px solid #E5E5E5;margin-top:10px;width:315px;padding:0 25px 20px 15px}
+.listaPraticidades2 li.li1{padding-left:0;width:325px;}
+.listaPraticidades2 li.li2 p{padding-bottom:10px;}
+.listaPraticidades2 li.li1 img{border:1px solid #E7E7E7;float:left;margin-right:15px}
+.listaPraticidades2 li.li1 p{margin-top:5px}
+
+#conteudo .mioloF3 .listaFiltroDetalhado, #conteudo .mioloF2 .listaFiltroDetalhado {font-size:11px;}
+.listaFiltroDetalhado, .listaFiltroDetalhadoModal {background:url(../../../imagens/geral/bgr_filtroExtrato.jpg) top left ;width:100%;margin-bottom:15px}
+.listaFiltroDetalhado li, .listaFiltroDetalhadoModal li{float:left;line-height:31px;}
+.listaFiltroDetalhado li select,.listaFiltroDetalhadoModal li select {/*line-height:31px*/margin-top:5px;}
+.listaFiltroDetalhado li.tp1,
+.listaFiltroDetalhadoModal li.tp1{padding-left:8px}
+.listaFiltroDetalhado li.tp1 select,
+.listaFiltroDetalhadoModal li.tp1 select{*margin-top:0;_margin-top:5px !important;}
+.listaFiltroDetalhado li.tp1 select#cmbTodasOp,
+.listaFiltroDetalhadoModal li.tp1 select#cmbTodasOp{ width:130px !important;}
+.listaFiltroDetalhado li.tp2,
+.listaFiltroDetalhadoModal li.tp2{padding-right:5px;padding-left:10px;background:url(../../../imagens/geral/bgr_lista_extrato_sep.gif) top right no-repeat}
+.listaFiltroDetalhado li.tp3,
+.listaFiltroDetalhadoModal li.tp3{color:#666666;background:url(../../../imagens/geral/bgr_lista_extrato_sep.gif) top right no-repeat;position:relative}
+.listaFiltroDetalhado li.tp3 span.dia,
+.listaFiltroDetalhadoModal li.tp3 span.dia{padding:0 6px}
+.listaFiltroDetalhado li.tp3 span.diaSpace,
+.listaFiltroDetalhadoModal li.tp3 span.diaSpace{padding:0 15px}
+.listaFiltroDetalhado li.tp3 span.diaOn,
+.listaFiltroDetalhadoModal li.tp3 span.diaOn{background:url(../../../imagens/geral/bgr_extrato_diaOn.jpg) top center no-repeat;position:relative;top:-5px;height:47px;line-height:120%;text-align:center;display:block;float:left;margin-right:1px;margin-bottom:-16px;}
+.listaFiltroDetalhado li.tp3 span.diaOn span.filtroBarra,
+.listaFiltroDetalhadoModal li.tp3 span.diaOn span.filtroBarra{color:#CC092F;font-size:145%;font-weight:bold;display:block;line-height:135%}
+.listaFiltroDetalhado li.tp3 span.diaOn a,
+.listaFiltroDetalhadoModal li.tp3 span.diaOn a{color:#333333 !important}
+.listaFiltroDetalhado li.tp3Ultimo,
+.listaFiltroDetalhadoModal li.tp3Ultimo{background:none}
+.listaFiltroDetalhado li.tp3 a,
+.listaFiltroDetalhadoModal li.tp3 a{color:#666}
+
+.listaFiltroDetalhado li.tp3 span.diaOpcd,
+.listaFiltroDetalhadoModal li.tp3 span.diaOpcd{padding:0 6px; filter: alpha(opacity=50); opacity: 0.5;}
+.listaFiltroDetalhado li.tp3 span.diaOpcd a,
+.listaFiltroDetalhadoModal li.tp3 span.diaOpcd a{text-decoration:none !important;}
+.listaFiltroDetalhado li.tp3 span.diaOnOpcd span.filtroBarra,
+.listaFiltroDetalhadoModal li.tp3 span.diaOnOpcd span.filtroBarra{color:#CC092F;font-size:145%;font-weight:bold;display:block;line-height:135%}
+.listaFiltroDetalhado li.tp3 span.diaOnOpcd span.filtroBarra a,
+.listaFiltroDetalhadoModal li.tp3 span.diaOnOpcd span.filtroBarra a{text-decoration:none !important;}
+.listaFiltroDetalhado li.tp3 span.diaOnOpcd,
+.listaFiltroDetalhadoModal li.tp3 span.diaOnOpcd {background:url(../../../imagens/extrato/bgr_extrato_diaOn.jpg) top center no-repeat;position:relative;top:-5px;height:47px;line-height:120%;text-align:center;display:block;float:left;margin-right:1px;margin-bottom:-16px;}
+
+.listaFiltroDetalhado li.tp4Opcd,
+.listaFiltroDetalhadoModal li.tp4Opcd {float:right;left:859px;}
+.listaFiltroDetalhado li.tp4Opcd a,
+.listaFiltroDetalhadoModal li.tp4Opcd a{background:url(../../../imagens/extrato/bgr_lista_extrato_tp4_a.gif) 0 -31px no-repeat;display:inline-block;padding:0 10px 0 29px;height:100%;white-space:nowrap; filter: alpha(opacity=50); opacity: 0.5;}
+.listaFiltroDetalhado li.tp4Opcd a:hover,
+.listaFiltroDetalhadoModal li.tp4Opcd a:hover {text-decoration:none !important; color:#333333 !important;}
+
+.listaFiltroDetalhado li.tp4,
+.listaFiltroDetalhadoModal li.tp4 {float:right;left:859px;}
+.listaFiltroDetalhadoModal li.tp4 {position:static !important;}
+.listaFiltroDetalhado li.tp4 a,
+.listaFiltroDetalhado li.tp4On a,
+.listaFiltroDetalhadoModal li.tp4 a,
+.listaFiltroDetalhadoModal li.tp4On a{background:url(../../../imagens/extrato/bgr_lista_extrato_tp4_a.gif) 0 -31px no-repeat;display:inline-block;padding:0 10px 0 29px;height:100%;white-space:nowrap}
+.listaFiltroDetalhado li.tp4On,
+.listaFiltroDetalhadoModal li.tp4On{background:url(../../../imagens/extrato/bgr_lista_extrato_tp4On.gif) top right no-repeat}
+.listaFiltroDetalhado li.tp4On a,
+.listaFiltroDetalhadoModal li.tp4On a{background-position:0 0}
+
+.listaFiltroExtrato li.tp4 a,
+.listaFiltroExtrato li.tp4On a {background:url(../../../imagens/geral/ico_maisMenos.gif) 12px 2px no-repeat;display:inline-block;padding:0 10px 0 29px;height:100%;white-space:nowrap}
+.listaFiltroExtrato li.tp4On a {background-position:-78px -86px}
+
+.listaFiltroDetalhado li.tp5, .listaFiltroDetalhadoModal li.tp5 {background: url("<../../../imagens/geral/bgr_lista_extrato_sep.gif") no-repeat scroll right top transparent;position: relative;}
+.listaFiltroDetalhado li.tp5 span, .listaFiltroDetalhadoModal li.tp5 span {padding: 0 15px;}
+.listaFiltroDetalhado li.tp5 span.on, .listaFiltroDetalhadoModal li.tp5 span.on, .listaFiltroDetalhado li.tp5Ultimo span.on {background: url("../../../imagens/geral/bgr_extrato_diaOn.jpg") no-repeat scroll center top transparent;display: block;float: left;height: 47px;line-height: 120%;margin-bottom: -16px;margin-right: 1px;position: relative;text-align: center;top: -5px;}
+.listaFiltroDetalhado li.tp5 span.on a, .listaFiltroDetalhadoModal li.tp5 span.on a, .listaFiltroDetalhado li.tp5Ultimo span.on a {color: #CC092F;display: block;font-weight: bold;padding-top: 13px;}
+.listaFiltroDetalhado li.tp5 span.on a:hover, .listaFiltroDetalhadoModal li.tp5 span.on a:hover, .listaFiltroDetalhado li.tp5Ultimo span.on a:hover {text-decoration: none;}
+.listaFiltroDetalhado li.tp5Ultimo, .listaFiltroDetalhadoModal li.tp5Ultimo {background: none repeat scroll 0 0 transparent;}
+.listaFiltroDetalhado li.tp5 a, .listaFiltroDetalhadoModal li.tp5 a {color: #666666;}
+.listaFiltroDetalhado li.tp5 a:hover, .listaFiltroDetalhadoModal li.tp5 a:hover {color: #CC092F;}
+.listaFiltroDetalhado, .listaFiltroDetalhadoModal {margin-bottom: 0 !important;}
+/* ALTERADO TAMBEM NA LINHA 380 */
+.btnExtrairExtrato {background-position:0 -592px;width:96px;}
+.btnVisualizarArquivo {background-position:0 -2414px;width:115px;}
+.btnExportarArquivo {background-position:0 -612px;width:110px;}
+
+.confirmacao .topo .icoLogo, .confirmacao .topoModal .icoLogo {background-attachment: scroll;background-clip: border-box;background-color: transparent;background-image: url("../../../imagens/geral/ico_confirmacao_transacao.gif");background-origin: padding-box;background-position: 0 0;background-repeat: no-repeat;background-size: auto auto;height: 83px;margin-left: 15px;width: 107px;}
+
+/*---------------------MIGRACAO VISUAL - DOWNLOAD DE ARQUIVOS------------------*/
+.listaTpArq2 ul {width:150px  !important;padding:10px 6px 10px 0 !important;}
+.listaTpArq2 li {float:left !important;}
+.listaTpArq2 li li {margin-bottom:10px !important;}
+
+.listaTpArq2 li.icoTxt label {background-position:0 0;}
+.listaTpArq2 li.icoOdt label {background-position:0 -73px;}
+.listaTpArq2 li.icoXmld label {background-position:0 -146px;}
+.listaTpArq2 li.icoXls label, .listaTpArq2 li.icoXls .label {background-position:0 -219px;}
+.listaTpArq2 li.icoCsv label {background-position:0 -291px;}
+.listaTpArq2 li.icoOds label {background-position:0 -364px;}
+.listaTpArq2 li.icoXmls label {background-position:0 -438px;}
+.listaTpArq2 li.icoQif label {background-position:0 -510px;}
+.listaTpArq2 li.icoOfx label {background-position:0 -583px;}
+.listaTpArq2 li.icoOfc label {background-position:0 -657px;}
+.listaTpArq2 li.icoPdf label, .listaTpArq2 li.icoPdf .label {background-position:0 -730px;}
+.listaTpArq2 li.icoHtml label {background-position:0 -803px;}
+.listaTpArq2 li.icoOxhtml label {background-position:0 -875px;}
+.listaTpArq2 li li input {margin:3px 5px 0 0;}
+.listaTpArq2 li li label , .listaTpArq2 li li .label{background:url(../../../imagens/geral/ico_fileTypes.gif) 0 0 no-repeat;padding:0 0 5px 30px;display:block;font-size:100%;float:left;width:100px;}
+.listaTpArq2 li li p {padding-left:48px;clear:both;}
+
+.wrap {white-space:normal !important;}
+
+.div_loading {position:fixed;top:0;right:0;bottom:0;left:0;height:100%;width:100%;margin:0;padding:0;background:#fff;z-index:101;filter: alpha(opacity=0);-moz-opacity:0;opacity:0;-khtml-opacity:0;}
+.listaBotoes li{display:block;float:left;line-height:21px;margin:10px 0;margin-right: -10px !important;}
+.listaBotoes li input{float:left;}
+
+.boxInformacaoSemDtalh{bottom right no-repeat;font-size:92%;margin-left:150px;padding-bottom:10px;width:590px}
+.boxInformacaoSemDtalh table tr.linha td{border-bottom:1px dashed #CCC;padding-bottom:8px}
+.boxInformacaoSemDtalh table tr.espaco td{padding-top:8px}
+.boxInformacaoSemDtalh table td{padding:3px 0;vertical-align:top}
+.boxInformacaoSemDtalh p{color:#666;}
+
+.boxInformacao2{background:url(../../../imagens/geral/bg_ttl_destaques2.jpg) bottom right no-repeat;font-size:92%;margin-left:130px;padding-bottom:10px;width:575px}
+.boxInformacao2 table tr.linha td{border-bottom:1px dashed #CCC;padding-bottom:8px}
+.boxInformacao2 table tr.espaco td{padding-top:8px}
+.boxInformacao2 table td{padding:3px 0;vertical-align:top}
+.boxInformacao2 p{color:#666;}
+
+/* Fim da implementa??o para  tabela expans?vel */
+
+/* Utilizado para montar o combo de sele??o de contas exibir*/
+.listaFiltroConta {background:url(../../../imagens/geral/bgr_filtro.jpg) top left repeat-x;width:100%;margin-bottom:10px}
+.listaFiltroConta li{float:left;line-height:31px;}
+.listaFiltroConta li select {margin-top:5px;}
+.listaFiltroConta li.tp1{padding-left:8px;}
+.listaFiltroConta li.tp1 select{margin-top:6px !important;}
+.listaFiltroConta li.tp1 select#cmbTodasOp{ width:130px !important;}
+/* Utilizado para montar o combo de sele??o de contas exibir*/
+.boxFiltro, .boxFiltroExtrato, .boxFiltroModal {background:#E4E4E4;border-left:1px solid #CDCDCD;border-right:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;padding:20px 15px 10px 15px;position:relative;top:0;display:none;}
+
+.boxWrapFiltro .boxOverlay {width: 603px;z-index: 1;}
+.boxOverlay {background-color: #FFFFFF;height: 100%;left: 0;filter: alpha(opacity=50); opacity: 0.5;position: absolute;top: 0;}
+.boxWrapFiltro {position: relative;}
+
+.borda2, tr.borda2 td {border-bottom-color: #999999;border-bottom-style: solid;border-bottom-width: 1px;}
+.borda3, tr.borda3 td {border-bottom-color: #CDCDCD;border-bottom-style: solid;border-bottom-width: 1px;}
+.blqueioUsr{float:left; position: absolute; color:#666666 !important; font-weight: normal !important;}
+
+.icoNaoRealizada, .icoOperPendente {background:url(../../../imagens/geral/ico_funcoes.gif) 0 -540px no-repeat;width: 28px;height: 28px;margin-right: 10px;}
+.icoOperPendente{background-position: 0 -360px;;margin-right: 10px;width: 106px;}
+.commprovanteConfirmOper {background: url("../../../imagens/geral/ico_confirmacao_transacao.gif") no-repeat scroll 0 0 transparent;height: 56px;margin-right: 10px;width: 106px;}
+.commprovanteConfirmOper {background-position:0 0px;margin-right: 10px;width: 106px;}
+
+.commprovanteAgend {background: url("../../../imagens/geral/ico_big_agenda.jpg") no-repeat scroll transparent;}
+.commprovanteAgend {background-position: 0 0;height: 68px;margin-right: 0;width: 53px;}
+
+.commprovanteLogoBradesco {background: url("../../../imagens/geral/logo_comprovante.gif") no-repeat scroll 0 0 transparent!important;height: 85px;margin-right: 10px;width: 106px ;}
+.commprovanteLogoBradesco {background-position:0 0px;margin-right: 0px;width: 86px;}
+
+.bt_conferido {background: url("../../../imagens/geral/conferido.gif") no-repeat scroll 0 0 transparent;height: 85px;margin-right: 10px;width: 81px;}
+.btnAddNovoFavorecido {background: url("../../../imagens/geral/bt_addNovoFavorecido.gif") no-repeat scroll 0 0 transparent;height: 22px;margin-right: 10px;width: 179px;}
+
+.btnVisualizar {background: url("../../../imagens/geral/bt_visualizar.gif") no-repeat scroll 0 0 transparent;height: 20px;margin-right: 10px;width: 69px;}
+
+.periodo_consulta {margin-left: 188px!important;}
+
+.listaTpArq3 ul {width:300px !important;padding:2px 6px 2px 0 !important;}
+.listaTpArq3 li {float:left !important;}
+.listaTpArq3 li li {margin-bottom:10px !important;}
+.listaTpArq3 li.icoTxt .label {background-position:0 0;}
+.listaTpArq3 li.icoOdt .label {background-position:0 -73px;}
+.listaTpArq3 li.icoXmld .label {background-position:0 -146px;}
+.listaTpArq3 li.icoXls .label {background-position:0 -219px;}
+.listaTpArq3 li.icoCsv .label {background-position:0 -291px;}
+.listaTpArq3 li.icoOds .label {background-position:0 -364px;}
+.listaTpArq3 li.icoXmls .label {background-position:0 -438px;}
+.listaTpArq3 li.icoQif .label {background-position:0 -510px;}
+.listaTpArq3 li.icoOfx .label {background-position:0 -583px;}
+.listaTpArq3 li.icoOfc .label {background-position:0 -657px;}
+.listaTpArq3 li.icoPdf .label {background-position:0 -729px;}
+.listaTpArq3 li.icoHtml .label {background-position:0 -803px;}
+.listaTpArq3 li.icoOxhtml .label {background-position:0 -875px;}
+.listaTpArq3 li li input {margin:3px 5px 0 0;}
+.listaTpArq3 li li .label {background:url(../../../imagens/geral/ico_fileTypes.gif) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;width:200px;}
+.listaTpArq3 li li p {padding-left:48px;clear:both;}
+
+.logBadesco {background:url(../../../imagens/geral/ico_bradesco_comprovante.jpg) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 32px;width:171px;}
+.recortar {background:url(../../../imagens/geral/img_recortar.jpg) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 30px;width:665px;}
+.icoISO {background:url(../../../imagens/geral/iso.gif) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 22px;width:31px;}
+.icoISO-pb {background:url(../../../imagens/geral/iso-pb.gif) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 22px;width:31px;}
+.btnComprtilhar{background:url("../../../imagens/geral/btnComprtilhar.jpg") 0 0 no-repeat;float:left;width:84px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnAceiteRecusa {background:url("../../../imagens/geral/btnAceita-Recusa.jpg") 0 0 no-repeat;float:left;width:104px;height:20px;border:none;cursor:pointer;text-indent:-9999px;padding:0 !important;}
+.btnConferido {background:url(../../../imagens/geral/bt_Conferido.gif) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 13px;width:53px;}
+.btnRemove-Lote {background:url(../../../imagens/geral/btnRemoverDoLote.jpg) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 13p;width:77px;}
+.chkDesSel, .chkParcSel, .chkSel {background:url(../../../imagens/geral/bgr_checkbox3estados.gif) 0 0 no-repeat;padding:2px 0 5px 30px;display:block;font-size:100%;float:left;height: 13px;width:77px;}
+.chkDesSel{background-position:0 0;height:6px;width:6px;}
+.chkParcSel{background-position:0 -13px;height:6px;width:6px;}
+.chkSel{background-position:0 -26px;height:6px;width:6px;}
+.wCampoChkDataProg .chkSel{background:none;padding:0;}
+.wCampoChkDataProg .odd{background: none repeat scroll 0 0 #F3F3F3;}
+/* Estilo quando o form_erro n?o cobrir todos os campos */
+.form_agrupa { display:inline-block; width:100%}
+.legParteOper, .legTodasOper {border: 1px solid #666;padding: 2px 4px;line-height: 1em;background: white;color: black;float: left;display: block;font-weight: 100 !important;margin-right: 5px;}
+.legParteOper {background: #999;margin-left: 0;}
+.boxLegs {width: 70px;margin: 0 auto !important;padding: 0 !important;}
+.icoLegParteOper, .icoLegTodasOper {width: 15px;height: 15px;text-indent: -999999px;font-size: 1px;display: block;border: 1px solid black;background: white;}
+.icoLegParteOper{background: #999;}
+.tabLegenda .sepRgt {border-right: 1px solid #999;height: 20px;}
+
+.loader,.loaderCenter,.loaderRight,.loaderWH100Percent {
+	background:url(../../../imagens/geral/ajax-loader.gif) 0 0 no-repeat;
+}
+
+.loaderCenter{
+	background-position:center center;
+}
+
+.loaderRight{
+	background-position:right 0;
+}
+
+.loaderWH100Percent{
+	background-size:100% 100%;
+}
+h3.titulo {font-size:1.69em; line-height:25px; padding: 10px 0;}
+
+.oculto{display:none;}
+
+/* AJUSTE VIGNETTE*/
+/*box expansivel*/
+.boxexpand{margin:0 0 10px;border-bottom:1px solid #CDCDCD;}
+.boxexpandon{background-color:#E3E3E3 !important;border:1px solid #CDCDCD;padding-bottom:10px;}
+.boxexpand .ttl{background-color:#F3F3F3;border:1px solid #F3F3F3;}
+.boxexpandon .ttl{background:none;border:1px solid #E3E3E3;}
+.boxexpand .ttl a.icomm,
+.boxexpand .ttl a.on,
+.boxexpand .ttl a{background:url(../../../imagens/geral/ico_mais_menos.gif) 10px 12px no-repeat;display:block;padding:10px 10px 10px 29px;color:#666;}
+
+.boxexpand .ttl a.on{background-position:0 -26px;height:6px;width:6px;}
+.boxexpand .ttl a.icomm {float:left;}
+.boxexpandon .ttl a.icomm,
+.boxexpandon .ttl a{padding:9px 9px 9px 28px;background-position:9px -38px;font-weight:700}
+.boxexpand .ttl a:hover{background-color:#E4E4E4;text-decoration:none;}
+.boxexpand .ttl a:hover span{text-decoration:none !important;color:#666;}
+.boxexpand .boxin{display:none;padding:10px;margin:10px;}
+
+/*tabela box expansivel*/
+.tabtp2 thead th{background:url(../../../imagens/geral/bgr_tabela1.jpg) top left repeat-x;font-weight:bold;height:27px;text-align:left}
+.tabtp2 thead th.right{text-align:right}
+.tabtp2 thead th.sep{background:url(../../../imagens/geral/bgr_tabela1_sep.gif) top left no-repeat;font-weight:bold;width:2px;height:27px}
+.tabtp2 tbody{vertical-align:top}
+.tabtp2 tbody.total{background:#E4E4E4;/*border-bottom:1px solid #CC092F;*/font-weight:bold}
+.tabtp2 tr.on td{background:#E4E4E4}
+.tabtp2 tbody tr.desc td{color:#666;padding-top:0 !important}
+.tabtp2 tbody td{line-height:140%;padding:8px 0}
+.tabtp2 tbody td.positivo{color:#0000A0}
+.tabtp2 tbody td.negativo{color:#CC092F}
+.tabtp2 tbody tr.borda td{border-bottom:1px solid #666}
+.tabtp2 tbody tr.over td{background:#CCC;cursor:pointer}
+.tabtp2 tbody td span.desc {color:#666;display:block;}
+.tabtp3 tr.espaco td,.tabtp4 tr.espaco td{padding-top:5px !important}
+.tabtp3 tr.borda5 td {border-bottom:#E5E5E5 1px solid;}
+.tabtp3 tr.espaco2 td,.tabtp4 tr.espaco2 td{padding-top:18px !important}
+.tabtp3 td, .tabtp4 td{padding-bottom:10px;padding-top:0}
+.tabtp3 td.rotulo,.tabtp4 td.rotulo, #feedBack td.rotulo{text-align:right;vertical-align:top}
+.tabtp3 td.dado,.tabtp4 td.dado, #feedBack td.dado{font-weight:bold;vertical-align:bottom}
+.tabtp3 td.codigo span,.tabtp4 td.codigo span, #feedBack td.codigo{margin-right:7px}
+.tabtp3 td.naoinformado {font-weight:normal;}
+.tabtp3 td.dado .tabtp1 td.normal {font-weight:normal !important;}
+
+td.alignTop{vertical-align: top;}
+
+.progressBar{border: 1px solid #c8c8c8;height: 15px;overflow: hidden;position: relative;width: 350px;}
+.progressBar .progress {background:url(../../../imagens/geral/bgr_loading.jpg) repeat-x scroll 0 0 transparent;display: block;height: 100%;left: -100%;position: absolute;text-indent: -9999px;top: 0;width: 100%;}	
+
+.box-alerta3 {font-family: "montserratregular";font-size: 12px;line-height: 17px;color: #7E7E7E;padding: 18px 20px 24px 105px;border: solid 2px #77A2B2; border-radius: 4px;background: url(../../../imagens/facelift/ico-aviso.png) 23px center no-repeat;} 
+
+.btnGerarChaveCript {
+    background: rgba(0, 0, 0, 0) url(../../../imagens/botoes/gerarChaveDeCriptografia.png) no-repeat scroll 0 0;
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    height: 22px;
+    padding: 0 !important;
+    text-indent: -9999px;
+    background-position: -2px -4px;
+    width: 189px;
+}
+
+/* ATUALIZACAO LAYOUT AUTENTICADOR */
+.btnIniciarLeitura2 {text-transform: uppercase;font-family: "newjunebookregular";font-size: 11px;min-width: 158px;height: 34px !important;border-radius: 17px;background-color: #BF0712;color: #FFF; border: solid 1px #BF0712;cursor: pointer}
+.boxAbasIcons {	width:100%;}
+.clearfix:after {clear: both;}
+.clearfix:before, .clearfix:after {content: "";display: table;}
+.clearfix:before, .clearfix:after {content: "";display: table;}
+.box-icones  ul {list-style-type: none;margin:10px 0;}
+.box-icones  ul li {margin:10px 0;}
+.boxAbasIcons {width:100%;}
+.iconesToken {width: 50%;display: block;float:left;text-align: center;padding:10px 0;height: 13px;text-indent: -9999px;background: url(../../../imagens/geral/img_tokens_luminoso.png) no-repeat;}
+.iconesToken.icon1 {background-position: 60px 0px;}
+.iconesToken.icon1.active {background-position: 60px -60px;}
+.iconesToken.icon2 {background-position: -144px -60px;}
+.iconesToken.icon2.active {background-position: -143px 0;}
+.iconesToken.active {border-bottom:2px solid #333;padding:10px 0;}
+
+.btn-novo-menu:after{ content: url("../../../imagens/geral/novo.png"); padding: 0 0 4px 8px;  position: absolute;}
+
+.btn-novo-menu-nv4 span:after {
+    content: url("../../../imagens/geral/novo.png");
+    padding: 0px 0px 4px 8px;
+    margin-top: -2px;
+    position: absolute;
+}
+
+.btn-embreve-menu:after{ content: url("../../../imagens/geral/em_breve.png"); padding: 0 0 4px 8px;  position: absolute;}
+
+.btn-embreve-menu-nv4 span:after {
+    content: url("../../../imagens/geral/em_breve.png");
+    padding: 0px 0px 4px 8px;
+    margin-top: -2px;
+    position: absolute;
+}
+
+/* Propriedades para adicionar o componente snackbar do facelift */
+body .box-snackbar{
+    position: fixed;
+    bottom: 15px;
+    width: 474px;
+    background-color: #47484C;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    display: inline-flex;
+    z-index: 100;		
+}
+body .box-snackbar .close{
+    background-image: url(/guide/icones/icone-x.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+    margin: 24px 24px 0px 32px;
+    cursor: pointer;
+}
+
+body .box-snackbar.left{
+    left: 200px;
+}
+body .box-snackbar.right{
+    right: 200px;
+}
+body .box-snackbar .conteudo-snackbar{
+    margin: 24px 0 24px 24px;	
+    width: 370px;	
+}

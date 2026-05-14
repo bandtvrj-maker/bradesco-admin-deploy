@@ -1,0 +1,414 @@
+.w97percent{width: 97%;}
+
+.jqmWindow {display:none;position:absolute;}
+.jqmOverlay {background-color:#CCC;}
+.jqmCornerTop, .jqmCornerBottom {height:8px;width:100%;position:relative;}
+.jqmCornerTop .cc, .jqmCornerBottom .cc {background:url(../../../imagens/geral/bgr_modal.png) 0 -17px repeat-x;display:block;height:100%;margin:0 8px;}
+.jqmCornerBottom .cc {background-position:0 -17px;}
+.jqmCornerTop .c1,
+.jqmCornerTop .c2,
+.jqmCornerBottom .c3,
+.jqmCornerBottom .c4 {background:url(../../../imagens/geral/bgr_modal.png) 0 0 no-repeat;display:block;height:8px;position:absolute;width:8px;}
+.jqmCornerTop .c1 {left:0;top:0;}
+.jqmCornerTop .c2 {background-position:-8px 0;top:0;right:0;}
+.jqmCornerBottom .c3 {background-position:0 -7px;bottom:0;left:0;}
+.jqmCornerBottom .c4 {background-position:-7px -7px;bottom:0;right:0;}
+.jqmWrapper {background:#FFF;}
+.jqmTop {padding:0 15px 0 0px;}
+.jqmTop h4 {font-size:1.38em;float:left;padding:7px 0 15px 0;color: #CC092F;}
+.jqmTop h3 {font-size:1.69em; line-height:25px; padding: 10px 0;}
+.jqmTop .lnkFechar {background:url(../../../imagens/geral/bgr_modal.png) 0 -27px no-repeat;display:block;height:17px;float:right;text-indent:-9999px;width:17px;cursor: pointer;}
+
+.jqmMiolo {background:url(../../../imagens/geral/bgr_conteudo.jpg) 0 -133px repeat-x;
+			border:1px; 
+			padding-bottom: 0px;
+			padding-top: 10px;
+			text-indent: -9999px;
+			width:100% !important;			
+}
+
+/* content */
+.jqmContent {padding:0 20px;}
+.jqmContent p.subtitle {padding:10px 0;}
+.jqmContent h3 { font-size:1.31em; padding:15px 0; }
+.jqmContent h4 { font-weight:bold; padding:10px 0; }
+.jqmContent p {padding-bottom:10px;}
+.jqmContent span.mini {font-size:0.88em;}
+.jqmContent .btos_bottom {padding-bottom:10px;}
+
+.lstRemetente li {float:left;display:inline-block;}
+
+.jqmContent h3.submenu {font-size:12px}
+
+/* janela de alguma coisa */
+.jqmWindow fieldset {border-bottom:1px solid #E5E5E5;padding-bottom:15px;}
+.jqmWindow legend {color:#000;font-size:1.23em;padding:20px 0;*margin-left:-7px;}
+.jqmWindow .lstAbas {background:url(../../../imagens/geral/bgr_aba.jpg) 0 31px repeat-x;padding:0 20px;}
+.jqmWindow .lstAbas li,
+.jqmWindow .lstAbas li.on {margin-left:-1px;background:url(../../../imagens/geral/bgr_aba.jpg) 0 -111px repeat-x;border-bottom:0;display:inline-block;float:left;height:32px;}
+.jqmWindow .lstAbas li span,
+.jqmWindow .lstAbas li.on span {display:block;background:url(../../../imagens/geral/bgr_aba.jpg) 0 -148px no-repeat;display:inline-block;padding-left:30px;}
+.jqmWindow .lstAbas li a,
+.jqmWindow .lstAbas li.on a {display:block;background:url(../../../imagens/geral/bgr_aba.jpg) right -185px no-repeat;color:#666;display:inline-block;font-size:0.92em;line-height:32px;padding-right:30px;}
+.jqmWindow .lstAbas li a:hover {color:#BF0000;}
+.jqmWindow .lstAbas li.on a:hover {text-decoration:none;}
+.jqmWindow .lstAbas li.on {background-position:0 0;}
+.jqmWindow .lstAbas li.on span {background-position:0 -37px;}
+.jqmWindow .lstAbas li.on a {background-position:right -74px;color:#BF0000;}
+.jqmWindow .frmCheck, .jqmWindow .frmRadio {width:13px;}
+.jqmWindow .espaco {display:inline-block;text-align:right;vertical-align:top;width:75px;}
+.jqmWindow .lstButtons {clear:both;padding:15px 0 10px;}
+.jqmWindow .lstButtonsLine {border-top:solid 1px #E5E5E5;}
+.jqmWindow .lstButtons li {float:right;padding-left:8px;}
+
+.jqmWindow .tabCabContatos {margin-top:20px;width:100%;}
+.jqmWindow .tabCabContatos td {background:#F0F0F0 url(../../../imagens/geral/pix_fill_double.gif) right top repeat-y;border-bottom:1px solid #E5E5E5;padding:7px 0;text-align:center;}
+.jqmWindow .tabCabContatos td.noBorder {background-image:none;}
+
+.jqmWindow .overflow132 {border-bottom:1px solid #E5E5E5;height:132px;overflow-y:scroll;overflow-x:hidden;margin-bottom:10px;width:100%;} /* show exactly 5 lines */
+.jqmWindow .tabContatos td {border-top:1px solid #E5E5E5;padding:5px 0;vertical-align:center;}
+.jqmWindow .tabContatos .frmCheck {height:13px;margin:0 5px 0 5px;width:13px;}
+.jqmWindow .tabContatos .frmTxt {display:none;}
+.jqmWindow .box-alerta a {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat 0 5px;padding:0 0 0 10px;}
+
+.jqmWindow .tabContatos {width:100%;}
+
+.jqmWindow .tabContatos .trConf td {border-top:none;padding-top:none;}
+.jqmWindow .tabContatos .trEditar * {vertical-align:middle !important;}
+.jqmWindow .tabContatos .trEditar .frmTxt {display:inline-block;padding:1px!important;}
+.jqmWindow .tabContatos .trEditar .frmCheck {margin-right:0;}
+.jqmWindow .tabContatos .trEditar label {display:none;}
+
+.jqmWindow .lstConfirmacao {margin-left:24px;}
+.jqmWindow .lstConfirmacao li {float:left;display:inline-block;line-height:22px;padding-left:5px;}
+.jqmWindow .lstConfirmacao strong {margin-right:5px;}
+
+
+
+.jqmWindow_infra_estrutura fieldset {border-bottom:1px solid #E5E5E5;padding-bottom:15px;}
+.jqmWindow_infra_estrutura legend {color:#000;font-size:1.23em;padding:20px 0;*margin-left:-7px;}
+.jqmWindow_infra_estrutura .lstAbas {background:url(../../../imagens/geral/bgr_aba.jpg) 0 31px repeat-x;padding:0 20px;}
+.jqmWindow_infra_estrutura .lstAbas li,
+.jqmWindow_infra_estrutura .lstAbas li.on {margin-left:-1px;background:url(../../../imagens/geral/bgr_aba.jpg) 0 -111px repeat-x;border-bottom:0;display:inline-block;float:left;height:32px;}
+.jqmWindow_infra_estrutura .lstAbas li span,
+.jqmWindow_infra_estrutura .lstAbas li.on span {display:block;background:url(../../../imagens/geral/bgr_aba.jpg) 0 -148px no-repeat;display:inline-block;padding-left:30px;}
+.jqmWindow_infra_estrutura .lstAbas li a,
+.jqmWindow_infra_estrutura .lstAbas li.on a {display:block;background:url(../../../imagens/geral/bgr_aba.jpg) right -185px no-repeat;color:#666;display:inline-block;font-size:0.92em;line-height:32px;padding-right:30px;}
+.jqmWindow_infra_estrutura .lstAbas li a:hover {color:#BF0000;}
+.jqmWindow_infra_estrutura .lstAbas li.on a:hover {text-decoration:none;}
+.jqmWindow_infra_estrutura .lstAbas li.on {background-position:0 0;}
+.jqmWindow_infra_estrutura .lstAbas li.on span {background-position:0 -37px;}
+.jqmWindow_infra_estrutura .lstAbas li.on a {background-position:right -74px;color:#BF0000;}
+.jqmWindow_infra_estrutura .frmCheck, 
+.jqmWindow_infra_estrutura .frmRadio {width:13px;}
+.jqmWindow_infra_estrutura .espaco {display:inline-block;text-align:right;vertical-align:top;width:75px;}
+.jqmWindow_infra_estrutura .lstButtons {padding:15px 15px 8px 8px;float:right !important;}
+.jqmWindow_infra_estrutura .lstButtonsLine {padding-right:20px;border: none;}
+.jqmWindow_infra_estrutura .lstButtons li {float:right;padding-left:8px;}
+.jqmWindow_infra_estrutura .tabCabContatos {margin-top:20px;width:100%;}
+.jqmWindow_infra_estrutura .tabCabContatos td {background:#F0F0F0 url(../../../imagens/geral/pix_fill_double.gif) right top repeat-y;border-bottom:1px solid #E5E5E5;padding:7px 0;text-align:center;}
+.jqmWindow_infra_estrutura .tabCabContatos td.noBorder {background-image:none;} 
+.jqmWindow_infra_estrutura .overflow145 {border-bottom:1px solid #E5E5E5;height:145px;overflow-y:scroll;overflow-x:hidden;margin-bottom:20px;width:100%;}
+.jqmWindow_infra_estrutura .overflow132 {border-bottom:1px solid #E5E5E5;height:132px;overflow-y:scroll;overflow-x:hidden;margin-bottom:10px;width:100%;} /* show exactly 5 lines */
+.jqmWindow_infra_estrutura .tabContatos td {border-top:1px solid #E5E5E5;padding:5px 0;vertical-align:center;}
+.jqmWindow_infra_estrutura .tabContatos .frmCheck {height:13px;margin:0 5px 0 5px;width:13px;}
+.jqmWindow_infra_estrutura .tabContatos .frmTxt {display:none;}
+.jqmWindow_infra_estrutura .box-alerta a {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat 0 5px;padding:0 0 0 10px;}
+.jqmWindow_infra_estrutura .tabContatos {width:100%;}
+.jqmWindow_infra_estrutura .tabContatos .trConf td {border-top:none;padding-top:none;}
+.jqmWindow_infra_estrutura .tabContatos .trEditar * {vertical-align:middle !important;}
+.jqmWindow_infra_estrutura .tabContatos .trEditar .frmTxt {display:inline-block;padding:2px 5px !important;}
+.jqmWindow_infra_estrutura .tabContatos .trEditar .frmCheck {margin-right:0;}
+.jqmWindow_infra_estrutura .tabContatos .trEditar label {display:none;}
+.jqmWindow_infra_estrutura .lstConfirmacao {margin-left:24px;}
+.jqmWindow_infra_estrutura .lstConfirmacao li {float:left;display:inline-block;line-height:22px;padding-left:5px;}
+.jqmWindow_infra_estrutura .lstConfirmacao strong {margin-right:5px;}
+
+
+
+/* botoes */
+.bto_imprimir,
+.bto_fechar2,
+.bto_voltar,
+.bto_cancelar,
+.bto_cancelar_acesso,
+.bto_alterar,
+.bto_enviar,
+.bto_salvar,
+.bto_sim,
+.bto_sim_destacado,
+.bto_nao,
+.bto_adicionar_favorecido,
+.bto_adicionar_outro_favorecido,
+.bto_alterar_favorecido,
+.bto_incluir_cedente,
+.bto_incluir_sacado{border:0;display:block;height:26px;padding:0;text-indent:-9999px;}
+.bto_fechar2:hover,
+.bto_voltar:hover,
+.bto_cancelar_acesso:hover,
+.bto_alterar:hover,
+.bto_enviar:hover,
+.bto_salvar:hover,
+.bto_adicionar_favorecido:hover,
+.bto_adicionar_outro_favorecido:hover,
+.bto_alterar_favorecido:hover,
+.bto_incluir_cedente:hover,
+.bto_incluir_sacado:hover{background-position:0 -26px;}
+.bto_imprimir {background:url(../../../imagens/geral/btn_geral.gif) 0 0 no-repeat;width:89px;}
+.bto_imprimir {background-position: 0 -224px;height: 21px;margin-left: 15px;width: 77px;}
+/*.bto_fechar {background:url(../../../imagens/geral/btn_geral.gif) 0 0 no-repeat;width:80px;}*/
+/*.bto_fechar {background-position: 0 -245px;height: 21px;margin-left: 15px;width: 56px;}*/
+.bto_fechar2 {background:url(../../../imagens/geral/bto_fechar2.gif) 0 0 no-repeat;width:66px;}
+.bto_voltar {background:url(../../../imagens/geral/bto_voltar.gif) 0 0 no-repeat;width:72px;}
+.bto_cancelar {background:url(../../../imagens/geral/btn_geral.gif) 0 0 no-repeat;width:88px;}
+.bto_cancelar {background-position: 0 -182px;height: 20px;margin-left: 15px;width: 77px;}
+.bto_cancelar_acesso {background:url(../../../imagens/geral/bto_cancelar_acesso.gif) 0 0 no-repeat;width:136px;}
+.bto_alterar {background:url(../../../imagens/geral/bto_alterar.gif) 0 0 no-repeat;width:78px;}
+.bto_alterar {background:url(../../../imagens/geral/bto_alterar.gif) 0 0 no-repeat;width:78px;}
+.bto_enviar {background:url(../../../imagens/geral/bto_enviar.gif) 0 0 no-repeat;width:72px;}
+.bto_salvar {background:url(../../../imagens/geral/bto_salvar.gif) 0 0 no-repeat;width:72px;}
+.bto_sim {background:url(../../../imagens/geral/bto_sim.gif) 0 0 no-repeat;width:47px;}
+.bto_sim_destacado {background:url(../../../imagens/geral/bto_sim_destacado.gif) 0 0 no-repeat;width:54px;}
+.bto_nao {background:url(../../../imagens/geral/bto_nao.gif) 0 0 no-repeat;width:49px;}
+.bto_adicionar_favorecido {background:url(../../../imagens/geral/bto_adicionar_favorecido.gif) 0 0 no-repeat;width:177px;}
+.bto_incluir_cedente {background:url(../../../imagens/geral/btn_incluir_cedente.gif) 0 0 no-repeat;width:177px;}
+.bto_incluir_sacado {background:url(../../../imagens/geral/btn_incluir_sacado.gif) 0 0 no-repeat;width:122px;}
+.bto_adicionar_outro_favorecido {background:url(../../../imagens/geral/bto_adicionar_outro_favorecido.gif) 0 0 no-repeat;width:218px;}
+.bto_alterar_favorecido {background:url(../../../imagens/geral/bto_alterar_favorecido.gif) 0 0 no-repeat;width:157px;}
+
+.jqmWindow .ico_excluir,
+.jqmWindow .ico_alterar,
+.jqmWindow .ico_selecionar {margin-top:-3px;}
+
+/* Acesso rapido */
+#modalAtalho fieldset {border-bottom:none;padding:30px 0 30px 10px;}
+#modalAtalho label {vertical-align:middle;}
+#modalAtalho input {border-bottom:1px solid #D4D4D4; border-right:1px solid #D4D4D4; border-left:1px solid #7A7A7A; border-top:1px solid #7A7A7A; padding:5px; background:#F4F4F4; font-size:0.85em; vertical-align:middle; width:397px;}
+#modalAtalho em {color:#666666;display:block;padding:3px 0 0 61px;font-size:0.85em;}
+/* Acesso rapido */
+
+/* Enviar por E-mail */
+#modalEnviarEmail .frmTxt {color:#333;font:0.92em/1.2 Tahoma, Arial, sans-serif;padding:1px 2px 0px 2px;height: 15px;}
+#modalEnviarEmail .lstRemetente label {display:inline-block;line-height:24px;}
+#modalEnviarEmail .lstDestinatario li {padding-bottom:10px;}
+#modalEnviarEmail .lstDestinatario li input {vertical-align:top;}
+#modalEnviarEmail .lstDestinatario label {background:#FFF;display:inline-block;padding-left:0px;}
+#modalEnviarEmail .lstMensagemEmail li {padding-top:20px;}
+#modalEnviarEmail .lstNovosRemetente li {padding-top:10px;}
+#modalEnviarEmail .lstNovosRemetente label {display:inline-block;line-height:24px;vertical-align:top;}
+#modalEnviarEmail .lstNovosRemetente .ico_excluir {display:inline-block;margin-bottom:3px;}
+#modalEnviarEmail .lstNovosRemetente .contato {clear:both;display:none;padding-left:83px;}
+#modalEnviarEmail .lstNovosRemetente .contato input {height:13px;margin-top:0px;vertical-align:top;}
+#modalEnviarEmail .lstNovosRemetente .contato label {margin-left:5px;}
+#modalEnviarEmail li.addRemetentes {padding-top:10px;}
+#modalEnviarEmail li.addRemetentes a {background:transparent url(../../../imagens/geral/ico_setas.gif) no-repeat 0 5px;display:block;padding-left:10px;}
+
+#boxRetorno li {padding:3px 0;}
+#boxRetorno .cadastroEmail {border-top:1px solid #E5E5E5;margin-top:20px;padding:20px 0 10px 0;}
+/* Enviar por E-mail */
+
+/* Salvar Como */
+.lstArquivos {padding-top:10px;width:100%;}
+.lstArquivos li {background:url(../../../imagens/geral/ico_arquivos.png) 0 0 no-repeat;display:inline-block;float:left;padding:0 30px;}
+.lstArquivos li.itemHTML {background-position:0 -69px;}
+.lstArquivos li.itemPDF {background-position:0 0;}
+.lstArquivos li a {display:inline-block;}
+.lstArquivos li span {display:block;font-size:0.85em;}
+/* Salvar Como */
+
+/* Salvar Como Full */
+#modalSalvarComoFull h2{font-weight:bold; padding:10px 0;}
+.lstArquivosFull {width:100%; border-bottom: solid 1px #E5E5E5;}
+.lstArquivosFull li {background:url(../../../imagens/geral/ico_fileTypes.gif) 0 0 no-repeat; display:inline-block; float:left; width:180px; padding:0 30px 15px 30px;}
+.lstArquivosFull li.itemTXT {background-position:0 0;}
+.lstArquivosFull li.itemODT {background-position:0 -73px;}
+.lstArquivosFull li.itemXMLD {background-position:0 -146px;}
+.lstArquivosFull li.itemXLS {background-position:0 -219px;}
+.lstArquivosFull li.itemCSV {background-position:0 -291px;}
+.lstArquivosFull li.itemODS {background-position:0 -364px;}
+.lstArquivosFull li.itemXMLS {background-position:0 -438px;}
+.lstArquivosFull li.itemQIF {background-position:0 -510px;}
+.lstArquivosFull li.itemOFX {background-position:0 -583px;}
+.lstArquivosFull li.itemOFC {background-position:0 -657px;}
+.lstArquivosFull li.itemPDF {background-position:0 -729px;}
+.lstArquivosFull li.itemHTML {background-position:0 -803px;}
+.lstArquivosFull li.itemXHTML {background-position:0 -875px;}
+.lstArquivosFull li a {display:inline-block;}
+.lstArquivosFull li span {display:block;font-size:0.85em;}
+/* Salvar Como Full */
+
+/* Imprimir */
+.lstPrint,
+.lstAsk {padding-top:15px;}
+.lstPrint li {float:left;vertical-align:top;padding-right:4px;}
+.lstPrint .sheet a {margin-right:8px;}
+.lstPrint .sheet .frmRadio {margin-right:4px;}
+.lstPrint .sheet .grey {background-position:right -174px!important;cursor: pointer;}
+.lstPrint .sheet .color {background-position:right -116px!important;cursor: pointer;}
+.lstPrint .sheet .label {background:url("../../../imagens/geral/ico_folhas.gif") no-repeat scroll right 0 transparent;height:58px;margin-right:4px;padding-right:50px;}
+.lstPrint .sheet * {float:left;vertical-align:top;}
+
+.lstAsk li {display:block;font-size:0.92em;padding:0 0 3px 23px;}
+.lstAsk li.ask {font-size:1em;padding-left:0;}
+.lstAsk li label {color:#000;padding-left:5px;}
+.lstAsk li input {height:13px;}
+.lstAsk li a {display:block;}
+/* Imprimir */
+
+/* Cheques */
+.modal_cheque {padding-top:20px;}
+.modal_cheque .boxAbas {text-align:center;padding:20px 0;}
+.modal_cheque .sac {display:none;}
+/* Cheques */
+
+/* Lista de favorecidos */
+.modalFavorecidos {padding-top:20px;}
+.modalFavorecidos .tabFavorecidos td {padding-left:7px;padding-right:7px;cursor:pointer;}
+.modalFavorecidos .tabCabFavorecidos td {padding:0;vertical-align:middle;}
+.modalFavorecidos .tabCabFavorecidos td a {display:block;height:50px;line-height:50px;padding:0 7px;margin-right:2px;}
+
+.modalFavorecidos .tabCabFavorecidos a.sortAsc,
+.modalFavorecidos .tabCabFavorecidos a.sortDesc {background: url(../../../imagens/geral/ico_sort.gif) no-repeat 0 0; text-decoration:none;}
+
+.modalFavorecidos .tabCabFavorecidos a.sortAsc {background-position:center 43px;}
+.modalFavorecidos .tabCabFavorecidos a.sortAsc:hover {background-color:#E2E2E2 !important;background-position:center -197px;}
+
+.modalFavorecidos .tabCabFavorecidos a.sortDesc {background-position:center -77px;}
+.modalFavorecidos .tabCabFavorecidos a.sortDesc:hover {background-position:center -317px;}
+.modalFavorecidos .tabCabFavorecidos a:hover {background-color:#E2E2E2 !important;text-decoration:none;}
+
+.modalFavorecidos .buscaFavorecidos label,
+.modalFavorecidos .buscaFavorecidos input {vertical-align:middle;font:0.92em/1.2 Tahoma, Arial, sans-serif;padding:4px 8px;}
+.modalFavorecidos .buscaFavorecidos a {background:url(../../../imagens/geral/ico_setas.gif) no-repeat 0 5px;float:right;padding-left:12px;margin-top:3px;}
+
+.modalFavorecidos .tabFavorecidos {font-size:.88em;} /* 11px */
+.modalFavorecidos .tabFavorecidos td i {display:block;float:left;font-style:normal;} /* SIM / NAO */
+.modalFavorecidos .tabFavorecidos .over td {background:#E5E5E5;}
+
+.modalFavorecidos .limites_transferencias {padding-bottom:15px;padding-top:10px;font-size:0.85em;zoom:1;overflow:hidden;}
+.modalFavorecidos .limites_transferencias .limites_box1 {float:left;width:355px;}
+.modalFavorecidos .limites_transferencias .limites_box2 {float:right;width:365px;border-left:solid 1px #E5E5E5;padding-left:15px;}
+.modalFavorecidos .limites_transferencias p {padding:0;}
+
+.modalFavorecidos .limites_transferencias h5 {padding:0 0 5px 0;font-weight:bold;}
+.modalFavorecidos .limites_transferencias dt,
+.modalFavorecidos .limites_transferencias dd {display:inline;}
+.modalFavorecidos .limites_transferencias dd {color:#000000;}
+
+.modalFavorecidos .limites_transferencias dl {padding-bottom:10px;}
+
+.modalFavorecidos .alterar_favorecido,
+.modalFavorecidos .excluir_favorecido { margin:0; float:left; }
+
+.modalFavorecidos .headerTip {background:url(../../../imagens/geral/ico_tip.gif) no-repeat 100% 50%;display:block;height:17px;position:absolute;right:1px;text-indent:-9999px;top:17px;width:17px;}
+
+.contasBradesco .formulario label {width:55px;}
+/* Lista de favorecidos */
+
+/* scroll */
+.contentScroll {height:300px; overflow-y:auto; overflow-x:hidden; margin:0;padding-right:10px; scroll 0 -132px transparent;
+    padding-bottom: 10px;
+    position: relative;}
+.contentScroll td {font-size:12px}
+/* scroll */
+
+/* listas */
+.jqmContent ul.listaTexto li,
+.jqmContent ol.listaTexto li {margin-bottom:10px;}
+.jqmContent ul.listaTexto li,
+.jqmContent ol.listaTexto li {list-style-image:none; list-style-position:outside; list-style-type:disc; margin-left:15px;}
+
+/* link Comprovantes em modal */
+.comprovantes {background:url(../../../imagens/geral/ico_funcoes.gif) 0 4px no-repeat !important;}
+.comprovantes a {line-height:28px;padding-left:30px;}
+
+/* Alterar nome */
+#modalAlterarNome fieldset {border:0;padding-top:25px;}
+#modalAlterarNome label {text-align:right;width:135px;}
+#modalAlterarNome .inputText {width:238px;}
+
+/* Formulario em modal */
+.jqmWindow .inputText {border-bottom:1px solid #D4D4D4; border-right:1px solid #D4D4D4; border-left:1px solid #7A7A7A; border-top:1px solid #7A7A7A; padding:5px; background:#F4F4F4; font-size:0.85em; vertical-align:middle; }
+.jqmWindow .frmLine {clear:both;zoom:1;overflow:hidden;padding-bottom:8px;}
+.jqmWindow .frmLine label,
+.jqmWindow .frmLine .frmCampo {float:left;line-height:22px;}
+.jqmWindow .frmLine label {padding-right:12px;}
+
+/* Caching CSS created with the help of;
+	Klaus Hartl <klaus.hartl@stilbuero.de> */
+@media projection, screen {
+     div.imgCache { position: absolute; left: -8000px; top: -8000px; }
+     div.imgCache img { display:block; }
+}
+@media print {div.imgCache { display: none; }}
+
+/* Estilo para ser usado por Modal que nao fecha qdo clicado fora */
+.modalNaoFecha {display:none;position:absolute;}
+
+/* Tabela de linha única simulando cabeçalho de tabela ordenável */
+table.ordenavel1 { width: 100%; }
+table.ordenavel1 tbody { background-color: #CCC; }
+table.ordenavel1 td { height: 46px; background: url(../../../imagens/geral/bgr_tabela2.jpg) top left repeat-x; border: none; }
+table.ordenavel1 td:hover { background-image: url(../../../imagens/geral/bgr_tabela2_over.jpg);  }
+table.ordenavel1 td div { background: url(../../../imagens/geral/pix_fill_double.gif) right top repeat-y; }
+table.ordenavel1 td.noBorder div { background-image: none; }
+table.ordenavel1 a { color: #333; display: block; font-weight: bold; text-align: left; line-height: 46px; padding: 0 7px; }
+table.ordenavel1 a:hover { color:#CC092F; text-decoration:underline; background: url(../../../imagens/geral/ico_sort.gif) no-repeat center -202px;}
+table.ordenavel1 a.sortAsc, table.ordenavel1 a.sortDesc { background: url(../../../imagens/geral/ico_sort.gif) no-repeat 0 0; } 
+table.ordenavel1 a.sortAsc { background-position: center 38px; }
+table.ordenavel1 a.sortDesc { background-position: center -82px; }
+table.ordenavel1 a.sortAsc:hover { background-position: center -202px; }
+table.ordenavel1 a.sortDesc:hover { background-position: center -322px; }
+
+/* Definição de abas */
+ul.abas1 { padding: 10px 0 0 20px; background: url(../../../imagens/modal/bgr_aba.jpg) left bottom repeat-x; }
+ul.abas1 li { float: left; padding-left: 20px; cursor: pointer; background: url(../../../imagens/modal/bgr_aba_item.jpg) 0 -32px no-repeat; }
+ul.abas1 li.on { background-position: 0 0; }
+ul.abas1 li a { display: block; padding: 8px 35px 8px 0; background: url(../../../imagens/modal/bgr_aba_item.jpg) right -32px no-repeat; }
+ul.abas1 li.on a { background-position: right 0; font-weight: bold; }
+
+.jqmTop p{margin-left: 0px !important; margin-right: 0px !important;}
+
+div.jqmWrapper ul.list_infos li.info {width: auto}
+
+div.jqmWrapper ul.list_infos li.infoLast {color: #000000; font-weight: bold; padding-right: 15px; width: 560px; padding: 0 10px 0 0; width: auto !important;}
+div.jqmWrapper ul.list_infos li.itemLast {color: #333333; padding-right: 10px; text-align: right; width: 120px; padding: 0 10px 0 0;}
+
+.jqmWrapper p{margin-left:15px; margin-right:15px;}
+
+.jqmWrapper .rodape {margin-right:15px;}
+.jqmWrapper .campos_form {margin-left:15px;}
+
+
+.conteudoModal {color: #333333;font: 0.95em Tahoma,Arial,Sans-Serif;}
+
+div.box_grayLine_bottomModal {padding: 10px 0 0 0; font-weight: bold;}
+.box_grayLine_bottomModal .titulo_grupo_dados_formulario {padding-bottom:15px;padding-top: 0px;color: #333333;font-weight:bold}
+
+.botao_sei {cursor:pointer;}
+
+.lnk_grey {
+	color: #666666!important;
+}
+
+.labelFolha, .labelFolhaResumido, .labelFolhaDetalhado, .labelFolhaPaginas, .labelFolhaPB, .labelFolhaColorido {background:url(../../../imagens/geral/ico_folhas.gif) right 0 no-repeat;height:58px;padding-right:50px;margin-right:4px;}
+
+.labelFolhaResumido {
+   background-position:right 0px;
+}
+
+.labelFolhaDetalhado {
+    background-position:right -116px; 	
+}
+
+.labelFolhaPaginas {
+   background-position:right -58px;
+}
+
+.labelFolhaPB {
+    background-position:right -174px;
+}
+
+.labelFolhaColorido {
+   background-position:right -116px;
+}

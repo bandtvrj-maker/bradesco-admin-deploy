@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1777517887515,
+      "tag": "0000_cultured_luke_cage",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1777518083089,
+      "tag": "0001_sudden_roland_deschain",
+      "breakpoints": true
+    }
+  ]
+}

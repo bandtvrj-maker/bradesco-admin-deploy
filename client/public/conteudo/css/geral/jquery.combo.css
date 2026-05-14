@@ -1,0 +1,30 @@
+/*wrapper of all elements*/
+div.combo {position:relative;left:0px;top:0px;}
+.combo input {position:absolute;}
+.combo a.icon {position:absolute;}
+.combo div.list-wrapper {position:absolute;overflow-x:hidden;max-height:201px;z-index:99999;overflow:auto;}
+.combo div.list-wrapper ul{overflow:hidden !important;}
+.combo .visible {display:block;}
+.combo .invisible {display:none;}
+.combo .odd {background-color:#F4F4F4;}
+.combo input.empty {color:#CCC;}
+.combo ul {list-style-type:none;}
+.combo li {font:100%/163% Tahoma, Arial, sans-serif;background-color:#FFF;cursor:pointer;padding:0 5px;width:100%;height:18px;}
+.combo li.active {background-color:#CCC;}
+
+/*used when emptyText config opt is set. Applied to text input*/
+div.net {white-space:nowrap;width:175px;height:18px;border:0;margin:0;padding:0;}
+div.net input {font:100% Tahoma, Arial, sans-serif;color:#333;background:#F4F4F4;border-color:#7A7A7A #D4D4D4 #D4D4D4 #7A7A7A;border-style:solid;border-width:1px;padding:1px 3px;width:167px;height:15px;vertical-align:middle;left:0px;top:0px;}
+div.net a.icon {width:17px;height:17px;display:block;background:transparent url(../../../imagens/geral/bgr_iconTrigger.gif) no-repeat 0 0;cursor:pointer;border-bottom:0px solid #B5B8C8;top:0px;left:158px;}
+div.net a.icon:hover {background-position:-17px 0;}
+div.net div.list-wrapper {left:0px;top:18px;border:1px solid #D9D9D9;background-color:#FFFFFF;padding:0;margin:0;bottom:auto;overflow-x:hidden;overflow:auto;}
+div.net div.list-wrapper-up {top:auto;bottom:18px;}
+div.net div.list-wrapper form {width:100%;clear:both;margin-bottom:10px;border-top:1px solid #999;}
+div.net div.list-wrapper form label {display:block;padding:5px;}
+div.net div.list-wrapper input.txtAddContato {width:125px;float:left;position:static;margin-left:5px;}
+div.net div.list-wrapper input.btnOkHome {width:16px;height:19px;background:url(../../../imagens/geral/btn_ok.gif) 0 -25px no-repeat;border:0;position:static;margin-left:5px;}
+
+.listaCorrenteTipo {width:270px !important}
+.listaCorrente {width:160px !important}
+.listaCobrancaPrincipal {width:200px !important}
+.listaCobrancaRelativo {width:180px !important}

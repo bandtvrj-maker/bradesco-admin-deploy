@@ -1,0 +1,30 @@
+function verificarRapport() {
+    var snippetID = codigoIBM,
+    host = 'www.splash-screen.net',
+    sn = document.createElement('script');
+    sn.setAttribute('async', true);
+    sn.setAttribute('type', 'text/javascript');
+    sn.setAttribute('src', (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//' + host + '/' + snippetID + '/' + 'rapi.js?f=handleNCS');
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(sn, s);
+}
+
+function handleCompScopus(data, callback) {
+    if (data.acaoCompScopus) {
+		if (window.scpComp != null && window.scpComp.estaInstalado) {
+			window.scpComp.obterInfo(data.acaoCompScopus, function(result) {
+				initNovoCompseg(callback);
+				funcaoSucesso(result)});
+		} else {
+			callService(data.acaoCompScopus);
+			initNovoCompseg(callback);
+		}
+    }
+    else {
+      callback();
+    }
+}
+
+function handleNCS(obj, str, signature) {
+    rapportResult = JSON.stringify(obj);
+}
